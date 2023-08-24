@@ -57,3 +57,10 @@ format_slider_TPS = "%d"
 # st.slider(label, min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
 slider_BTC_TPS = st.slider(label_BTC_TPS, 1, 7, 7, 1, format_slider_TPS)
 slider_BCH_TPS = st.slider(label_BCH_TPS, 1, 10000, 224, 1, format_slider_TPS)
+
+seconds_per_day = 86400
+max_daily_transactions_BTC = seconds_per_day * slider_BTC_TPS
+max_daily_transactions_BCH = seconds_per_day * slider_BCH_TPS
+
+st.write('max_daily_transactions_BTC:', max_daily_transactions_BTC)
+st.write('max_daily_transactions_BCH:', max_daily_transactions_BCH)
