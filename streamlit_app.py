@@ -49,7 +49,7 @@ with st.echo(code_location='below'):
         .encode(x='x:Q', y='y:Q'))
 
 
-st.slider(label, min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
+# st.slider(label, min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
 
 label_BTC_TPS = "BTC Network, Maximum Transactions Per Second"
 label_BCH_TPS = "BCH Network, Maximum Transactions Per Second" 
