@@ -47,3 +47,13 @@ with st.echo(code_location='below'):
     st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
         .mark_circle(color='#0068c9', opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
+
+
+st.slider(label, min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
+
+label_BTC_TPS = "BTC Network, Maximum Transactions Per Second"
+label_BCH_TPS = "BCH Network, Maximum Transactions Per Second" 
+format_slider_TPS = "%d"
+# st.slider(label, min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
+slider_BTC_TPS = st.slider(label_BTC_TPS, 1, 7, value=None, 1, format_slider_TPS, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
+slider_BCH_TPS = st.slider(label_BCH_TPS, 1, 224, value=None,1, format_slider_TPS, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
