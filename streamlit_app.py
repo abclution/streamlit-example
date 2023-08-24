@@ -68,4 +68,4 @@ st.write('max_daily_transactions_BCH:', max_daily_transactions_BCH)
 
 format_slider_energyUsageYearlyTwH = "%d"
 label_energyUsageYearlyTwH_BTC = "Yearly energy usage of BTC network in Terrawatt Hours, found here: https://ccaf.io/cbnsi/cbeci " 
-energyUsageYearlyTwH_BTC = st.slider(label_energyUsageYearlyTwH_BTC, 1.0, 1000, 402.2, .1, format_slider_energyUsageYearlyTwH)
+energyUsageYearlyTwH_BTC = st.slider(label_energyUsageYearlyTwH_BTC, 1.0, 1000.0, 402.2, .1, format_slider_energyUsageYearlyTwH)
