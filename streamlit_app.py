@@ -54,7 +54,8 @@ with st.echo(code_location='below'):
 label_BTC_TPS = "BTC Network, Maximum Transactions Per Second"
 label_BCH_TPS = "BCH Network, Maximum Transactions Per Second" 
 format_slider_TPS = "%d"
-# st.slider(label, min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
+#! st.slider(label, min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
+#! Formatter for int/float supports: %d %e %f %g %i Formatter for date/time/datetime uses Moment.js notation: https://momentjs.com/docs/#/displaying/format/
 slider_BTC_TPS = st.slider(label_BTC_TPS, 1, 7, 7, 1, format_slider_TPS)
 slider_BCH_TPS = st.slider(label_BCH_TPS, 1, 10000, 224, 1, format_slider_TPS)
 
@@ -64,3 +65,7 @@ max_daily_transactions_BCH = seconds_per_day * slider_BCH_TPS
 
 st.write('max_daily_transactions_BTC:', max_daily_transactions_BTC)
 st.write('max_daily_transactions_BCH:', max_daily_transactions_BCH)
+
+format_slider_energyUsageYearlyTwH = "%f"
+label_energyUsageYearlyTwH_BTC = "Yearly energy usage of BTC network in Terrawatt Hours, found here: https://ccaf.io/cbnsi/cbeci " 
+energyUsageYearlyTwH_BTC = st.slider(label_energyUsageYearlyTwH_BTC, 1, 1000, 402, .1, format_slider_energyUsageYearlyTwH)
