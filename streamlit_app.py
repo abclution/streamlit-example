@@ -142,3 +142,33 @@ df = pd.DataFrame(KwHCostList)
 
 
 st.dataframe(df, use_container_width=True)
+
+df = pd.DataFrame(
+    [
+        {"command": "st.selectbox", "rating": 4, "is_widget": True},
+        {"command": "st.balloons", "rating": 5, "is_widget": False},
+        {"command": "st.time_input", "rating": 3, "is_widget": True},
+    ]
+)
+
+# Define the range of values
+start_value = 0.007
+end_value = 0.35
+step = 0.01
+
+
+# Define the variable for energy usage
+#energyUsageYearlyKwH = 1000  # Example value, replace with your actual value
+
+# Create a list of values for column 1
+column1_values = [round(start_value + i * step, 3) for i in range(int((end_value - start_value) / step) + 1)]
+
+# Create a dictionary to hold the data
+data = {
+    "Electricity Cost (KwH)": column1_values,
+    "Energy Usage Yearly (KwH)": [value * energyUsageYearlyKwH_BTC for value in column1_values]
+}
+
+df = pd.DataFrame(data)
+
+st.dataframe(df, use_container_width=True)
