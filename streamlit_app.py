@@ -207,3 +207,7 @@ st.line_chart(df,x = 'Electricity Cost (per KwH)')
 
 st.write('BTC Total Daily Block Rewards (USD):', totalDailyBlockRewards * slider_PriceBTC)
 st.write('BCH Total Daily Block Rewards (USD):', totalDailyBlockRewards * slider_PriceBCH)
+
+''' So what we see here is once the price per KwH gets close the the cheapest availiable KwH (Libya by the way with .007 / USD) the block rewards are no longer sufficient
+
+'''
