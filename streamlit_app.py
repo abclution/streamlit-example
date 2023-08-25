@@ -62,6 +62,10 @@ format_slider_energyUsageYearlyTwH = "%d"
 
 format_slider_exaHashes_BTC = "%d"
 format_slider_exaHashes_BCH = "%d"
+
+format_slider_PriceBTC = "%d"
+format_slider_PriceBCH = "%d"
+
 #### FORMATS #################################################################
 
 #### LABELS #################################################################
@@ -72,16 +76,26 @@ label_energyUsageYearlyTwH_BTC = "BTC: Yearly energy usage of entire network in 
 
 label_exaHashes_BTC = "BTC: Current Exahashes (7 Day AVG)"
 label_exaHashes_BCH = "BCH: Current Exahashes (7 Day AVG)"
+
+label_priceBTC = "BTC: Current Price"
+label_priceBCH = "BCH: Current Price"
+
 #### LABELS #################################################################
 
 #### SIDEBAR #################################################################
 slider_BTC_TPS = st.sidebar.slider(label_BTC_TPS, 1, 7, 7, 1, format_slider_TPS)
 slider_BCH_TPS = st.sidebar.slider(label_BCH_TPS, 1, 10000, 224, 1, format_slider_TPS)
 
-slider_energyUsageYearlyTwH_BTC = st.sidebar.slider(label_energyUsageYearlyTwH_BTC, 1.0, 1000.0, 145.02, .1, format_slider_energyUsageYearlyTwH)
-
 slider_exaHashes_BTC = st.sidebar.slider(label_exaHashes_BTC, 1.0, 1000.0, 402.2, .1, format_slider_exaHashes_BTC)
 slider_exaHashes_BCH = st.sidebar.slider(label_exaHashes_BCH, 1.0, 1000.0, 2.67, .1, format_slider_exaHashes_BCH)
+
+slider_energyUsageYearlyTwH_BTC = st.sidebar.slider(label_energyUsageYearlyTwH_BTC, 1.0, 1000.0, 145.02, .1, format_slider_energyUsageYearlyTwH)
+# ! No slider for BCH as its energy usage is derived from BTC energy usage per exahash.
+
+slider_PriceBTC = st.sidebar.slider(label_priceBTC, 1.0, 100000.0, 26091.70, .1, format_slider_PriceBTC)
+slider_PriceBCH = st.sidebar.slider(label_priceBCH, 1.0, 100000.0, 190.02, .1, format_slider_PriceBCH)
+
+
 #### SIDEBAR #################################################################
 
 #### MAIN #################################################################
