@@ -166,8 +166,10 @@ column1_values = [round(start_value + i * step, 3) for i in range(int((end_value
 # Create a dictionary to hold the data
 data = {
     "Electricity Cost (KwH)": column1_values,
-    "BTC, Security Budget Cost (Yearly)": [value * energyUsageYearlyKwH_BTC for value in column1_values],
-    "BCH, Security Budget Cost (Yearly)": [value * energyUsageYearlyKwH_BCH for value in column1_values]}
+    "BTC Energy Usage Yearly (KwH)": [value * energyUsageYearlyKwH_BTC for value in column1_values],
+    "BCH Energy Usage Yearly (KwH)": [value * energyUsageYearlyKwH_BCH for value in column1_values]
+    
+}
 
 df = pd.DataFrame(data)
 
@@ -175,4 +177,4 @@ st.dataframe(df, use_container_width=True)
 
 #st.line_chart(data=None, *, x=None, y=None, color=None, width=0, height=0, use_container_width=True)
 #st.line_chart(df,"Electricity Cost (KwH)","Energy Usage Yearly (KwH)",None,0,0,True)
-st.line_chart(df,x = 'Cost of Electricity per (KwH)')
+st.line_chart(df,x = 'Electricity Cost (KwH)')
