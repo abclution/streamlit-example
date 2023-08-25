@@ -154,7 +154,7 @@ df = pd.DataFrame(
 # Define the range of values
 start_value = 0.007
 end_value = 0.35
-step = 0.01
+step = 0.001
 
 
 # Define the variable for energy usage
