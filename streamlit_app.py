@@ -166,31 +166,44 @@ costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - s
 # Create a dictionary to hold the data
 data = {
     "Electricity Cost (per KwH)": costPerKwH,
-    "BTC Security Budget (Yearly Cost)": [value * energyUsageYearlyKwH_BTC for value in costPerKwH],
-    "BCH Security Budget (Yearly Cost)": [value * energyUsageYearlyKwH_BCH for value in costPerKwH]
+    "Yearly BTC Security Budget": [value * energyUsageYearlyKwH_BTC for value in costPerKwH],
+    "Yearly, BCH Security Budget": [value * energyUsageYearlyKwH_BCH for value in costPerKwH]
     
 }
 
-df = pd.DataFrame(data)
-
-st.dataframe(df, use_container_width=True)
-
+# st.dataframe(df, use_container_width=True)
 #st.line_chart(data=None, *, x=None, y=None, color=None, width=0, height=0, use_container_width=True)
-#st.line_chart(df,"Electricity Cost (KwH)","Energy Usage Yearly (KwH)",None,0,0,True)
+
+df = pd.DataFrame(data)
 st.line_chart(df,x = 'Electricity Cost (per KwH)')
 # ! This is a simple, linear chart.
 
-# * Next lets discuss if block reward covers security budget costs
-# * Column 1: Per KwH Cost, .007 to .30
-# * Column 2: energyUsageYearlyKwH_BTC * Col1 , energyUsageYearlyKwH_BCH * Col1
+# * Next lets see what the costs look like by day.
+# * Same as above but divided by 365
+# * 
 
 data = {
     "Electricity Cost (per KwH)": costPerKwH,
-    "BTC Security Budget (Daily Cost)": [(value * energyUsageYearlyKwH_BTC)/365 for value in costPerKwH],
-    "BCH Security Budget (Daily Cost)": [(value * energyUsageYearlyKwH_BCH)/365 for value in costPerKwH]
+    "Daily, BTC Security Budget": [(value * energyUsageYearlyKwH_BTC)/365 for value in costPerKwH],
+    "Daily, BCH Security Budget": [(value * energyUsageYearlyKwH_BCH)/365 for value in costPerKwH]
     
 }
-
 df = pd.DataFrame(data)
-
 st.line_chart(df,x = 'Electricity Cost (per KwH)')
+# ! Again, this is a simple, linear chart. Just scaled to daily.
+
+# * Next lets discuss if block reward covers security budget costs
+# * Same as above but divided by 365
+# * 
+
+data = {
+    "Electricity Cost (per KwH)": costPerKwH,
+    "Daily, BTC Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BTC)/365) - (totalDailyBlockRewards * slider_PriceBTC) for value in costPerKwH],
+    "Daily, BCH Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BCH)/365) - (totalDailyBlockRewards * slider_PriceBCH) for value in costPerKwH]
+    
+}
+df = pd.DataFrame(data)
+st.line_chart(df,x = 'Electricity Cost (per KwH)')
+
+st.write('BTC Total Daily Block Rewards (USD):', totalDailyBlockRewards * slider_PriceBTC)
+st.write('BCH Total Daily Block Rewards (USD):', totalDailyBlockRewards * slider_PriceBCH)
