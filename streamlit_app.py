@@ -172,3 +172,6 @@ data = {
 df = pd.DataFrame(data)
 
 st.dataframe(df, use_container_width=True)
+
+#st.line_chart(data=None, *, x=None, y=None, color=None, width=0, height=0, use_container_width=True)
+st.line_chart(df,"Electricity Cost (KwH)","Energy Usage Yearly (KwH)",None,0,0,True)
