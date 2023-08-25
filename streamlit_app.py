@@ -100,7 +100,10 @@ slider_PriceBCH = st.sidebar.slider(label_priceBCH, 1.0, 100000.0, 190.02, .1, f
 
 
 # st.selectbox(label, options, index=0, format_func=special_internal_function, key=None, help=None, on_change=None, args=None, kwargs=None, *, placeholder="Select...", disabled=False, label_visibility="visible")
-blockReward = st.selectbox('Choose block reward (Default: 6.25)', (50, 25, 12.5, 6.25, 3.125, 1.5625, .78125, .390625, .195325, .09765625, 0), 3)
+blockReward = st.sidebar.selectbox('Choose block reward (Default: 6.25)', (50, 25, 12.5, 6.25, 3.125, 1.5625, .78125, .390625, .195325, .09765625, 0), 3)
+
+# (6 blocks per hour * 24 hours) * (block reward)
+totalDailyBlockRewards = (6*24) * blockReward
 
 #### SIDEBAR #################################################################
 
@@ -118,3 +121,8 @@ st.write('energyUsageYearlyTwH_BCH:', energyUsageYearlyTwH_BTC)
 st.write('Exahash to Kwh/year ratio:', exaHashToYearlyKwHRatio)
 # ! Derived from (energyUsageYearlyKwH_BTC / slider_exaHashes_BTC) * exaHashToYearlyKwHRatio
 
+st.write('BTC Price:', slider_PriceBTC)
+st.write('BCH Price:', slider_PriceBCH)
+
+st.write('BTC Price:', totalDailyBlockRewards * slider_PriceBTC)
+st.write('BCH Price:', totalDailyBlockRewards * slider_PriceBCH)
