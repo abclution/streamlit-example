@@ -93,4 +93,4 @@ energyUsageYearlyKwH_BTC = slider_energyUsageYearlyTwH_BTC * 1000000000
 st.write('##BTC Maximum Daily Transactions:', max_daily_transactions_BTC)
 st.write('##BCH Maximum Daily Transactions:', max_daily_transactions_BCH)
 
-st.write('energyUsageYearlyTwH_BTC:', energyUsageYearlyTwH_BTC)
+st.write('energyUsageYearlyTwH_BTC:', slider_energyUsageYearlyTwH_BTC)
