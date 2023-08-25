@@ -93,7 +93,10 @@ energyUsageYearlyKwH_BTC = slider_energyUsageYearlyTwH_BTC * 1000000000
 
 exaHashToYearlyKwHRatio = energyUsageYearlyKwH_BTC / slider_exaHashes_BTC
 energyUsageYearlyKwH_BCH = slider_exaHashes_BCH * exaHashToYearlyKwHRatio
-energyUsageYearlyTwH_BTC = energyUsageYearlyKwH_BCH /  1000000000
+energyUsageYearlyTwH_BCH = energyUsageYearlyKwH_BCH /  1000000000
+
+st.write('BCH: Yearly energy usage of entire network in Terawatt(TwH) Hours :', energyUsageYearlyTwH_BCH)
+st.write('BCH: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', energyUsageYearlyKwH_BCH)
 
 slider_PriceBTC = st.sidebar.slider(label_priceBTC, 1.0, 100000.0, 26091.70, .1, format_slider_Price)
 slider_PriceBCH = st.sidebar.slider(label_priceBCH, 1.0, 100000.0, 190.02, .1, format_slider_Price)
