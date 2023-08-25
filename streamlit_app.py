@@ -228,25 +228,25 @@ Lets break that down..
 col1, col2 = st.columns(2)
 
 with col1:
-   st.header("BTC")
-   data = {
+    st.header("BTC")
+    data = {
     "Electricity Cost (per KwH)": costPerKwH,
     "Daily, BTC Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BTC)/365) - (totalDailyBlockRewards * slider_PriceBTC) for value in costPerKwH]   
     }
-   df = pd.DataFrame(data)
-   st.line_chart(df,x = 'Electricity Cost (per KwH)')
-
+    df = pd.DataFrame(data)
+    st.line_chart(df,x = 'Electricity Cost (per KwH)')
+    ''' BTC Info here'''
 
 #    st.image("https://static.streamlit.io/examples/cat.jpg")
 
 with col2:
-   st.header("BCH")
-   data = {
+    st.header("BCH")
+    data = {
     "Electricity Cost (per KwH)": costPerKwH,
     "Daily, BCH Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BCH)/365) - (totalDailyBlockRewards * slider_PriceBCH) for value in costPerKwH]
     }
-   df = pd.DataFrame(data)
-   st.line_chart(df,x = 'Electricity Cost (per KwH)')
-  
-  
+    df = pd.DataFrame(data)
+    st.line_chart(df,x = 'Electricity Cost (per KwH)')
+    '''BCH Info Here'''
+
 #    st.image("https://static.streamlit.io/examples/dog.jpg")
