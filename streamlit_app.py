@@ -193,4 +193,4 @@ data = {
 
 df = pd.DataFrame(data)
 
-st.dataframe(df, use_container_width=True)
+st.line_chart(df,x = 'Electricity Cost (per KwH)', y = 'USD Cost Daily')
