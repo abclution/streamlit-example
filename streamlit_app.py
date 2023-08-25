@@ -51,23 +51,45 @@ with st.echo(code_location='below'):
 
 # st.slider(label, min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
 
-label_BTC_TPS = "BTC Network, Maximum Transactions Per Second"
-label_BCH_TPS = "BCH Network, Maximum Transactions Per Second" 
-format_slider_TPS = "%d"
 #! st.slider(label, min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
 #! Formatter for int/float supports: %d %e %f %g %i Formatter for date/time/datetime uses Moment.js notation: https://momentjs.com/docs/#/displaying/format/
+
+seconds_per_day = 86400
+
+st.write('energyUsageYearlyTwH_BTC:', energyUsageYearlyTwH_BTC)
+#### FORMATS #################################################################
+format_slider_TPS = "%d"
+format_slider_energyUsageYearlyTwH = "%d"
+
+format_slider_exaHashes_BTC = "%d"
+format_slider_exaHashes_BCH = "%d"
+#### FORMATS #################################################################
+
+#### LABELS #################################################################
+label_BTC_TPS = "BTC Network, Maximum Transactions Per Second"
+label_BCH_TPS = "BCH Network, Maximum Transactions Per Second" 
+
+label_energyUsageYearlyTwH_BTC = "BTC: Yearly energy usage of entire network in Terrawatt Hours, found here: https://ccaf.io/cbnsi/cbeci " 
+
+label_exaHashes_BTC = "BTC: Current Exahashes (7 Day AVG)"
+label_exaHashes_BCH = "BCH: Current Exahashes (7 Day AVG)"
+#### LABELS #################################################################
+
+#### SIDEBAR #################################################################
 slider_BTC_TPS = st.sidebar.slider(label_BTC_TPS, 1, 7, 7, 1, format_slider_TPS)
 slider_BCH_TPS = st.sidebar.slider(label_BCH_TPS, 1, 10000, 224, 1, format_slider_TPS)
 
-seconds_per_day = 86400
+slider_energyUsageYearlyTwH_BTC = st.sidebar.slider(label_energyUsageYearlyTwH_BTC, 1.0, 1000.0, 145.02, .1, format_slider_energyUsageYearlyTwH)
+
+slider_exaHashes_BTC = st.sidebar.slider(label_exaHashes_BTC, 1.0, 1000.0, 402.2, .1, format_slider_exaHashes_BTC)
+slider_exaHashes_BCH = st.sidebar.slider(label_exaHashes_BCH, 1.0, 1000.0, 2.67, .1, format_slider_exaHashes_BCH)
+#### SIDEBAR #################################################################
+
+#### MAIN #################################################################
 max_daily_transactions_BTC = seconds_per_day * slider_BTC_TPS
 max_daily_transactions_BCH = seconds_per_day * slider_BCH_TPS
 
+energyUsageYearlyKwH_BTC = slider_energyUsageYearlyTwH_BTC * 1000000000
+
 st.write('##BTC Maximum Daily Transactions:', max_daily_transactions_BTC)
 st.write('##BCH Maximum Daily Transactions:', max_daily_transactions_BCH)
-
-format_slider_energyUsageYearlyTwH = "%d"
-label_energyUsageYearlyTwH_BTC = "Yearly energy usage of BTC network in Terrawatt Hours, found here: https://ccaf.io/cbnsi/cbeci " 
-energyUsageYearlyTwH_BTC = st.sidebar.slider(label_energyUsageYearlyTwH_BTC, 1.0, 1000.0, 402.2, .1, format_slider_energyUsageYearlyTwH)
-st.write('energyUsageYearlyTwH_BTC:', energyUsageYearlyTwH_BTC)
-
