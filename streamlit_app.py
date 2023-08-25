@@ -153,7 +153,7 @@ df = pd.DataFrame(
 
 # Define the range of values
 start_value = 0.007
-end_value = 0.35
+end_value = 0.10
 step = 0.001
 
 
