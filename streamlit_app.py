@@ -63,11 +63,11 @@ seconds_per_day = 86400
 max_daily_transactions_BTC = seconds_per_day * slider_BTC_TPS
 max_daily_transactions_BCH = seconds_per_day * slider_BCH_TPS
 
-st.write('max_daily_transactions_BTC:', max_daily_transactions_BTC)
-st.write('max_daily_transactions_BCH:', max_daily_transactions_BCH)
+st.write('##BTC Maximum Daily Transactions:' max_daily_transactions_BTC)
+st.write('##BCH Maximum Daily Transactions:', max_daily_transactions_BCH)
 
 format_slider_energyUsageYearlyTwH = "%d"
 label_energyUsageYearlyTwH_BTC = "Yearly energy usage of BTC network in Terrawatt Hours, found here: https://ccaf.io/cbnsi/cbeci " 
-energyUsageYearlyTwH_BTC = st.slider(label_energyUsageYearlyTwH_BTC, 1.0, 1000.0, 402.2, .1, format_slider_energyUsageYearlyTwH)
+energyUsageYearlyTwH_BTC = st.sidebar.slider(label_energyUsageYearlyTwH_BTC, 1.0, 1000.0, 402.2, .1, format_slider_energyUsageYearlyTwH)
 st.write('energyUsageYearlyTwH_BTC:', energyUsageYearlyTwH_BTC)
 
