@@ -166,7 +166,9 @@ column1_values = [round(start_value + i * step, 3) for i in range(int((end_value
 # Create a dictionary to hold the data
 data = {
     "Electricity Cost (KwH)": column1_values,
-    "Energy Usage Yearly (KwH)": [value * energyUsageYearlyKwH_BTC for value in column1_values]
+    "BTC Energy Usage Yearly (KwH)": [value * energyUsageYearlyKwH_BTC for value in column1_values],
+    "BCH Energy Usage Yearly (KwH)": [value * energyUsageYearlyKwH_BCH for value in column1_values]
+    
 }
 
 df = pd.DataFrame(data)
