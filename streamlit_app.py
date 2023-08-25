@@ -124,5 +124,5 @@ st.write('Exahash to Kwh/year ratio:', exaHashToYearlyKwHRatio)
 st.write('BTC Price:', slider_PriceBTC)
 st.write('BCH Price:', slider_PriceBCH)
 
-st.write('BTC Price:', totalDailyBlockRewards * slider_PriceBTC)
-st.write('BCH Price:', totalDailyBlockRewards * slider_PriceBCH)
+st.write('BTC Total Daily Block Rewards (USD):', totalDailyBlockRewards * slider_PriceBTC)
+st.write('BCH Total Daily Block Rewards (USD):', totalDailyBlockRewards * slider_PriceBCH)
