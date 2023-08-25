@@ -119,7 +119,7 @@ st.write('##BTC Maximum Daily Transactions:', max_daily_transactions_BTC)
 st.write('##BCH Maximum Daily Transactions:', max_daily_transactions_BCH)
 
 st.write('energyUsageYearlyTwH_BTC:', slider_energyUsageYearlyTwH_BTC)
-st.write('energyUsageYearlyTwH_BCH:', energyUsageYearlyTwH_BTC)
+st.write('energyUsageYearlyTwH_BCH:', energyUsageYearlyTwH_BCH)
 
 st.write('Exahash to Kwh/year ratio:', exaHashToYearlyKwHRatio)
 # ! Derived from (energyUsageYearlyKwH_BTC / slider_exaHashes_BTC) * exaHashToYearlyKwHRatio
