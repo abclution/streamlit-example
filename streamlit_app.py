@@ -60,11 +60,9 @@ seconds_per_day = 86400
 format_slider_TPS = "%d"
 format_slider_energyUsageYearlyTwH = "%d"
 
-format_slider_exaHashes_BTC = "%d"
-format_slider_exaHashes_BCH = "%d"
+format_slider_exaHashes = "%d"
 
-format_slider_PriceBTC = "%d"
-format_slider_PriceBCH = "%d"
+format_slider_Price = "%d"
 
 #### FORMATS #################################################################
 
@@ -86,14 +84,19 @@ label_priceBCH = "BCH: Current Price"
 slider_BTC_TPS = st.sidebar.slider(label_BTC_TPS, 1, 7, 7, 1, format_slider_TPS)
 slider_BCH_TPS = st.sidebar.slider(label_BCH_TPS, 1, 10000, 224, 1, format_slider_TPS)
 
-slider_exaHashes_BTC = st.sidebar.slider(label_exaHashes_BTC, 1.0, 1000.0, 402.2, .1, format_slider_exaHashes_BTC)
-slider_exaHashes_BCH = st.sidebar.slider(label_exaHashes_BCH, 1.0, 1000.0, 2.67, .1, format_slider_exaHashes_BCH)
+slider_exaHashes_BTC = st.sidebar.slider(label_exaHashes_BTC, 1.0, 1000.0, 402.2, .1, format_slider_exaHashes)
+slider_exaHashes_BCH = st.sidebar.slider(label_exaHashes_BCH, 1.0, 1000.0, 2.67, .1, format_slider_exaHashes)
 
 slider_energyUsageYearlyTwH_BTC = st.sidebar.slider(label_energyUsageYearlyTwH_BTC, 1.0, 1000.0, 145.02, .1, format_slider_energyUsageYearlyTwH)
 # ! No slider for BCH as its energy usage is derived from BTC energy usage per exahash.
+energyUsageYearlyKwH_BTC = slider_energyUsageYearlyTwH_BTC * 1000000000
 
-slider_PriceBTC = st.sidebar.slider(label_priceBTC, 1.0, 100000.0, 26091.70, .1, format_slider_PriceBTC)
-slider_PriceBCH = st.sidebar.slider(label_priceBCH, 1.0, 100000.0, 190.02, .1, format_slider_PriceBCH)
+exaHashToYearlyKwHRatio = energyUsageYearlyKwH_BTC / slider_exaHashes_BTC
+energyUsageYearlyKwH_BCH = slider_exaHashes_BCH * exaHashToYearlyKwHRatio
+energyUsageYearlyTwH_BTC = energyUsageYearlyKwH_BCH /  1000000000
+
+slider_PriceBTC = st.sidebar.slider(label_priceBTC, 1.0, 100000.0, 26091.70, .1, format_slider_Price)
+slider_PriceBCH = st.sidebar.slider(label_priceBCH, 1.0, 100000.0, 190.02, .1, format_slider_Price)
 
 
 #### SIDEBAR #################################################################
@@ -102,9 +105,12 @@ slider_PriceBCH = st.sidebar.slider(label_priceBCH, 1.0, 100000.0, 190.02, .1, f
 max_daily_transactions_BTC = seconds_per_day * slider_BTC_TPS
 max_daily_transactions_BCH = seconds_per_day * slider_BCH_TPS
 
-energyUsageYearlyKwH_BTC = slider_energyUsageYearlyTwH_BTC * 1000000000
 
 st.write('##BTC Maximum Daily Transactions:', max_daily_transactions_BTC)
 st.write('##BCH Maximum Daily Transactions:', max_daily_transactions_BCH)
 
 st.write('energyUsageYearlyTwH_BTC:', slider_energyUsageYearlyTwH_BTC)
+st.write('energyUsageYearlyTwH_BCH:', energyUsageYearlyTwH_BTC)
+
+st.write('Exahash to Kwh/year ratio:', exaHashToYearlyKwHRatio)
+
