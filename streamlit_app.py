@@ -94,6 +94,7 @@ energyUsageYearlyKwH_BTC = slider_energyUsageYearlyTwH_BTC * 1000000000
 exaHashToYearlyKwHRatio = energyUsageYearlyKwH_BTC / slider_exaHashes_BTC
 energyUsageYearlyKwH_BCH = slider_exaHashes_BCH * exaHashToYearlyKwHRatio
 energyUsageYearlyTwH_BCH = energyUsageYearlyKwH_BCH /  1000000000
+st.sidebar.write('BTC: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', energyUsageYearlyKwH_BTC)
 
 st.sidebar.write('BCH: Yearly energy usage of entire network in Terawatt(TwH) Hours :', energyUsageYearlyTwH_BCH)
 st.sidebar.write('BCH: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', energyUsageYearlyKwH_BCH)
@@ -129,3 +130,15 @@ st.write('BCH Price:', slider_PriceBCH)
 
 st.write('BTC Total Daily Block Rewards (USD):', totalDailyBlockRewards * slider_PriceBTC)
 st.write('BCH Total Daily Block Rewards (USD):', totalDailyBlockRewards * slider_PriceBCH)
+
+
+# * First lets discuss security budget costs
+# * Column 1: Per KwH Cost, .007 to .30
+# * Column 2: energyUsageYearlyKwH_BTC * Col1 , energyUsageYearlyKwH_BCH * Col1
+
+KwHCostList = [.5,.6,.7,.8]
+
+df = pd.DataFrame(KwHCostList)
+
+
+st.dataframe(df, use_container_width=True)
