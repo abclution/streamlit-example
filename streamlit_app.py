@@ -67,15 +67,15 @@ format_slider_Price = "%d"
 #### FORMATS #################################################################
 
 #### LABELS #################################################################
-label_BTC_TPS = "BTC Network, Maximum Transactions Per Second"
-label_BCH_TPS = "BCH Network, Maximum Transactions Per Second" 
+label_BTC_TPS = "BTC Network, Maximum Transactions Per Second (Default: 7)"
+label_BCH_TPS = "BCH Network, Maximum Transactions Per Second (Default: 224)" 
 
-label_energyUsageYearlyTwH_BTC = "BTC: Yearly energy usage of entire network in Terrawatt Hours, found here: https://ccaf.io/cbnsi/cbeci " 
+label_energyUsageYearlyTwH_BTC = "BTC: Yearly energy usage of entire network in Terrawatt Hours (Default: 145.02), found here: https://ccaf.io/cbnsi/cbeci " 
 
-label_exaHashes_BTC = "BTC: Current Exahashes (7 Day AVG)"
-label_exaHashes_BCH = "BCH: Current Exahashes (7 Day AVG)"
+label_exaHashes_BTC = "BTC: Current Exahashes (7 Day AVG) (Default: 402.2)"
+label_exaHashes_BCH = "BCH: Current Exahashes (7 Day AVG) (Default: 2.67)"
 
-label_priceBTC = "BTC: Current Price"
+label_priceBTC = "BTC: Current Price "
 label_priceBCH = "BCH: Current Price"
 
 #### LABELS #################################################################
@@ -99,6 +99,9 @@ slider_PriceBTC = st.sidebar.slider(label_priceBTC, 1.0, 100000.0, 26091.70, .1,
 slider_PriceBCH = st.sidebar.slider(label_priceBCH, 1.0, 100000.0, 190.02, .1, format_slider_Price)
 
 
+# st.selectbox(label, options, index=0, format_func=special_internal_function, key=None, help=None, on_change=None, args=None, kwargs=None, *, placeholder="Select...", disabled=False, label_visibility="visible")
+blockReward = st.selectbox('Choose block reward (Default: 6.25)', (50, 25, 12.5, 6.25, 3.125, 1.5625, .78125, .390625, .195325, .09765625, 0), 3)
+
 #### SIDEBAR #################################################################
 
 #### MAIN #################################################################
@@ -113,4 +116,5 @@ st.write('energyUsageYearlyTwH_BTC:', slider_energyUsageYearlyTwH_BTC)
 st.write('energyUsageYearlyTwH_BCH:', energyUsageYearlyTwH_BTC)
 
 st.write('Exahash to Kwh/year ratio:', exaHashToYearlyKwHRatio)
+# ! Derived from (energyUsageYearlyKwH_BTC / slider_exaHashes_BTC) * exaHashToYearlyKwHRatio
 
