@@ -63,7 +63,7 @@ seconds_per_day = 86400
 max_daily_transactions_BTC = seconds_per_day * slider_BTC_TPS
 max_daily_transactions_BCH = seconds_per_day * slider_BCH_TPS
 
-st.write('##BTC Maximum Daily Transactions:' max_daily_transactions_BTC)
+st.write('##BTC Maximum Daily Transactions:', max_daily_transactions_BTC)
 st.write('##BCH Maximum Daily Transactions:', max_daily_transactions_BCH)
 
 format_slider_energyUsageYearlyTwH = "%d"
