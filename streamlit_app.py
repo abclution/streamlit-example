@@ -216,8 +216,36 @@ What we see here is... once the price per KwH gets close the the cheapest availi
 - This means it will be neccesary for the remaining of the security budget to be covered by the transaction fees.
 
 Some exercises to do.
-- Adjust the block reward
+- Adjust the block reward up and down
+    - @ 25 Bitcoins (BTC) the block reward was enough to cover the energy costs up to about .235/Kwh.
+    - @ 50 Bitcoins (BTC) the block reward was enough to cover the energy costs up to about .45/Kwh.
 
 Lets break that down..
 
 '''
+
+col1, col2 = st.columns(3)
+
+with col1:
+   st.header("BTC")
+   data = {
+    "Electricity Cost (per KwH)": costPerKwH,
+    "Daily, BTC Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BTC)/365) - (totalDailyBlockRewards * slider_PriceBTC) for value in costPerKwH]   
+    }
+   df = pd.DataFrame(data)
+   st.line_chart(df,x = 'Electricity Cost (per KwH)')
+
+
+#    st.image("https://static.streamlit.io/examples/cat.jpg")
+
+with col2:
+   st.header("BCH")
+   data = {
+    "Electricity Cost (per KwH)": costPerKwH,
+    "Daily, BCH Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BCH)/365) - (totalDailyBlockRewards * slider_PriceBCH) for value in costPerKwH]
+    }
+   df = pd.DataFrame(data)
+   st.line_chart(df,x = 'Electricity Cost (per KwH)')
+  
+  
+#    st.image("https://static.streamlit.io/examples/dog.jpg")
