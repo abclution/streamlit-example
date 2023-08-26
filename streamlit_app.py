@@ -219,8 +219,8 @@ costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - s
 # Create a dictionary to hold the data
 data = {
     "Electricity Cost (per KwH)": costPerKwH,
-    "Yearly, BCH Security Budget": [value * energyUsageYearlyKwH_BCH for value in costPerKwH],
-    "Yearly, BTC Security Budget": [value * energyUsageYearlyKwH_BTC for value in costPerKwH]
+    "Yearly, BTC Security Budget": [value * energyUsageYearlyKwH_BTC for value in costPerKwH],
+    "Yearly, BCH Security Budget": [value * energyUsageYearlyKwH_BCH for value in costPerKwH]
 
 }
 
@@ -229,9 +229,10 @@ df = pd.DataFrame(data)
 st.line_chart(
     df,
     x='Electricity Cost (per KwH)',
-    y=['Yearly, BCH Security Budget','Yearly, BTC Security Budget'],
     color=[colorBTC, colorBCH]
     )
 
+
+#    y=['Yearly, BCH Security Budget','Yearly, BTC Security Budget'],
 
 #    y=['Yearly, BTC Security Budget','Yearly, BCH Security Budget'],
