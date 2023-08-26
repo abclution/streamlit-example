@@ -128,14 +128,14 @@ with col1:
 with col2:
     st.header("BTC")
     # st.write('<font size="+5">', str(round(energyUsageYearlyKwH_BTC)),'</font>', unsafe_allow_html=True)
-    st.write('<font size="+5">', str(round(slider_energyUsageYearlyTwH_BTC)),'</font>', unsafe_allow_html=True)
+    st.write('<font size="+5">', str(round(slider_energyUsageYearlyTwH_BTC)),'</font>','</br> Terawatt Hours (TwH), Yearly', unsafe_allow_html=True)
     ''' BTC Info here'''
 
 
 with col3:
     st.header("BCH")
     # st.write('<font size="+5">', str(round(energyUsageYearlyKwH_BCH)),'</font>', unsafe_allow_html=True)
-    st.write('<font size="+5">', str(round(energyUsageYearlyTwH_BCH)),'</font>', unsafe_allow_html=True)
+    st.write('<font size="+5">', str(round(energyUsageYearlyTwH_BCH)),'</font>','</br> Terawatt Hours (TwH), Yearly', unsafe_allow_html=True)
     '''BCH Info Here'''
 
 
