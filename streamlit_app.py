@@ -226,10 +226,15 @@ data = {
 
 df = pd.DataFrame(data)
 
+
+colorBTC = "#F2A900"
+colorBCH = "#0AC18E"
+
+
 st.line_chart(
     df,
     x='Electricity Cost (per KwH)',
-    color=['#0AC18E','#F2A900']
+    color=[colorBCH, colorBTC]
 
     )
 
