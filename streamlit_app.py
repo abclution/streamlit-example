@@ -83,7 +83,10 @@ label_priceBCH = "BCH: Current Price"
 
 #### SIDEBAR #################################################################
 slider_BTC_TPS = st.sidebar.slider(label_BTC_TPS, 1, 7, 7, 1, format_slider_TPS)
-'Current TPS', slider_BTC_TPS
+
+st.sidebar.write('Current TPS', <h2>str(slider_BTC_TPS)</h2>)
+
+
 slider_BCH_TPS = st.sidebar.slider(label_BCH_TPS, 1, 10000, 224, 1, format_slider_TPS)
 
 slider_exaHashes_BTC = st.sidebar.slider(label_exaHashes_BTC, 1.0, 1000.0, 402.2, .1, format_slider_exaHashes)
@@ -225,7 +228,7 @@ Some exercises to do.
 Lets break that down..
 
 '''
-
+st.divider()
 col1, col2 = st.columns(2)
 
 with col1:
