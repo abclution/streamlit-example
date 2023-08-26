@@ -5,20 +5,11 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 
-
 st.set_page_config(layout="wide")
 """
-# Welcome to Streamlit!
-
-Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:
-
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
-
-In the meantime, below is an example of what you can do with just a few lines of code:
-
-farts
+Just farting around 
 """
+
 colorBTC = "#F2A900"
 colorBCH = "#0AC18E"
 seconds_per_day = 86400
@@ -27,22 +18,11 @@ seconds_per_day = 86400
 # ! Formatter for int/float supports: %d %e %f %g %i Formatter for date/time/datetime uses Moment.js notation: https://momentjs.com/docs/#/displaying/format/
 
 
-#### FORMATS #################################################################
-
-
 format_slider_Price = "%d"
-
-#### FORMATS #################################################################
-
-#### LABELS #################################################################
-
 
 label_priceBTC = "BTC: Current Price "
 label_priceBCH = "BCH: Current Price"
 
-#### LABELS #################################################################
-
-#### SIDEBAR #################################################################
 
 
 
@@ -78,7 +58,7 @@ slider_exaHashes_BCH = st.sidebar.slider(label_exaHashes_BCH,
 
 #### BTC ENERGY USAGE SLIDER  #################################################
 format_slider_energyUsageYearlyTwH = "%d"
-label_energyUsageYearlyTwH_BTC = "BTC: Yearly energy usage of entire network in Terrawatt Hours (Default: 145.02), found here: https://ccaf.io/cbnsi/cbeci " 
+label_energyUsageYearlyTwH_BTC = "BTC: Yearly energy usage of entire network in Terrawatt Hours (Default: 145.02), found here: https://ccaf.io/cbnsi/cbeci"
 slider_energyUsageYearlyTwH_BTC = st.sidebar.slider(label_energyUsageYearlyTwH_BTC,
                                                     1.0, 1000.0, 145.02, .1,
                                                     format_slider_energyUsageYearlyTwH)
@@ -86,11 +66,21 @@ slider_energyUsageYearlyTwH_BTC = st.sidebar.slider(label_energyUsageYearlyTwH_B
 #### BCH ENERGY USAGE SLIDER  #################################################
 # ! No slider for BCH as its energy usage is derived from BTC energy usage per exahash.
 
+# Convert BTC Yearly TwH to KwH, this is because most other calculations are
+# done based on the cost of each KwH.
 energyUsageYearlyKwH_BTC = slider_energyUsageYearlyTwH_BTC * 1000000000
 
+# Get an energy usage ratio by getting the BTC hashrate and its yearly KwH
 exaHashToYearlyKwHRatio = energyUsageYearlyKwH_BTC / slider_exaHashes_BTC
+
+# Multiply the BCH exahashes by the energy usage ratio, this assumes equivalent
+# efficiency between the chains equipment. This is a fair comparison.
 energyUsageYearlyKwH_BCH = slider_exaHashes_BCH * exaHashToYearlyKwHRatio
-energyUsageYearlyTwH_BCH = energyUsageYearlyKwH_BCH /  1000000000
+
+# Get BCH yearly TwH used
+energyUsageYearlyTwH_BCH = energyUsageYearlyKwH_BCH / 1000000000
+
+
 st.sidebar.write('BTC: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', energyUsageYearlyKwH_BTC)
 
 st.sidebar.write('BCH: Yearly energy usage of entire network in Terawatt(TwH) Hours :', energyUsageYearlyTwH_BCH)
@@ -190,12 +180,12 @@ chart_data = pd.DataFrame(
 
 chart_data
 
-st.line_chart(
-    chart_data,
-    x = 'col1',
-    y = ['col2', 'col3'],
-    color = ['#FF0000', '#0000FF']  # Optional
-)
+# st.line_chart(
+#     chart_data,
+#     x = 'col1',
+#     y = ['col2', 'col3'],
+#     color = ['#FF0000', '#0000FF']  # Optional
+# )
 
 # st.line_chart(
 #     df,
