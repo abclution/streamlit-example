@@ -122,7 +122,6 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.header("BTC")
-    # st.write('<font size="+5">', str(round(energyUsageYearlyKwH_BTC)),'</font>', unsafe_allow_html=True)
 
     st.write('<font size="+5">', str(round(slider_BTC_TPS)),'</font>','</br> Max. TPS (Transactions per Second)', unsafe_allow_html=True)
     st.write('<font size="+5">', str(round(max_daily_transactions_BTC)),'</font>','</br> Max. Daily Transactions (Full Blocks)', unsafe_allow_html=True)
@@ -137,15 +136,11 @@ with col1:
 
     st.write('<font size="+5">', '$', str(round(totalDailyBlockRewards * slider_PriceBTC)),'</font>','</br> Total Daily Block Reward (if sold to USD)', unsafe_allow_html=True)
 
-
-
-    # st.write('<font size="+5">', str(round(slider_energyUsageYearlyTwH_BTC)),'</font>','</br> Energy Usage (TwH/Yearly)', unsafe_allow_html=True)
     ''' BTC Info here'''
 
 
 with col2:
     st.header("BCH")
-    # st.write('<font size="+5">', str(round(energyUsageYearlyKwH_BCH)),'</font>', unsafe_allow_html=True)
 
     st.write('<font size="+5">', str(round(slider_BCH_TPS)),'</font>','</br> Max. TPS (Transactions per Second)', unsafe_allow_html=True)
     st.write('<font size="+5">', str(round(max_daily_transactions_BCH)),'</font>','</br> Max. Daily Transactions (Full Blocks)', unsafe_allow_html=True)
@@ -160,77 +155,17 @@ with col2:
 
     st.write('<font size="+5">', '$', str(round(totalDailyBlockRewards * slider_PriceBCH)),'</font>','</br> Total Daily Block Reward (if sold to USD)', unsafe_allow_html=True)
 
-    
-    # st.write('<font size="+5">', str(round(energyUsageYearlyTwH_BCH)),'</font>','</br> Energy Usage (TwH/Yearly)', unsafe_allow_html=True)
     '''BCH Info Here'''
-
-
-
-# Max. TPS (Transactions per Second)
-# Max. Daily Transactions (Full Blocks)
-
-# Hashrate (in Exahashes/s)
-# Energy Usage (TwH/Yearly)
-
-# Price (in USD)
-
-# Block Reward (in Bitcoins, BTC)
-# Block Reward (if sold to USD)
-
-
-
-
-#st.sidebar.write('Current TPS', '<h2>', str(slider_BTC_TPS), '</h2>', unsafe_allow_html=True)
-
-
-#st.write('BTC: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', energyUsageYearlyKwH_BTC)
-#
-#st.write('BCH: Yearly energy usage of entire network in Terawatt(TwH) Hours :', energyUsageYearlyTwH_BCH)
-#st.write('BCH: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', energyUsageYearlyKwH_BCH)
-
-
-
 
 
 ################################
 
-
-
-
-st.write('##BTC Maximum Daily Transactions:', max_daily_transactions_BTC)
-st.write('##BCH Maximum Daily Transactions:', max_daily_transactions_BCH)
-
-st.write('energyUsageYearlyTwH_BTC:', slider_energyUsageYearlyTwH_BTC)
-st.write('energyUsageYearlyTwH_BCH:', energyUsageYearlyTwH_BCH)
-
-st.write('Exahash to Kwh/year ratio:', exaHashToYearlyKwHRatio)
 # ! Derived from (energyUsageYearlyKwH_BTC / slider_exaHashes_BTC) * exaHashToYearlyKwHRatio
-
-st.write('BTC Price:', slider_PriceBTC)
-st.write('BCH Price:', slider_PriceBCH)
-
-st.write('BTC Total Daily Block Rewards (USD):', totalDailyBlockRewards * slider_PriceBTC)
-st.write('BCH Total Daily Block Rewards (USD):', totalDailyBlockRewards * slider_PriceBCH)
 
 
 # * First lets discuss security budget costs
 # * Column 1: Per KwH Cost, .007 to .30
 # * Column 2: energyUsageYearlyKwH_BTC * Col1 , energyUsageYearlyKwH_BCH * Col1
-
-KwHCostList = [.5,.6,.7,.8]
-
-df = pd.DataFrame(KwHCostList)
-
-
-st.dataframe(df, use_container_width=True)
-
-df = pd.DataFrame(
-    [
-        {"command": "st.selectbox", "rating": 4, "is_widget": True},
-        {"command": "st.balloons", "rating": 5, "is_widget": False},
-        {"command": "st.time_input", "rating": 3, "is_widget": True},
-    ]
-)
 
 # Define the range of values
 start_value = 0.007
@@ -240,9 +175,6 @@ step = 0.001
 
 # Define the variable for energy usage
 #energyUsageYearlyKwH = 1000  # Example value, replace with your actual value
-
-
-
 
 # Create a list of values for column 1
 costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - start_value) / step) + 1)]
