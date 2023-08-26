@@ -123,6 +123,11 @@ with col1:
     st.header("BTC")
 
     st.write('<font size="+5">', str(round(slider_BTC_TPS)),'</font>','</br> Max. TPS (Transactions per Second)', unsafe_allow_html=True)
+    slider_BTC_TPS = st.slider(label_BTC_TPS,
+                                   1, 7, 7, 1,
+                                   format_slider_TPS)
+
+
     st.write('<font size="+5">', str(round(max_daily_transactions_BTC)),'</font>','</br> Max. Daily Transactions (Full Blocks)', unsafe_allow_html=True)
 
     st.write('<font size="+5">', str(round(slider_exaHashes_BTC)),'</font>','</br> Hashrate (in Exahashes/s))', unsafe_allow_html=True)
