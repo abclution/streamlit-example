@@ -38,8 +38,10 @@ max_daily_transactions_BCH = (seconds_per_day * slider_BCH_TPS)
 ###############################################################################
 st.sidebar.divider()
 ###############################################################################
-st.sidebar.write('<font size="+5">Hashrate','</font>', '</br>', '(Current Exahashes (7 Day AVG))', unsafe_allow_html=True)
+
+
 ###############################################################################
+st.sidebar.write('<font size="+5">Hashrate','</font>', '</br>', '(Current hashrate in exa-hashes, 7 Day AVG.)', unsafe_allow_html=True)
 ###############################################################################
 #### BTC HASHRATE SLIDER  #####################################################
 format_slider_exaHashes = "%d"
@@ -58,9 +60,13 @@ slider_exaHashes_BCH = st.sidebar.slider(label_exaHashes_BCH,
 st.sidebar.divider()
 ###############################################################################
 
+
+###############################################################################
+st.sidebar.write('<font size="+5">Energy Usage in TwH','</font>', '</br>', '(Yearly energy usage of entire network in Terrawatt Hours, found here, https://ccaf.io/cbnsi/cbeci )', unsafe_allow_html=True)
+###############################################################################
 #### BTC ENERGY USAGE SLIDER  #################################################
 format_slider_energyUsageYearlyTwH = "%d"
-label_energyUsageYearlyTwH_BTC = ":orange[BTC]: Yearly energy usage of entire network in Terrawatt Hours (Default: 145.02), found here: https://ccaf.io/cbnsi/cbeci"
+label_energyUsageYearlyTwH_BTC = ":orange[BTC Network] *(Default: 145.02)*"
 slider_energyUsageYearlyTwH_BTC = st.sidebar.slider(label_energyUsageYearlyTwH_BTC,
                                                     1.0, 1000.0, 145.02, .1,
                                                     format_slider_energyUsageYearlyTwH)
