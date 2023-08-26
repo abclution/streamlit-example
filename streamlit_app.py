@@ -33,9 +33,9 @@ slider_BCH_TPS = st.sidebar.slider(label_BCH_TPS,
                                    format_slider_TPS)
 
 max_daily_transactions_BCH = (seconds_per_day * slider_BCH_TPS)
-#####################################################
+###############################################################################
 st.sidebar.divider()
-#####################################################
+###############################################################################
 #### BTC HASHRATE SLIDER  #####################################################
 format_slider_exaHashes = "%d"
 label_exaHashes_BTC = "BTC: Current Exahashes (7 Day AVG) (Default: 402.2)"
@@ -49,6 +49,9 @@ label_exaHashes_BCH = "BCH: Current Exahashes (7 Day AVG) (Default: 2.67)"
 slider_exaHashes_BCH = st.sidebar.slider(label_exaHashes_BCH,
                                          1.0, 1000.0, 2.67, .1,
                                          format_slider_exaHashes)
+###############################################################################
+st.sidebar.divider()
+###############################################################################
 
 #### BTC ENERGY USAGE SLIDER  #################################################
 format_slider_energyUsageYearlyTwH = "%d"
@@ -84,6 +87,9 @@ st.sidebar.write('KwH Yearly',
                  str(round(energyUsageYearlyTwH_BCH)),
                  '</h3>',
                  unsafe_allow_html=True)
+###############################################################################
+st.sidebar.divider()
+###############################################################################
 
 #### BTC PRICING SLIDER  ######################################################
 format_slider_Price = "%d"
@@ -101,6 +107,9 @@ slider_PriceBCH = st.sidebar.slider(label_priceBCH,
                                     1.0, 100000.0, 190.02, .1,
                                     format_slider_Price)
 
+###############################################################################
+st.sidebar.divider()
+###############################################################################
 
 #### BLOCK REWARD SELECTOR (BOTH)  ############################################
 
