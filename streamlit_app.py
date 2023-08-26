@@ -128,7 +128,7 @@ with col1:
 
 with col2:
     st.header("BTC")
-    st.write('<h3>', str(round(energyUsageYearlyKwH_BTC)),'</h3>', unsafe_allow_html=True)
+    st.write('<font size="+8">', str(round(energyUsageYearlyKwH_BTC)),'</font>', unsafe_allow_html=True)
     st.write('<h3>', str(round(slider_energyUsageYearlyTwH_BTC)),'</h3>', unsafe_allow_html=True)
     ''' BTC Info here'''
 
