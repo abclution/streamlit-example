@@ -202,19 +202,9 @@ with tab2:
 ###############################################################################
 st.divider()
 ###############################################################################
-chart_data = pd.DataFrame(
-    np.random.randn(20, 3),
-    columns = ['col1', 'col2', 'col3'])
 
-st.line_chart(
-    chart_data,
-    x = 'col1',
-    y = ['col2', 'col3'],
-    color = ['#FF0000', '#0000FF']  # Optional
-)
-
-energyUsageYearlyKwH_BTC = 23542345234563546
-energyUsageYearlyKwH_BCH = 237645675673543
+energyUsageYearlyKwH_BTC = 1000000
+energyUsageYearlyKwH_BCH = 34567
 # Define the range of values
 start_value = 0.007
 end_value = 0.35
