@@ -241,10 +241,9 @@ st.divider()  # DAILY - SECURITY BUDGET CHART AND TABLE
 # * 
 
 data = {
-    "Electricity Cost per KwH" costPerKwH,
+    "Electricity Cost per KwH": costPerKwH,
     "BTC, Daily Security Budget": [(value * energyUsageYearlyKwH_BTC)/365 for value in costPerKwH],
     "BCH, Daily Security Budget": [(value * energyUsageYearlyKwH_BCH)/365 for value in costPerKwH]
-    
 }
 df = pd.DataFrame(data)
 
