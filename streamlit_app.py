@@ -170,18 +170,18 @@ step = 0.001
 #energyUsageYearlyKwH = 1000  # Example value, replace with your actual value
 
 
-##############################################################
-chart_data = pd.DataFrame(
-    np.random.randn(20, 3),
-    columns = ['col1', 'col2', 'col3'])
+# ##############################################################
+# chart_data = pd.DataFrame(
+#     np.random.randn(20, 3),
+#     columns = ['col1', 'col2', 'col3'])
 
-st.line_chart(
-    chart_data,
-    x = 'col1',
-    y = ['col2', 'col3'],
-    color = ['#FF0000', '#0000FF']  # Optional
-)
-##############################################################
+# st.line_chart(
+#     chart_data,
+#     x = 'col1',
+#     y = ['col2', 'col3'],
+#     color = ['#FF0000', '#0000FF']  # Optional
+# )
+# ##############################################################
 
 
 
@@ -210,7 +210,7 @@ st.line_chart(
     df,
     x = 'Electricity Cost (per KwH)',
     y = ['Yearly BTC Security Budget','Yearly BCH Security Budget'],
-    color = ["#F2A900", "#0AC18E"])
+    color = ("#F2A900", "#0AC18E"))
 
 # ! This is a simple, linear chart.
 
