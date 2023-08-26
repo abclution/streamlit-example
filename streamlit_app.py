@@ -167,6 +167,22 @@ step = 0.001
 # Define the variable for energy usage
 #energyUsageYearlyKwH = 1000  # Example value, replace with your actual value
 
+
+##############################################################
+chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns = ['col1', 'col2', 'col3'])
+
+st.line_chart(
+    chart_data,
+    x = 'col1',
+    y = ['col2', 'col3'],
+    color = ['#FF0000', '#0000FF']  # Optional
+)
+##############################################################
+
+
+
 # Create a list of values for column 1
 costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - start_value) / step) + 1)]
 
@@ -180,7 +196,11 @@ data = {
 
 # st.dataframe(df, use_container_width=True)
 #st.line_chart(data=None, *, x=None, y=None, color=None, width=0, height=0, use_container_width=True)
+#######################################################3
 
+
+
+###############################################
 df = pd.DataFrame(data)
 # st.line_chart(df, x = 'Electricity Cost (per KwH)', y = ['Yearly BTC Security Budget','Yearly BCH Security Budget'], color = [colorBTC, colorBCH])
 
@@ -188,7 +208,7 @@ st.line_chart(
     df,
     x = 'Electricity Cost (per KwH)',
     y = ['Yearly BTC Security Budget','Yearly BCH Security Budget'],
-    color = ['#F2A900', '#0AC18E'])
+    color = ["#F2A900", "#0AC18E"])
 
 # ! This is a simple, linear chart.
 
