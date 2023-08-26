@@ -181,7 +181,7 @@ with col2:
 
 
 ###############################################################################
-st.divider()
+st.divider()  # YEARLY - SECURITY BUDGET CHART AND TABLE
 ###############################################################################
 
 # * First lets discuss security budget costs
@@ -216,13 +216,10 @@ with tab1:
         color=[colorBCH, colorBTC]
         )
 
-
-#    st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
-
 with tab2:
     st.header("Data")
     df
-''' A simple linear chart showing the effects of electricity price and hashrate interaction. 
+''' A simple linear chart showing the effects of electricity price and hashrate interaction (Yearly Scale). 
 The very simple formula for determining the cost of the security budget is as follows:
  - Determine the KwH/year used by each network.
  - Multiply the KwH/year * cost per KwH.
@@ -236,44 +233,75 @@ Suggested exercises include:
 
 
 ###############################################################################
-st.divider()
+st.divider()  # DAILY - SECURITY BUDGET CHART AND TABLE
 ###############################################################################
-
-
-
-# st.line_chart(
-#     chart_data,
-#     x = 'col1',
-#     y = ['col2', 'col3'],
-#     color = ['#FF0000', '#0000FF']  # Optional
-# )
-
-# st.line_chart(
-#     df,
-#     x = 'Electricity Cost (per KwH)',
-#     y = ['Yearly, BTC Security Budget','Yearly, BCH Security Budget'],
-#     color = ['#FF0000'])
-
-
-    # ['#F2A900', '#0AC18E']
-
-
 # # ! This is a simple, linear chart.
-
-
 # * Next lets see what the costs look like by day.
 # * Same as above but divided by 365
 # * 
 
 data = {
-    "Electricity Cost (per KwH)": costPerKwH,
-    "Daily, BTC Security Budget": [(value * energyUsageYearlyKwH_BTC)/365 for value in costPerKwH],
-    "Daily, BCH Security Budget": [(value * energyUsageYearlyKwH_BCH)/365 for value in costPerKwH]
+    "Electricity Cost per KwH" costPerKwH,
+    "BTC, Daily Security Budget": [(value * energyUsageYearlyKwH_BTC)/365 for value in costPerKwH],
+    "BCH, Daily Security Budget": [(value * energyUsageYearlyKwH_BCH)/365 for value in costPerKwH]
     
 }
 df = pd.DataFrame(data)
-st.line_chart(df,x = 'Electricity Cost (per KwH)')
+
+st.line_chart(df = 'Electricity Cost (per KwH)')
 # ! Again, this is a simple, linear chart. Just scaled to daily.
+
+tab1, tab2 = st.tabs(["Daily Security Budget Costs (aka Electric Bill) - Chart", "Daily Security Budget Costs (aka Electric Bill)  - Data"])
+
+with tab1:
+    st.header("Yearly Cost of Electricity (Security Budget) for (Given Hashrate X Cost per KwH) Chart")
+    st.line_chart(
+        df,
+        x='Electricity Cost per KwH',
+        y=['BTC, Daily Security Budget','BCH, Daily Security Budget'],
+        color=[colorBCH, colorBTC]
+        )
+
+with tab2:
+    st.header("Data")
+    df
+
+
+''' A simple linear chart showing the effects of electricity price and hashrate interaction. 
+The very simple formula for determining the cost of the security budget is as follows:
+ - Determine the KwH/year used by each network.
+ - Multiply the KwH/year * cost per KwH.
+ - Make chart.
+
+Suggested exercises include:
+ - Adjust both the BTC + BCH hashrate to verify they match, as they are both calculated with identical efficiency.
+ - Adjust the BTC "Energy usage in TwH" to get an idea of how the cost of the security budget/electricity bill scales.'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###############################################################################
+st.divider()
+###############################################################################
+
+
+
+
+
+
+
 
 
 
