@@ -119,6 +119,9 @@ totalDailyBlockRewards = ((6*24) * blockReward)
 
 col1, col2, col3 = st.columns(3)
 
+col1.write('Direct method col 1')
+col2.write('Direct method col 2')
+col3.write('Direct method col 3')
 
 with col1:
     st.header("Setting")
@@ -139,6 +142,10 @@ with col3:
     st.write('<h3>', str(round(energyUsageYearlyTwH_BCH)),'</h3>', unsafe_allow_html=True)
     '''BCH Info Here'''
 
+
+col1.write('End Direct method col 1')
+col2.write('End Direct method col 2')
+col3.write('End Direct method col 3')
 
 
 
