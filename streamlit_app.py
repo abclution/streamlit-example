@@ -117,26 +117,52 @@ totalDailyBlockRewards = ((6*24) * blockReward)
 
 #### MAIN START  #############################################################
 
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
+
 
 with col1:
-    st.header("Setting")
-    # st.write('Kilowatt Hours (KwH), Yearly:')
-    st.write('Terawatt Hours (TwH), Yearly:')
-
-
-with col2:
     st.header("BTC")
     # st.write('<font size="+5">', str(round(energyUsageYearlyKwH_BTC)),'</font>', unsafe_allow_html=True)
-    st.write('<font size="+5">', str(round(slider_energyUsageYearlyTwH_BTC)),'</font>','</br> Terawatt Hours (TwH), Yearly', unsafe_allow_html=True)
+
+    st.write('<font size="+5">', str(round(slider_BTC_TPS)),'</font>','</br> Max. TPS (Transactions per Second)', unsafe_allow_html=True)
+    st.write('<font size="+5">', str(round(max_daily_transactions_BTC)),'</font>','</br> Max. Daily Transactions (Full Blocks)', unsafe_allow_html=True)
+
+    st.write('<font size="+5">', str(round(slider_exaHashes_BTC)),'</font>','</br> Hashrate (in Exahashes/s))', unsafe_allow_html=True)
+    st.write('<font size="+5">', str(round(slider_energyUsageYearlyTwH_BTC)),'</font>','</br> Energy Usage (TwH/Yearly)', unsafe_allow_html=True)
+
+    st.write('<font size="+5">', str(round(slider_PriceBTC)),'</font>','</br> Price (in USD)', unsafe_allow_html=True)
+
+    st.write('<font size="+5">', str(round(blockReward)),'</font>','</br> Block Reward (in Bitcoins, BTC)', unsafe_allow_html=True)
+    st.write('<font size="+5">', str(round(totalDailyBlockRewards)),'</font>','</br> Total Daily Block Reward (in Bitcoins, BTC)', unsafe_allow_html=True)
+
+    st.write('<font size="+5">', str(round(totalDailyBlockRewards * slider_PriceBTC)),'</font>','</br> Total Daily Block Reward (if sold to USD)', unsafe_allow_html=True)
+
+
+
+    # st.write('<font size="+5">', str(round(slider_energyUsageYearlyTwH_BTC)),'</font>','</br> Energy Usage (TwH/Yearly)', unsafe_allow_html=True)
     ''' BTC Info here'''
 
 
-with col3:
+with col2:
     st.header("BCH")
     # st.write('<font size="+5">', str(round(energyUsageYearlyKwH_BCH)),'</font>', unsafe_allow_html=True)
-    st.write('<font size="+5">', str(round(energyUsageYearlyTwH_BCH)),'</font>','</br> Terawatt Hours (TwH), Yearly', unsafe_allow_html=True)
+    
+    
+    # st.write('<font size="+5">', str(round(energyUsageYearlyTwH_BCH)),'</font>','</br> Energy Usage (TwH/Yearly)', unsafe_allow_html=True)
     '''BCH Info Here'''
+
+
+
+# Max. TPS (Transactions per Second)
+# Max. Daily Transactions (Full Blocks)
+
+# Hashrate (in Exahashes/s)
+# Energy Usage (TwH/Yearly)
+
+# Price (in USD)
+
+# Block Reward (in Bitcoins, BTC)
+# Block Reward (if sold to USD)
 
 
 
