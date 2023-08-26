@@ -196,6 +196,11 @@ df = pd.DataFrame(data)
 
 df
 
+chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns = ['col1', 'col2', 'col3'])
+
+chart_data
 # st.line_chart(
 #     df,
 #     x = 'Electricity Cost (per KwH)',
