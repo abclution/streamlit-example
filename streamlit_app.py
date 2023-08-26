@@ -24,6 +24,7 @@ slider_BTC_TPS = st.sidebar.slider(label_BTC_TPS,
                                    format_slider_TPS)
 
 st.sidebar.write('Current TPS', '<h2>', str(slider_BTC_TPS), '</h2>', unsafe_allow_html=True)
+max_daily_transactions_BTC = (seconds_per_day * slider_BTC_TPS)
 
 #### BCH TPS SLIDER  ##########################################################
 format_slider_TPS = "%d"
@@ -31,6 +32,8 @@ label_BCH_TPS = "BCH Network, Maximum Transactions Per Second (Default: 224)"
 slider_BCH_TPS = st.sidebar.slider(label_BCH_TPS,
                                    1, 10000, 224, 1,
                                    format_slider_TPS)
+
+max_daily_transactions_BCH = (seconds_per_day * slider_BCH_TPS)
 
 #### BTC HASHRATE SLIDER  #####################################################
 format_slider_exaHashes = "%d"
@@ -81,11 +84,41 @@ st.sidebar.write('KwH Yearly',
                  '</h3>',
                  unsafe_allow_html=True)
 
+#### BTC PRICING SLIDER  ######################################################
+format_slider_Price = "%d"
+label_priceBTC = "BTC: Current Price"
+
+slider_PriceBTC = st.sidebar.slider(label_priceBTC,
+                                    1.0, 100000.0, 26091.70, .1,
+                                    format_slider_Price)
+
+#### BCH PRICING SLIDER  ######################################################
+format_slider_Price = "%d"
+label_priceBCH = "BCH: Current Price"
+
+slider_PriceBCH = st.sidebar.slider(label_priceBCH,
+                                    1.0, 100000.0, 190.02, .1,
+                                    format_slider_Price)
+
+
+#### BLOCK REWARD SELECTOR (BOTH)  ############################################
+
+blockReward = st.sidebar.selectbox('Choose block reward (Default: 6.25)',
+                                   (50, 25, 12.5, 6.25, 3.125, 1.5625,
+                                    .78125, .390625, .195325, .09765625, 0),
+                                    3)
+
+# (6 blocks per hour * 24 hours) * (block reward)
+totalDailyBlockRewards = ((6*24) * blockReward)
 
 
 
 
+###############################################################################
 
+
+
+#### MAIN START  #############################################################
 
 st.write('BTC: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', energyUsageYearlyKwH_BTC)
 
@@ -94,30 +127,17 @@ st.write('BCH: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', 
 
 
 
-format_slider_Price = "%d"
-
-label_priceBTC = "BTC: Current Price "
-label_priceBCH = "BCH: Current Price"
 
 
 
 
-
-slider_PriceBTC = st.sidebar.slider(label_priceBTC, 1.0, 100000.0, 26091.70, .1, format_slider_Price)
-slider_PriceBCH = st.sidebar.slider(label_priceBCH, 1.0, 100000.0, 190.02, .1, format_slider_Price)
 
 
 # st.selectbox(label, options, index=0, format_func=special_internal_function, key=None, help=None, on_change=None, args=None, kwargs=None, *, placeholder="Select...", disabled=False, label_visibility="visible")
-blockReward = st.sidebar.selectbox('Choose block reward (Default: 6.25)', (50, 25, 12.5, 6.25, 3.125, 1.5625, .78125, .390625, .195325, .09765625, 0), 3)
-
-# (6 blocks per hour * 24 hours) * (block reward)
-totalDailyBlockRewards = (6*24) * blockReward
 
 #### SIDEBAR #################################################################
 
 #### MAIN #################################################################
-max_daily_transactions_BTC = seconds_per_day * slider_BTC_TPS
-max_daily_transactions_BCH = seconds_per_day * slider_BCH_TPS
 
 
 st.write('##BTC Maximum Daily Transactions:', max_daily_transactions_BTC)
