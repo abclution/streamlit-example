@@ -198,9 +198,9 @@ costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - s
 
 # Create a dictionary to hold the data
 data = {
-    "Electricity Cost (per KwH)": costPerKwH,
-    "Yearly, BTC Security Budget": [value * energyUsageYearlyKwH_BTC for value in costPerKwH],
-    "Yearly, BCH Security Budget": [value * energyUsageYearlyKwH_BCH for value in costPerKwH]
+    "Electricity Cost per KwH": costPerKwH,
+    "BTC, Yearly Security Budget": [value * energyUsageYearlyKwH_BTC for value in costPerKwH],
+    "BCH, Yearly Security Budget": [value * energyUsageYearlyKwH_BCH for value in costPerKwH]
 }
 
 df = pd.DataFrame(data)
@@ -208,11 +208,11 @@ df = pd.DataFrame(data)
 tab1, tab2 = st.tabs(["Yearly Security Budget Costs (aka Electric Bill) - Chart", "Yearly Security Budget Costs (aka Electric Bill)  - Data"])
 
 with tab1:
-    st.header("Yearly Cost of Electricity for Given Hashrate * Cost per KwH Chart")
+    st.header("Yearly Cost of Electricity (Security Budget) for (Given Hashrate X Cost per KwH) Chart")
     st.line_chart(
         df,
-        x='Electricity Cost (per KwH)',
-        y=['Yearly, BTC Security Budget','Yearly, BCH Security Budget'],
+        x='Electricity Cost per KwH',
+        y=['BTC, Yearly Security Budget','BCH, Yearly Security Budget'],
         color=[colorBCH, colorBTC]
         )
 
