@@ -94,9 +94,14 @@ st.sidebar.write("The energy usage of the BCH network is proportional based on i
 st.sidebar.divider()
 ###############################################################################
 
+
+
+###############################################################################
+st.sidebar.write('<font size="+5">Prices in USD','</font>', '</br>', '(Not yet updated dynamically )', unsafe_allow_html=True)
+###############################################################################
 #### BTC PRICING SLIDER  ######################################################
 format_slider_Price = "%d"
-label_priceBTC = ":orange[BTC] : Current Price"
+label_priceBTC = ":orange[BTC Network] *(Default: 26091.70)*"
 
 slider_PriceBTC = st.sidebar.slider(label_priceBTC,
                                     1.0, 100000.0, 26091.70, .1,
@@ -104,7 +109,7 @@ slider_PriceBTC = st.sidebar.slider(label_priceBTC,
 
 #### BCH PRICING SLIDER  ######################################################
 format_slider_Price = "%d"
-label_priceBCH = ":green[BCH] : Current Price"
+label_priceBCH = ":green[BCH Network] *(Default: 190.02)*"
 
 slider_PriceBCH = st.sidebar.slider(label_priceBCH,
                                     1.0, 100000.0, 190.02, .1,
@@ -114,6 +119,10 @@ slider_PriceBCH = st.sidebar.slider(label_priceBCH,
 st.sidebar.divider()
 ###############################################################################
 
+
+###############################################################################
+st.sidebar.write('<font size="+5">Block Reward','</font>', '</br>', '(Amount of Bitcoins awarded as prize for mining.)', unsafe_allow_html=True)
+###############################################################################
 #### BLOCK REWARD SELECTOR (BOTH)  ############################################
 
 blockReward = st.sidebar.selectbox('Choose block reward (Default: 6.25)',
