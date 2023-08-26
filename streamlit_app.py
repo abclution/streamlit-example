@@ -19,9 +19,9 @@ Just farting around
 #### BTC TPS SLIDER  ##########################################################
 format_slider_TPS = "%d"
 label_BTC_TPS = "BTC Network, Maximum Transactions Per Second (Default: 7)"
-slider_BTC_TPS = st.sidebar.slider(label_BTC_TPS,
-                                   1, 7, 7, 1,
-                                   format_slider_TPS)
+# slider_BTC_TPS = st.sidebar.slider(label_BTC_TPS,
+#                                    1, 7, 7, 1,
+#                                    format_slider_TPS)
 
 max_daily_transactions_BTC = (seconds_per_day * slider_BTC_TPS)
 
