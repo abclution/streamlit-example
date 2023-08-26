@@ -6,17 +6,15 @@ import streamlit as st
 import numpy as np
 
 st.set_page_config(layout="wide")
-"""
-Just farting around 
-"""
 
 colorBTC = "#F2A900"
 colorBCH = "#0AC18E"
 seconds_per_day = 86400
 
-# ! st.slider(label, min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
-# ! Formatter for int/float supports: %d %e %f %g %i Formatter for date/time/datetime uses Moment.js notation: https://momentjs.com/docs/#/displaying/format/
 
+"""
+Just farting around 
+"""
 
 #### BTC TPS SLIDER  ##########################################################
 format_slider_TPS = "%d"
@@ -71,6 +69,15 @@ energyUsageYearlyKwH_BCH = (slider_exaHashes_BCH * exaHashToYearlyKwHRatio)
 
 # Get BCH yearly TwH used
 energyUsageYearlyTwH_BCH = (energyUsageYearlyKwH_BCH / 1000000000)
+
+st.sidebar.write("The energy usage of the BCH network is based on its hashrate in comparison to BTC's energy usage and hashrate.")
+st.sidebar.write('KwH Yearly', '<h2>', str(energyUsageYearlyKwH_BCH), '</h2>', unsafe_allow_html=True)
+st.sidebar.write('TwH Yearly', '<h2>', str(energyUsageYearlyTwH_BCH), '</h2>', unsafe_allow_html=True)
+
+
+
+
+
 
 
 st.write('BTC: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', energyUsageYearlyKwH_BTC)
