@@ -88,16 +88,8 @@ energyUsageYearlyKwH_BCH = (slider_exaHashes_BCH * exaHashToYearlyKwHRatio)
 # Get BCH yearly TwH used
 energyUsageYearlyTwH_BCH = (energyUsageYearlyKwH_BCH / 1000000000)
 
-st.sidebar.write("The energy usage of the BCH network is based on its hashrate in comparison to BTC's energy usage and hashrate.")
-st.sidebar.write('KwH Yearly',
-                 '<h3>',
-                 str(round(energyUsageYearlyKwH_BCH)),
-                 '</h3>',
-                 'TwH Yearly',
-                 '<h3>',
-                 str(round(energyUsageYearlyTwH_BCH)),
-                 '</h3>',
-                 unsafe_allow_html=True)
+st.sidebar.write("The energy usage of the BCH network is proportional based on its hashrate in comparison to BTC's energy usage and hashrate.")
+
 ###############################################################################
 st.sidebar.divider()
 ###############################################################################
