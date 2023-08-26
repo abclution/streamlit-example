@@ -182,7 +182,7 @@ data = {
 #st.line_chart(data=None, *, x=None, y=None, color=None, width=0, height=0, use_container_width=True)
 
 df = pd.DataFrame(data)
-st.line_chart(df, x = 'Electricity Cost (per KwH)', color = [colorBTC, colorBCH])
+st.line_chart(df, x = 'Electricity Cost (per KwH)', y = ['Yearly BTC Security Budget','Yearly BCH Security Budget'], color = [colorBTC, colorBCH])
 # ! This is a simple, linear chart.
 
 colorBTC = "#F2A900"
