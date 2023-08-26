@@ -274,45 +274,31 @@ The very simple formula for determining the cost of the security budget is as fo
 
  Unfortunatly, due to the massive difference in scale, the BCH network looks quite flat. Lets split these charts up and drill down into the daily view.
  '''
-
-
-
-
-
-
-
-
-
-
-
-
-
 ###############################################################################
 st.divider()
 ###############################################################################
-
-
-
-
-
-
-
-
-
-
-
 
 
 # * Next lets discuss if block reward covers security budget costs
 # * Same as above but divided by 365
 # * 
 
+# data = {
+#     "Electricity Cost (per KwH)": costPerKwH,
+#     "Daily, BTC Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BTC)/365) - (totalDailyBlockRewards * slider_PriceBTC) for value in costPerKwH],
+#     "Daily, BCH Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BCH)/365) - (totalDailyBlockRewards * slider_PriceBCH) for value in costPerKwH]
+    
+# }
+
 data = {
     "Electricity Cost (per KwH)": costPerKwH,
-    "Daily, BTC Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BTC)/365) - (totalDailyBlockRewards * slider_PriceBTC) for value in costPerKwH],
-    "Daily, BCH Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BCH)/365) - (totalDailyBlockRewards * slider_PriceBCH) for value in costPerKwH]
+    "Daily, BTC Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BTC)/365) for value in costPerKwH],
+    "Daily, BTC Block Reward (USD)": [(totalDailyBlockRewards * slider_PriceBTC) for value in costPerKwH],
+    "Daily, BCH Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BCH)/365) for value in costPerKwH],
+    "Daily, BCH Block Reward (USD)": [(totalDailyBlockRewards * slider_PriceBCH) for value in costPerKwH]
     
 }
+
 df = pd.DataFrame(data)
 st.line_chart(df,x = 'Electricity Cost (per KwH)')
 
