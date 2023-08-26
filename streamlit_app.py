@@ -176,10 +176,10 @@ chart_data = pd.DataFrame(
     columns = ['col1', 'col2', 'col3'])
 
 st.line_chart(
-    chart_data,
+    data = chart_data,
     x = 'col1',
     y = ['col2', 'col3'],
-    ['#FF0000', '#0000FF']  # Optional
+    color = ['#FF0000', '#0000FF']  # Optional
 )
 # ##############################################################
 
