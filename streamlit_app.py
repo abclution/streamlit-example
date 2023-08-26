@@ -198,7 +198,7 @@ st.line_chart(
     data=df,
     x='Electricity Cost (per KwH)',
     y=None,
-    color=("#F2A900", "#0AC18E"))
+    ("#F2A900", "#0AC18E"))
 
 # # ! This is a simple, linear chart.
 
