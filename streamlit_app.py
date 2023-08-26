@@ -272,7 +272,7 @@ The very simple formula for determining the cost of the security budget is as fo
  - Divide by 365
  - Make chart.
 
- Unfortunatly, due to the massive difference in scale, the BCH network looks flat. Lets split these charts up.
+ Unfortunatly, due to the massive difference in scale, the BCH network looks quite flat. Lets split these charts up and drill down into the daily view.
  '''
 
 
