@@ -222,9 +222,11 @@ with tab1:
 with tab2:
     st.header("Data")
     df
-''' A simple linear chart showing the effects of electricity price and hashrate interaction. Some suggested excercises include:
+''' A simple linear chart showing the effects of electricity price and hashrate interaction. 
+
+Some suggested excercises include:
  - Adjust both the BTC + BCH hashrate to verify they match, as they are both calculated with identical efficiency.
- - Adjust the BTC Energy usage in TwH without adjusting the hashrate to get an idea of how '''
+ - Adjust the BTC "Energy usage in TwH" to get an idea of how the cost of the security budget/electricity bill scales.'''
 
 
 
