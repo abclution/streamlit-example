@@ -201,6 +201,14 @@ chart_data = pd.DataFrame(
     columns = ['col1', 'col2', 'col3'])
 
 chart_data
+
+st.line_chart(
+    chart_data,
+    x = 'col1',
+    y = ['col2', 'col3'],
+    color = ['#FF0000', '#0000FF']  # Optional
+)
+
 # st.line_chart(
 #     df,
 #     x = 'Electricity Cost (per KwH)',
