@@ -20,7 +20,7 @@ st.sidebar.write('<font size="+5">Max. TPS','</font>', '</br>', '(Transactions p
 ###############################################################################
 #### BTC TPS SLIDER  ##########################################################
 format_slider_TPS = "%d"
-label_BTC_TPS = ":orange[BTC Network], *Default: 7*"
+label_BTC_TPS = ":orange[BTC Network] *(Default: 7)*"
 slider_BTC_TPS = st.sidebar.slider(label_BTC_TPS,
                                    1, 7, 7, 1,
                                    format_slider_TPS)
@@ -29,7 +29,7 @@ max_daily_transactions_BTC = (seconds_per_day * slider_BTC_TPS)
 
 #### BCH TPS SLIDER  ##########################################################
 format_slider_TPS = "%d"
-label_BCH_TPS = ':green[BCH Network], *Default: 224*' 
+label_BCH_TPS = ':green[BCH Network] *(Default: 224)*' 
 slider_BCH_TPS = st.sidebar.slider(label_BCH_TPS,
                                    1, 10000, 224, 1,
                                    format_slider_TPS)
@@ -38,19 +38,19 @@ max_daily_transactions_BCH = (seconds_per_day * slider_BCH_TPS)
 ###############################################################################
 st.sidebar.divider()
 ###############################################################################
-
+st.sidebar.write('<font size="+5">Hashrate','</font>', '</br>', '(Current Exahashes (7 Day AVG))', unsafe_allow_html=True)
 ###############################################################################
 ###############################################################################
 #### BTC HASHRATE SLIDER  #####################################################
 format_slider_exaHashes = "%d"
-label_exaHashes_BTC = ":orange[BTC] : Current Exahashes (7 Day AVG) (Default: 402.2)"
+label_exaHashes_BTC = ":orange[BTC Network] *(Default: 402.2)*"
 slider_exaHashes_BTC = st.sidebar.slider(label_exaHashes_BTC,
                                          1.0, 1000.0, 402.2, .1,
                                          format_slider_exaHashes)
 
 #### BCH HASHRATE SLIDER  #####################################################
 format_slider_exaHashes = "%d"
-label_exaHashes_BCH = ":green[BCH] : Current Exahashes (7 Day AVG) (Default: 2.67)"
+label_exaHashes_BCH = ":green[BCH Network] *(Default: 2.67)*"
 slider_exaHashes_BCH = st.sidebar.slider(label_exaHashes_BCH,
                                          1.0, 1000.0, 2.67, .1,
                                          format_slider_exaHashes)
