@@ -140,8 +140,6 @@ totalDailyBlockRewards = ((6*24) * blockReward)
 #### MAIN START  #############################################################
 
 col1, col2 = st.columns(2)
-
-
 with col1:
     st.header("BTC")
     st.divider()
@@ -180,7 +178,10 @@ with col2:
     '''BCH Info Here'''
 
 
-################################
+
+st.divider()
+
+###############################################################################
 # * First lets discuss security budget costs
 # * Column 1: Per KwH Cost, .007 to .30
 # * Column 2: energyUsageYearlyKwH_BTC * Col1 , energyUsageYearlyKwH_BCH * Col1
