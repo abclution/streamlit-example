@@ -15,10 +15,11 @@ seconds_per_day = 86400
 """
 Just farting around 
 """
+st.write('<font size="+5">Max. TPS (Transactions per Second, Full Blocks)', '</font>', unsafe_allow_html=True)
 
 #### BTC TPS SLIDER  ##########################################################
 format_slider_TPS = "%d"
-label_BTC_TPS = "BTC Network, Maximum Transactions Per Second (Default: 7)"
+label_BTC_TPS = ":orange[BTC Network], *Default: 7*"
 slider_BTC_TPS = st.sidebar.slider(label_BTC_TPS,
                                    1, 7, 7, 1,
                                    format_slider_TPS)
@@ -27,7 +28,7 @@ max_daily_transactions_BTC = (seconds_per_day * slider_BTC_TPS)
 
 #### BCH TPS SLIDER  ##########################################################
 format_slider_TPS = "%d"
-label_BCH_TPS = ':green[BCH Network], Maximum Transactions Per Second *(Default: 224)*' 
+label_BCH_TPS = ':green[BCH Network], *Default: 224*' 
 slider_BCH_TPS = st.sidebar.slider(label_BCH_TPS,
                                    1, 10000, 224, 1,
                                    format_slider_TPS)
