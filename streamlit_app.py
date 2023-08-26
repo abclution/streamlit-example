@@ -122,26 +122,27 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.header("Setting")
-    st.write('Yearly energy usage in Kilowatt Hours (KwH):')
-    st.write('Yearly energy usage in Terawatt Hours (TwH):')
+    st.write('Kilowatt Hours (KwH), Yearly:')
+    st.write('Terawatt Hours (TwH), Yearly:')
 
 
 with col2:
     st.header("BTC")
-    st.write(energyUsageYearlyKwH_BTC)
-    st.write(slider_energyUsageYearlyTwH_BTC)
+    st.write('<h2>', str(round(energyUsageYearlyKwH_BTC)),'</h2>', unsafe_allow_html=True)
+    st.write('<h2>', str(round(slider_energyUsageYearlyTwH_BTC)),'</h2>', unsafe_allow_html=True)
     ''' BTC Info here'''
 
-#    st.image("https://static.streamlit.io/examples/cat.jpg")
 
 with col3:
     st.header("BCH")
-    st.write(energyUsageYearlyKwH_BCH)
-    st.write(energyUsageYearlyTwH_BCH)
+    st.write('<h2>', str(round(energyUsageYearlyKwH_BCH)),'</h2>', unsafe_allow_html=True)
+    st.write('<h2>', str(round(energyUsageYearlyTwH_BCH)),'</h2>', unsafe_allow_html=True)
     '''BCH Info Here'''
 
 
 
+
+#st.sidebar.write('Current TPS', '<h2>', str(slider_BTC_TPS), '</h2>', unsafe_allow_html=True)
 
 
 #st.write('BTC: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', energyUsageYearlyKwH_BTC)
