@@ -205,10 +205,10 @@ data = {
 
 df = pd.DataFrame(data)
 
-tab1, tab2 = st.tabs(["Security Budget Costs Chart", "Security Budget Costs Data"])
+tab1, tab2 = st.tabs(["Yearly Security Budget Costs (aka Electric Bill) - Chart", "Yearly Security Budget Costs (aka Electric Bill)  - Data"])
 
 with tab1:
-    st.header("Chart")
+    st.header("Yearly Cost of Electricity for Given Hashrate * Cost per KwH Chart")
     st.line_chart(
         df,
         x='Electricity Cost (per KwH)',
