@@ -181,30 +181,11 @@ with col2:
 ###############################################################################
 st.divider()
 ###############################################################################
-# * First lets discuss security budget costs
-# * Column 1: Per KwH Cost, .007 to .30
-# * Column 2: energyUsageYearlyKwH_BTC * Col1 , energyUsageYearlyKwH_BCH * Col1
-
-# Define the range of values
-start_value = 0.007
-end_value = 0.35
-step = 0.001
-
-# Create a list of values for column 1
-costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - start_value) / step) + 1)]
-
-# Create a dictionary to hold the data
-data = {
-    "Electricity Cost (per KwH)": costPerKwH,
-    "Yearly, BTC Security Budget": [value * energyUsageYearlyKwH_BTC for value in costPerKwH],
-    "Yearly, BCH Security Budget": [value * energyUsageYearlyKwH_BCH for value in costPerKwH]
-}
-
-df = pd.DataFrame(data)
 
 
 
-tab1, tab2, tab3 = st.tabs(["Security Budget Costs Chart", "Security Budget Costs Data"])
+
+tab1, tab2 = st.tabs(["Security Budget Costs Chart", "Security Budget Costs Data"])
 
 with tab1:
    st.header("Chart")

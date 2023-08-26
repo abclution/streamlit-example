@@ -1,4 +1,25 @@
 
+# * First lets discuss security budget costs
+# * Column 1: Per KwH Cost, .007 to .30
+# * Column 2: energyUsageYearlyKwH_BTC * Col1 , energyUsageYearlyKwH_BCH * Col1
+
+# Define the range of values
+start_value = 0.007
+end_value = 0.35
+step = 0.001
+
+# Create a list of values for column 1
+costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - start_value) / step) + 1)]
+
+# Create a dictionary to hold the data
+data = {
+    "Electricity Cost (per KwH)": costPerKwH,
+    "Yearly, BTC Security Budget": [value * energyUsageYearlyKwH_BTC for value in costPerKwH],
+    "Yearly, BCH Security Budget": [value * energyUsageYearlyKwH_BCH for value in costPerKwH]
+}
+
+df = pd.DataFrame(data)
+
 
 # st.line_chart(df, x = 'Electricity Cost (per KwH)', y = ['Yearly BTC Security Budget','Yearly BCH Security Budget'], color = [colorBTC, colorBCH])
 #st.line_chart(data = df, x = 'Electricity Cost (per KwH)')
