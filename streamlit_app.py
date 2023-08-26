@@ -180,16 +180,8 @@ data = {
     "Electricity Cost (per KwH)": costPerKwH,
     "Yearly, BTC Security Budget": [value * energyUsageYearlyKwH_BTC for value in costPerKwH],
     "Yearly, BCH Security Budget": [value * energyUsageYearlyKwH_BCH for value in costPerKwH]
-    
 }
 
-# st.dataframe(df, use_container_width=True)
-#st.line_chart(data=None, *, x=None, y=None, color=None, width=0, height=0, use_container_width=True)
-#######################################################3
-
-
-
-###############################################
 df = pd.DataFrame(data)
 # st.line_chart(df, x = 'Electricity Cost (per KwH)', y = ['Yearly BTC Security Budget','Yearly BCH Security Budget'], color = [colorBTC, colorBCH])
 #st.line_chart(data = df, x = 'Electricity Cost (per KwH)')
@@ -207,10 +199,10 @@ st.line_chart(
     df,
     'Electricity Cost (per KwH)',
     ['Yearly, BTC Security Budget','Yearly, BCH Security Budget'],
-    ['#F2A900', '#0AC18E']
     )
 
 
+    # ['#F2A900', '#0AC18E']
 
 
 # # ! This is a simple, linear chart.
