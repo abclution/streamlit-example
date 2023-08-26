@@ -223,8 +223,12 @@ with tab2:
     st.header("Data")
     df
 ''' A simple linear chart showing the effects of electricity price and hashrate interaction. 
+The very simple formula for determining the cost of the security budget is as follows:
+ - Determine the KwH/year used by each network.
+ - Multiply the KwH/year * cost per KwH.
+ - Make chart.
 
-Some suggested excercises include:
+Suggested exercises include:
  - Adjust both the BTC + BCH hashrate to verify they match, as they are both calculated with identical efficiency.
  - Adjust the BTC "Energy usage in TwH" to get an idea of how the cost of the security budget/electricity bill scales.'''
 
