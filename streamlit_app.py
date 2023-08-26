@@ -121,21 +121,21 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.header("Setting")
-    st.write('Kilowatt Hours (KwH), Yearly:')
+    # st.write('Kilowatt Hours (KwH), Yearly:')
     st.write('Terawatt Hours (TwH), Yearly:')
 
 
 with col2:
     st.header("BTC")
-    st.write('<font size="+8">', str(round(energyUsageYearlyKwH_BTC)),'</font>', unsafe_allow_html=True)
-    st.write('<h3>', str(round(slider_energyUsageYearlyTwH_BTC)),'</h3>', unsafe_allow_html=True)
+    # st.write('<font size="+5">', str(round(energyUsageYearlyKwH_BTC)),'</font>', unsafe_allow_html=True)
+    st.write('<font size="+5">', str(round(slider_energyUsageYearlyTwH_BTC)),'</font>', unsafe_allow_html=True)
     ''' BTC Info here'''
 
 
 with col3:
     st.header("BCH")
-    st.write('<h3>', str(round(energyUsageYearlyKwH_BCH)),'</h3>', unsafe_allow_html=True)
-    st.write('<h3>', str(round(energyUsageYearlyTwH_BCH)),'</h3>', unsafe_allow_html=True)
+    # st.write('<font size="+5">', str(round(energyUsageYearlyKwH_BCH)),'</font>', unsafe_allow_html=True)
+    st.write('<font size="+5">', str(round(energyUsageYearlyTwH_BCH)),'</font>', unsafe_allow_html=True)
     '''BCH Info Here'''
 
 
