@@ -84,7 +84,7 @@ label_priceBCH = "BCH: Current Price"
 #### SIDEBAR #################################################################
 slider_BTC_TPS = st.sidebar.slider(label_BTC_TPS, 1, 7, 7, 1, format_slider_TPS)
 
-st.sidebar.write('Current TPS', <h2>, str(slider_BTC_TPS), </h2>)
+st.sidebar.write('Current TPS', '<h2>', str(slider_BTC_TPS), '</h2>', unsafe_allow_html=True)
 
 
 slider_BCH_TPS = st.sidebar.slider(label_BCH_TPS, 1, 10000, 224, 1, format_slider_TPS)
