@@ -229,7 +229,7 @@ df = pd.DataFrame(data)
 st.line_chart(
     df,
     x='Electricity Cost (per KwH)',
-    color=[colorBTC, colorBCH]
+    color=['#de0007', '#00ff22']
     )
 
 
