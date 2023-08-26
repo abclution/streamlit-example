@@ -15,8 +15,9 @@ seconds_per_day = 86400
 """
 Just farting around 
 """
+###############################################################################
 st.sidebar.write('<font size="+5">Max. TPS','</font>', '</br>', '(Transactions per Second, Full Blocks)', unsafe_allow_html=True)
-
+###############################################################################
 #### BTC TPS SLIDER  ##########################################################
 format_slider_TPS = "%d"
 label_BTC_TPS = ":orange[BTC Network], *Default: 7*"
@@ -37,16 +38,19 @@ max_daily_transactions_BCH = (seconds_per_day * slider_BCH_TPS)
 ###############################################################################
 st.sidebar.divider()
 ###############################################################################
+
+###############################################################################
+###############################################################################
 #### BTC HASHRATE SLIDER  #####################################################
 format_slider_exaHashes = "%d"
-label_exaHashes_BTC = "BTC: Current Exahashes (7 Day AVG) (Default: 402.2)"
+label_exaHashes_BTC = ":orange[BTC] : Current Exahashes (7 Day AVG) (Default: 402.2)"
 slider_exaHashes_BTC = st.sidebar.slider(label_exaHashes_BTC,
                                          1.0, 1000.0, 402.2, .1,
                                          format_slider_exaHashes)
 
 #### BCH HASHRATE SLIDER  #####################################################
 format_slider_exaHashes = "%d"
-label_exaHashes_BCH = "BCH: Current Exahashes (7 Day AVG) (Default: 2.67)"
+label_exaHashes_BCH = ":green[BCH] : Current Exahashes (7 Day AVG) (Default: 2.67)"
 slider_exaHashes_BCH = st.sidebar.slider(label_exaHashes_BCH,
                                          1.0, 1000.0, 2.67, .1,
                                          format_slider_exaHashes)
@@ -56,7 +60,7 @@ st.sidebar.divider()
 
 #### BTC ENERGY USAGE SLIDER  #################################################
 format_slider_energyUsageYearlyTwH = "%d"
-label_energyUsageYearlyTwH_BTC = "BTC: Yearly energy usage of entire network in Terrawatt Hours (Default: 145.02), found here: https://ccaf.io/cbnsi/cbeci"
+label_energyUsageYearlyTwH_BTC = ":orange[BTC]: Yearly energy usage of entire network in Terrawatt Hours (Default: 145.02), found here: https://ccaf.io/cbnsi/cbeci"
 slider_energyUsageYearlyTwH_BTC = st.sidebar.slider(label_energyUsageYearlyTwH_BTC,
                                                     1.0, 1000.0, 145.02, .1,
                                                     format_slider_energyUsageYearlyTwH)
@@ -94,7 +98,7 @@ st.sidebar.divider()
 
 #### BTC PRICING SLIDER  ######################################################
 format_slider_Price = "%d"
-label_priceBTC = "BTC: Current Price"
+label_priceBTC = ":orange[BTC] : Current Price"
 
 slider_PriceBTC = st.sidebar.slider(label_priceBTC,
                                     1.0, 100000.0, 26091.70, .1,
@@ -102,7 +106,7 @@ slider_PriceBTC = st.sidebar.slider(label_priceBTC,
 
 #### BCH PRICING SLIDER  ######################################################
 format_slider_Price = "%d"
-label_priceBCH = "BCH: Current Price"
+label_priceBCH = ":green[BCH] : Current Price"
 
 slider_PriceBCH = st.sidebar.slider(label_priceBCH,
                                     1.0, 100000.0, 190.02, .1,
