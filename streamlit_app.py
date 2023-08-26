@@ -23,7 +23,6 @@ slider_BTC_TPS = st.sidebar.slider(label_BTC_TPS,
                                    1, 7, 7, 1,
                                    format_slider_TPS)
 
-st.sidebar.write('Current TPS', '<h2>', str(slider_BTC_TPS), '</h2>', unsafe_allow_html=True)
 max_daily_transactions_BTC = (seconds_per_day * slider_BTC_TPS)
 
 #### BCH TPS SLIDER  ##########################################################
@@ -159,10 +158,6 @@ with col2:
 
 
 ################################
-
-# ! Derived from (energyUsageYearlyKwH_BTC / slider_exaHashes_BTC) * exaHashToYearlyKwHRatio
-
-
 # * First lets discuss security budget costs
 # * Column 1: Per KwH Cost, .007 to .30
 # * Column 2: energyUsageYearlyKwH_BTC * Col1 , energyUsageYearlyKwH_BCH * Col1
