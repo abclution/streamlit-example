@@ -111,33 +111,52 @@ blockReward = st.sidebar.selectbox('Choose block reward (Default: 6.25)',
 # (6 blocks per hour * 24 hours) * (block reward)
 totalDailyBlockRewards = ((6*24) * blockReward)
 
-
-
-
 ###############################################################################
 
 
 
 #### MAIN START  #############################################################
 
-st.write('BTC: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', energyUsageYearlyKwH_BTC)
-
-st.write('BCH: Yearly energy usage of entire network in Terawatt(TwH) Hours :', energyUsageYearlyTwH_BCH)
-st.write('BCH: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', energyUsageYearlyKwH_BCH)
+col1, col2, col3 = st.columns(3)
 
 
+with col1:
+    st.header("Setting")
+    st.write('Yearly energy usage in Kilowatt Hours (KwH):')
+    st.write('Yearly energy usage in Terawatt Hours (TwH):')
+    ''' BTC Info here'''
+
+
+with col1:
+    st.header("BTC")
+    st.write(energyUsageYearlyKwH_BTC)
+    st.write(energyUsageYearlyTwH_BTC)
+    ''' BTC Info here'''
+
+#    st.image("https://static.streamlit.io/examples/cat.jpg")
+
+with col2:
+    st.header("BCH")
+    st.write(energyUsageYearlyKwH_BCH)
+    st.write(energyUsageYearlyTwH_BCH)
+    '''BCH Info Here'''
 
 
 
 
 
+#st.write('BTC: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', energyUsageYearlyKwH_BTC)
+#
+#st.write('BCH: Yearly energy usage of entire network in Terawatt(TwH) Hours :', energyUsageYearlyTwH_BCH)
+#st.write('BCH: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', energyUsageYearlyKwH_BCH)
 
 
-# st.selectbox(label, options, index=0, format_func=special_internal_function, key=None, help=None, on_change=None, args=None, kwargs=None, *, placeholder="Select...", disabled=False, label_visibility="visible")
 
-#### SIDEBAR #################################################################
 
-#### MAIN #################################################################
+
+################################
+
+
 
 
 st.write('##BTC Maximum Daily Transactions:', max_daily_transactions_BTC)
