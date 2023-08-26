@@ -228,6 +228,9 @@ df = pd.DataFrame(data)
 st.line_chart(
     df,
     x='Electricity Cost (per KwH)',
-    y=['Yearly, BTC Security Budget','Yearly, BCH Security Budget'],
+    y=['Yearly, BCH Security Budget','Yearly, BTC Security Budget'],
     color=[colorBTC, colorBCH]
     )
+
+
+#    y=['Yearly, BTC Security Budget','Yearly, BCH Security Budget'],
