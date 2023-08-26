@@ -125,7 +125,7 @@ st.sidebar.write('<font size="+5">Block Reward','</font>', '</br>', '(Amount of 
 ###############################################################################
 #### BLOCK REWARD SELECTOR (BOTH)  ############################################
 
-blockReward = st.sidebar.selectbox('Choose block reward (Default: 6.25)',
+blockReward = st.sidebar.selectbox('Choose block reward *(Default: 6.25)*',
                                    (50, 25, 12.5, 6.25, 3.125, 1.5625,
                                     .78125, .390625, .195325, .09765625, 0),
                                     3)
