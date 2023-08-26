@@ -213,7 +213,7 @@ st.line_chart(
     color = ['#FF0000', '#0000FF']  # Optional
 )
 
-energyUsageYearlyKwH_BTC = 2354234523456
+energyUsageYearlyKwH_BTC = 23542345234563546
 energyUsageYearlyKwH_BCH = 237645675673543
 # Define the range of values
 start_value = 0.007
