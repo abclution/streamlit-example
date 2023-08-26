@@ -263,12 +263,17 @@ with tab1:
 with tab2:
     st.header("Data")
     df
-''' A simple linear chart showing the effects of electricity price and hashrate interaction (Yearly Scale). 
+''' A simple linear chart showing the effects of electricity price and hashrate interaction on a Daily Scale.
+
+
 The very simple formula for determining the cost of the security budget is as follows:
  - Determine the KwH/year used by each network.
  - Multiply the KwH/year * cost per KwH.
+ - Divide by 365
  - Make chart.
-'''
+
+ Unfortunatly, due to the massive difference in scale, the BCH network looks flat. Lets split these charts up.
+ '''
 
 
 
