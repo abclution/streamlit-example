@@ -34,7 +34,7 @@ slider_BCH_TPS = st.sidebar.slider(label_BCH_TPS,
 
 max_daily_transactions_BCH = (seconds_per_day * slider_BCH_TPS)
 #####################################################
-st.divider()
+st.sidebar.divider()
 #####################################################
 #### BTC HASHRATE SLIDER  #####################################################
 format_slider_exaHashes = "%d"
