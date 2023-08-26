@@ -18,14 +18,6 @@ seconds_per_day = 86400
 # ! Formatter for int/float supports: %d %e %f %g %i Formatter for date/time/datetime uses Moment.js notation: https://momentjs.com/docs/#/displaying/format/
 
 
-format_slider_Price = "%d"
-
-label_priceBTC = "BTC: Current Price "
-label_priceBCH = "BCH: Current Price"
-
-
-
-
 #### BTC TPS SLIDER  ##########################################################
 format_slider_TPS = "%d"
 label_BTC_TPS = "BTC Network, Maximum Transactions Per Second (Default: 7)"
@@ -68,23 +60,34 @@ slider_energyUsageYearlyTwH_BTC = st.sidebar.slider(label_energyUsageYearlyTwH_B
 
 # Convert BTC Yearly TwH to KwH, this is because most other calculations are
 # done based on the cost of each KwH.
-energyUsageYearlyKwH_BTC = slider_energyUsageYearlyTwH_BTC * 1000000000
+energyUsageYearlyKwH_BTC = (slider_energyUsageYearlyTwH_BTC * 1000000000)
 
 # Get an energy usage ratio by getting the BTC hashrate and its yearly KwH
-exaHashToYearlyKwHRatio = energyUsageYearlyKwH_BTC / slider_exaHashes_BTC
+exaHashToYearlyKwHRatio = (energyUsageYearlyKwH_BTC / slider_exaHashes_BTC)
 
 # Multiply the BCH exahashes by the energy usage ratio, this assumes equivalent
 # efficiency between the chains equipment. This is a fair comparison.
-energyUsageYearlyKwH_BCH = slider_exaHashes_BCH * exaHashToYearlyKwHRatio
+energyUsageYearlyKwH_BCH = (slider_exaHashes_BCH * exaHashToYearlyKwHRatio)
 
 # Get BCH yearly TwH used
-energyUsageYearlyTwH_BCH = energyUsageYearlyKwH_BCH / 1000000000
+energyUsageYearlyTwH_BCH = (energyUsageYearlyKwH_BCH / 1000000000)
 
 
-st.sidebar.write('BTC: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', energyUsageYearlyKwH_BTC)
+st.write('BTC: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', energyUsageYearlyKwH_BTC)
 
-st.sidebar.write('BCH: Yearly energy usage of entire network in Terawatt(TwH) Hours :', energyUsageYearlyTwH_BCH)
-st.sidebar.write('BCH: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', energyUsageYearlyKwH_BCH)
+st.write('BCH: Yearly energy usage of entire network in Terawatt(TwH) Hours :', energyUsageYearlyTwH_BCH)
+st.write('BCH: Yearly energy usage of entire network in Kilowatt(KwH) Hours :', energyUsageYearlyKwH_BCH)
+
+
+
+format_slider_Price = "%d"
+
+label_priceBTC = "BTC: Current Price "
+label_priceBCH = "BCH: Current Price"
+
+
+
+
 
 slider_PriceBTC = st.sidebar.slider(label_priceBTC, 1.0, 100000.0, 26091.70, .1, format_slider_Price)
 slider_PriceBCH = st.sidebar.slider(label_priceBCH, 1.0, 100000.0, 190.02, .1, format_slider_Price)
