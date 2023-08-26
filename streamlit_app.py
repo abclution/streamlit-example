@@ -126,7 +126,7 @@ with col1:
     st.write('Yearly energy usage in Terawatt Hours (TwH):')
 
 
-with col1:
+with col2:
     st.header("BTC")
     st.write(energyUsageYearlyKwH_BTC)
     st.write(slider_energyUsageYearlyTwH_BTC)
@@ -134,7 +134,7 @@ with col1:
 
 #    st.image("https://static.streamlit.io/examples/cat.jpg")
 
-with col2:
+with col3:
     st.header("BCH")
     st.write(energyUsageYearlyKwH_BCH)
     st.write(energyUsageYearlyTwH_BCH)
