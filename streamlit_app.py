@@ -239,5 +239,5 @@ st.line_chart(
     df,
     x='Electricity Cost (per KwH)',
     y=['Yearly, BTC Security Budget','Yearly, BCH Security Budget'],
-    color=[colorBTC, colorBCH]
+    color=[colorBCH, colorBTC]
     )
