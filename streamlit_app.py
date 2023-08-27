@@ -308,7 +308,7 @@ costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - s
 ''' Daily cost of security budget with a line representing the daily block rewards value, sold to USD.'''
 col1, col2 = st.columns(2)
 with col1:
-
+    st.header("BTC")
     data = {
         "Electricity Cost per KwH": costPerKwH,
         "BTC, Daily Security Budget": [(value * energyUsageYearlyKwH_BTC)/365 for value in costPerKwH],
@@ -324,7 +324,7 @@ with col1:
         )
 
 with col2:
-
+    st.header("BCH")
     data = {
         "Electricity Cost per KwH": costPerKwH,
         "BCH, Daily Security Budget": [(value * energyUsageYearlyKwH_BCH)/365 for value in costPerKwH],
