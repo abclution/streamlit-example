@@ -297,11 +297,6 @@ st.divider()  # DAILY, SPLIT - SECURITY BUDGET CHART AND TABLE WITH BLOCK REWARD
 # * Same as above but divided by 365
 # * 
 
-# Define the range of values
-# start_value = 0.007
-# end_value = 0.14
-# step = 0.001
-
 # Create a list of values for column 1
 costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - start_value) / step) + 1)]
 
@@ -433,118 +428,75 @@ Lets break that down..
 ###############################################################################
 st.divider()
 ###############################################################################
+# * So if the block reward doesn't cover the bare costs for the security budget
+# * and transaction fees are supposed to, lets see what the transaction fees are
+# * likely to be for a set of variables.
 
 
 
+# Create a list of values for column 1
+costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - start_value) / step) + 1)]
 
-
-# * Next lets discuss if block reward covers security budget costs
-# * Same as above but divided by 365
-# * 
-
-# data = {
-#     "Electricity Cost (per KwH)": costPerKwH,
-#     "Daily, BTC Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BTC)/365) - (totalDailyBlockRewards * slider_PriceBTC) for value in costPerKwH],
-#     "Daily, BCH Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BCH)/365) - (totalDailyBlockRewards * slider_PriceBCH) for value in costPerKwH]
-    
-# }
-
-# data = {
-#     "Electricity Cost (per KwH)": costPerKwH,
-#     "Daily, BTC Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BTC)/365) for value in costPerKwH],
-#     "Daily, BTC Block Reward (USD)": [(totalDailyBlockRewards * slider_PriceBTC) for value in costPerKwH],
-#     "Daily, BCH Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BCH)/365) for value in costPerKwH],
-#     "Daily, BCH Block Reward (USD)": [(totalDailyBlockRewards * slider_PriceBCH) for value in costPerKwH]
-    
-# }
-
-data = {
-    "Electricity Cost (per KwH)": costPerKwH,
-    "Daily, BCH Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BCH)/365) for value in costPerKwH],
-    "Daily, BCH Block Reward (USD)": [(totalDailyBlockRewards * slider_PriceBCH) for value in costPerKwH]
-    
-}
-
-
-df = pd.DataFrame(data)
-st.line_chart(df,x = 'Electricity Cost (per KwH)')
-
-st.write('BTC Total Daily Block Rewards (USD):', totalDailyBlockRewards * slider_PriceBTC)
-st.write('BCH Total Daily Block Rewards (USD):', totalDailyBlockRewards * slider_PriceBCH)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-###############################################################################
-st.divider()
-###############################################################################
 col1, col2 = st.columns(2)
-
 with col1:
-    st.header("BTC")
-    data = {
-    "Electricity Cost (per KwH)": costPerKwH,
-    "Daily, BTC Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BTC)/365) - (totalDailyBlockRewards * slider_PriceBTC) for value in costPerKwH]   
-    }
-    df = pd.DataFrame(data)
-    st.line_chart(df,x = 'Electricity Cost (per KwH)')
-    ''' BTC Info here'''
 
-#    st.image("https://static.streamlit.io/examples/cat.jpg")
+    tab1, tab2 = st.tabs(["Chart", "Data"])
+
+    with tab1:
+        st.header(":orange[BTC] Daily Security Budget & Block Reward (USD)")
+        data = {
+            "Electricity Cost per KwH": costPerKwH,
+            "BTC, Daily Security Budget - Block Reward USD": [ ((value * energyUsageYearlyKwH_BTC)/365) - (totalDailyBlockRewards * slider_PriceBTC) for value in costPerKwH],
+            "BTC, Transaction Fee Needed": [(((value * energyUsageYearlyKwH_BTC)/365) - (totalDailyBlockRewards * slider_PriceBTC))/ max_daily_transactions_BTC  for value in costPerKwH]
+
+        }
+        df = pd.DataFrame(data)
+        st.line_chart(
+            df,
+            x='Electricity Cost per KwH',
+            y=['BTC, Daily Security Budget - Block Reward USD','BTC, Transaction Fee Needed'],
+            color=['#ff0320',colorBTC]
+            )
+        '''Daily cost of :orange[BTC] security budget with the :red[red line representing the daily block rewards value, sold to USD @ current prices.]'''
+
+        '''With default settings, :orange[BTC] at around .059/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
+
+    
+    
+    with tab2:
+        df
+    
+
 
 with col2:
-    st.header("BCH")
-    data = {
-    "Electricity Cost (per KwH)": costPerKwH,
-    "Daily, BCH Security Costs minus Block Reward": [((value * energyUsageYearlyKwH_BCH)/365) - (totalDailyBlockRewards * slider_PriceBCH) for value in costPerKwH]
-    }
-    df = pd.DataFrame(data)
-    st.line_chart(df,x = 'Electricity Cost (per KwH)')
-    '''BCH Info Here'''
 
-#    st.image("https://static.streamlit.io/examples/dog.jpg")
+    tab1, tab2 = st.tabs(["Chart", "Data"])
+
+    with tab1:
+        st.header(":green[BCH] Daily Security Budget & Block Reward (USD)")
+        data = {
+            "Electricity Cost per KwH": costPerKwH,
+            "BCH, Daily Security Budget": [(value * energyUsageYearlyKwH_BCH)/365 for value in costPerKwH],
+            "BCH, Daily (USD) Block Reward": [(totalDailyBlockRewards * slider_PriceBCH) for value in costPerKwH]
+        }
+        df = pd.DataFrame(data)
+        st.line_chart(
+            df,
+            x='Electricity Cost per KwH',
+            y=['BCH, Daily Security Budget','BCH, Daily (USD) Block Reward'],
+            color=['#ff0320', colorBCH]
+            )
+    
+        ''' Daily cost of :green[BCH] security budget with the :red[red line representing the daily block rewards, sold to USD @ current prices.]'''
+        '''With default settings, :green[BCH] at around .0648/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
+
+    with tab2:
+        df
+
+
+
+
+
 
 
 
@@ -587,6 +539,12 @@ with col2:
 st.divider()
 ###############################################################################
 
-colorBTC = "#F2A900"
-colorBCH = "#0AC18E"
 
+
+
+
+
+
+###############################################################################
+st.divider()
+###############################################################################
