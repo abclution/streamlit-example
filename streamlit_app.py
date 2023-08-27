@@ -464,9 +464,8 @@ with tab1:
         y=['BTC, Per Transaction Fee Needed','BCH, Per Transaction Fee Needed'],
         color=[colorBCH, colorBTC]
         )
-    '''Daily cost of :orange[BTC] security budget with the :red[red line representing the daily block rewards value, sold to USD @ current prices.]'''
+    '''The cost per transaction needed for each :orange[BTC] and :green[BCH] to maintain the security budget. The security budget has been adjusted for having the block rewards sold to USD @ current prices.]'''
 
-    '''With default settings, :orange[BTC] at around .059/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
 with tab2:
     df
 
