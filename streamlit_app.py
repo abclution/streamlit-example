@@ -307,7 +307,7 @@ costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - s
 
 col1, col2 = st.columns(2)
 with col1:
-    st.header("BTC")
+    st.header(":orange[BTC] Daily Security Budget & Block Reward (USD)")
     data = {
         "Electricity Cost per KwH": costPerKwH,
         "BTC, Daily Security Budget": [(value * energyUsageYearlyKwH_BTC)/365 for value in costPerKwH],
@@ -325,7 +325,7 @@ with col1:
 
     '''With default settings, :orange[BTC] at around .059/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
 with col2:
-    st.header("BCH")
+    st.header(":green[BCH] Daily Security Budget & Block Reward (USD)")
     data = {
         "Electricity Cost per KwH": costPerKwH,
         "BCH, Daily Security Budget": [(value * energyUsageYearlyKwH_BCH)/365 for value in costPerKwH],
