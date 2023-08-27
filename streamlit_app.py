@@ -345,8 +345,8 @@ with col2:
 '''
 Some suggested exercises: 
  - Change the "Block Reward" amount as well as the price for both :orange[BTC] & :green[BCH] to see how the chart interacts.
- - Adjust the hashrate of :green[BCH], notice how it affects the :green[BCH] chart.
- - Adjust the hashrate of :orange[BTC]. Notice how strangely it affects the :green[BCH] chart instead of the :orange[BTC] chart. 
+ - Adjust the "Hashrate" of :green[BCH], notice how it affects the :green[BCH] chart.
+ - Adjust the "Hashrate" of :orange[BTC]. Notice how strangely it affects the :green[BCH] chart instead of the :orange[BTC] chart. 
      - This is because the power usage for :green[BCH] is derived from the efficiency ratio of the orange:[BTC] network.
      - The power usage for :orange[BTC] is found from here: https://ccaf.io/cbnsi/cbeci
      - The hashrate for :orange[BTC] & :green[BCH] are found here: https://www.fork.lol/pow/hashrate
