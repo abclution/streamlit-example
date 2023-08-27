@@ -359,7 +359,7 @@ with col2:
         '''With default settings, :green[BCH] at around .0648/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
 
     with tab2:
-    df
+        df
 
 
 
