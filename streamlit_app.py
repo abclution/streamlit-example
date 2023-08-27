@@ -282,6 +282,15 @@ st.divider()  # DAILY, SPLIT - SECURITY BUDGET CHART AND TABLE
 # * Same as above but divided by 365
 # * 
 
+# Define the range of values
+start_value = 0.007
+end_value = 0.14
+step = 0.001
+
+# Create a list of values for column 1
+costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - start_value) / step) + 1)]
+
+
 col1, col2 = st.columns(2)
 with col1:
 
