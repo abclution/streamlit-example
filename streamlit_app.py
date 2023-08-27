@@ -461,6 +461,18 @@ with tab1:
 with tab2:
     df
 
+'''
+Some suggested exercises for this chart:
+ - Validate the presented data. Match the :orange[BTC] & :green[BCH] settings and make sure the chart lines match. I suggest the following settings to assist in setting the sliders which are unfriendly for detail work.
+   - "Max TPS", bring :green[BCH] all the way down to 1, then use keyboard to move it to 7.
+   - "Hashrate", move both :orange[BTC] & :green[BCH] fully to the right, 1000. They have equal efficiency so this is fine and "Energy Usage in TwH" is not needed for this chart.
+   - "Prices in USD", move both :orange[BTC] & :green[BCH] fully to the left, 1. Or the right, 100000. Leave one of them a tick off so you can observe both lines.
+   - Great, once you are satisfied they match, you should have confidence to continue.
+   - You can refresh the page to reset to defaults.
+ -    
+
+
+'''
 
 
 # tab1, tab2 = st.tabs(["Chart", "Data"])
