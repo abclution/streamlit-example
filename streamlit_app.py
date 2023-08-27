@@ -134,8 +134,16 @@ blockReward = st.sidebar.selectbox('Choose block reward *(Default: 6.25)*',
 
 # (6 blocks per hour * 24 hours) * (block reward)
 totalDailyBlockRewards = ((6*24) * blockReward)
+###############################################################################
 
 ###############################################################################
+st.sidebar.divider()
+###############################################################################
+###############################################################################
+st.sidebar.write('<font size="+5">Chart Settings','</font>', '</br>', '(Settings that control the scale of the chart. Helpful for zooming in.)', unsafe_allow_html=True)
+###############################################################################
+
+
 
 #st.number_input(label, min_value=None, max_value=None, value=, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
 start_value = st.sidebar.number_input('Lowest Electricity Price, KwH (Default: .007)', .001, .50, .007, .001, '%f', help="Loaaawasdfasdferrrrrrrrr")
@@ -468,7 +476,7 @@ Some suggested exercises for this chart:
    - "Hashrate", move both :orange[BTC] & :green[BCH] fully to the right, 1000. They have equal efficiency so this is fine and "Energy Usage in TwH" is not needed for this chart.
    - "Prices in USD", move both :orange[BTC] & :green[BCH] fully to the left, 1. Or the right, 100000. Leave one of them a tick off so you can observe both lines.
    - Great, once you are satisfied they match, you should have confidence to continue.
-   - You can refresh the page to reset to defaults.
+ - I suggest to refresh the page to reset to defaults.
  -    
 
 
