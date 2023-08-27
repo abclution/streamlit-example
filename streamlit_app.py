@@ -290,7 +290,7 @@ step = 0.001
 # Create a list of values for column 1
 costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - start_value) / step) + 1)]
 
-
+''' Daily cost of security budget with a line representing the daily block rewards value, sold to USD.'''
 col1, col2 = st.columns(2)
 with col1:
 
