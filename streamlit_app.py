@@ -321,7 +321,7 @@ with col1:
         y=['BTC, Daily Security Budget','BTC, Daily (USD) Block Reward'],
         color=['#ff0320',colorBTC]
         )
-    ''' Daily cost of security budget with the :red[red line] representing the daily block rewards value, :orange[BTC], sold to USD @ current prices.'''
+    '''Daily cost of :orange[BTC] security budget with the :red[red line representing the daily block rewards value, sold to USD @ current prices.]'''
 
     '''With default settings, :orange[BTC] at around .059/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
 with col2:
@@ -338,7 +338,7 @@ with col2:
         y=['BCH, Daily Security Budget','BCH, Daily (USD) Block Reward'],
         color=['#ff0320', colorBCH]
         )
-    ''' Daily cost of security budget with the :red[red line] representing the daily block rewards, :green[BCH], sold to USD @ current prices.'''
+    ''' Daily cost of :green[BCH] security budget with the :red[red line representing the daily block rewards, sold to USD @ current prices.]'''
 
     '''With default settings, :green[BCH] at around .0648/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
 
