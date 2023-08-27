@@ -158,7 +158,7 @@ with col1:
     st.divider()
     st.write('<font size="+5">', '$', str(round(totalDailyBlockRewards * slider_PriceBTC)),'</font>','</br> Total Daily Block Reward (if sold to USD)', unsafe_allow_html=True)
 
-    st.write('<font size="+5">', '$', str(round(max_daily_transactions_BTC / (energyUsageYearlyKwH_BTC/365))),'</font>','</br> KwH Per Transaction', unsafe_allow_html=True)
+    st.write('<font size="+5">', str((max_daily_transactions_BTC / (energyUsageYearlyKwH_BTC/365)),'</font>','</br> KwH Per Transaction', unsafe_allow_html=True)
 
     ''' BTC Info here'''
 
@@ -178,7 +178,7 @@ with col2:
     st.write('<font size="+5">', str(round(totalDailyBlockRewards)),'</font>','</br> Total Daily Block Reward (in Bitcoins, BCH)', unsafe_allow_html=True)
     st.divider()
     st.write('<font size="+5">', '$', str(round(totalDailyBlockRewards * slider_PriceBCH)),'</font>','</br> Total Daily Block Reward (if sold to USD)', unsafe_allow_html=True)
-    st.write('<font size="+5">', '$', str(round(max_daily_transactions_BCH / (energyUsageYearlyKwH_BCH/365))),'</font>','</br> KwH Per Transaction', unsafe_allow_html=True)
+    st.write('<font size="+5">', str(max_daily_transactions_BCH / (energyUsageYearlyKwH_BCH / 365)),'</font>','</br> KwH Per Transaction', unsafe_allow_html=True)
 
     '''BCH Info Here'''
 
