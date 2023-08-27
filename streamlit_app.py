@@ -138,9 +138,14 @@ totalDailyBlockRewards = ((6*24) * blockReward)
 ###############################################################################
 
 #st.number_input(label, min_value=None, max_value=None, value=, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
-st.sidebar.number_input('Lowest Electricity Price, KwH', .001, .50, .007, .001, '%e', help="Lowerrrrrrrrr")
-st.sidebar.number_input('Highest Electricity Price, KwH', .001, .50, .25, .001, '%f', help="Highest price")
-st.sidebar.number_input('Stepping for Charts', .001, .50, .001, .001, '%g', help="Stepping")
+start_value = st.sidebar.number_input('Lowest Electricity Price, KwH', .001, .50, .007, .001, '%f', help="Lowerrrrrrrrr")
+end_value = st.sidebar.number_input('Highest Electricity Price, KwH', .001, .50, .25, .001, '%f', help="Highest price")
+step = st.sidebar.number_input('Stepping for Charts', .001, .50, .001, .001, '%f', help="Stepping")
+
+
+# start_value = 0.007
+# end_value = 0.35
+# step = 0.001
 #### MAIN START  #############################################################
 
 col1, col2 = st.columns(2)
@@ -216,9 +221,9 @@ st.divider()  # YEARLY - SECURITY BUDGET CHART AND TABLE
 # * Column 2: energyUsageYearlyKwH_BTC * Col1 , energyUsageYearlyKwH_BCH * Col1
 
 # Define the range of values
-start_value = 0.007
-end_value = 0.35
-step = 0.001
+# start_value = 0.007
+# end_value = 0.35
+# step = 0.001
 
 # Create a list of values for column 1
 costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - start_value) / step) + 1)]
