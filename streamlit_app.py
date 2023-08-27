@@ -305,7 +305,6 @@ st.divider()  # DAILY, SPLIT - SECURITY BUDGET CHART AND TABLE
 # Create a list of values for column 1
 costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - start_value) / step) + 1)]
 
-''' Daily cost of security budget with the :red[red line] representing the daily block rewards value, sold to USD @ current prices.'''
 col1, col2 = st.columns(2)
 with col1:
     st.header("BTC")
@@ -322,6 +321,8 @@ with col1:
         y=['BTC, Daily Security Budget','BTC, Daily (USD) Block Reward'],
         color=['#ff0320',colorBTC]
         )
+    ''' Daily cost of security budget with the :red[red line] representing the daily block rewards value, :orange[BTC], sold to USD @ current prices.'''
+
     '''With default settings, :orange[BTC] at around .059/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
 with col2:
     st.header("BCH")
@@ -337,10 +338,12 @@ with col2:
         y=['BCH, Daily Security Budget','BCH, Daily (USD) Block Reward'],
         color=['#ff0320', colorBCH]
         )
+    ''' Daily cost of security budget with the :red[red line] representing the daily block rewards, :green[BCH], sold to USD @ current prices.'''
+
     '''With default settings, :green[BCH] at around .0648/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
 
 '''
-Suggested excersizes: 
+Some suggested exercises: 
  - Change the block reward amount see how the chart interacts.
  - Adjust the hashrate of :green[BCH], notice how it affects the :green[BCH] chart.
  - Adjust the hashrate of :orange[BTC]. Notice how strangely it affects the :green[BCH] chart instead of the :orange[BTC] chart. 
@@ -349,7 +352,7 @@ Suggested excersizes:
    - The hashrate for :orange[BTC] & :green[BCH] are found here: https://www.fork.lol/pow/hashrate
    - We use the hashrate to power usage ratio from :orange[BTC] and use it to derive :green[BCH] power usage based on :green[BCH] current hashrate. 
    - This assumes each network has equivalent efficiency in terms of the mining machines used.
- - Adjust the "Energy Usage in TwH" :orange[BTC]. Again, this affects both :orange[BTC] & :green[BCH] charts. :red[Remember], :green[BCH] electric efficiencies are derived from :orange[BTC].
+ - Adjust the "Energy Usage in TwH" :orange[BTC]. Again, this affects both :orange[BTC] & :green[BCH] charts. :red[Remember], :green[BCH] electric efficiencies are derived from :orange[BTC], but scaled for its own hashrate.
     - Raising "Energy Usage in TwH" for :orange[BTC] while keeping the "Hashrate" the same, or lowering it simulates LESS efficient mining machines on both :orange[BTC] & :green[BCH] networks. 
     - Lowering "Energy Usage in TwH" for :orange[BTC] while keeping the "Hashrate" the same, or increasing it simulates MORE efficient mining machines on both :orange[BTC] & :green[BCH] networks. 
 
