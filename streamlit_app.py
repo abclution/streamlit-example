@@ -464,7 +464,7 @@ with tab1:
         y=['BTC, Per Transaction Fee Needed','BCH, Per Transaction Fee Needed'],
         color=[colorBCH, colorBTC]
         )
-    '''The cost per transaction needed for each :orange[BTC] and :green[BCH] to maintain the security budget. The security budget has been adjusted for having the block rewards sold to USD @ current prices.]'''
+    '''This is the cost per transaction *needed* for each :orange[BTC] and :green[BCH] to maintain their security budget (electricity bill) adjusted for having sold the daily block rewards to USD @ current prices.]'''
 
 with tab2:
     df
@@ -483,33 +483,19 @@ Some suggested exercises for this chart:
 '''
 
 
-# tab1, tab2 = st.tabs(["Chart", "Data"])
+'''
+Ok, so lets look into the far future.
+All of this has been based on the current fact regarding the cost of electricity.
 
-# with tab1:
-#     st.header(":green[BCH] Per Transaction Fee Needed to Pay for Remainder of (Security Budget - Block Reward) (USD)")
-#     data = {
-#         "Electricity Cost per KwH": costPerKwH,
-#         "BCH, Per Transaction Fee Needed": [(((value * energyUsageYearlyKwH_BCH)/365) - (totalDailyBlockRewards * slider_PriceBCH))/max_daily_transactions_BCH  for value in costPerKwH]
-#     }
-#     df = pd.DataFrame(data)
-#     st.line_chart(
-#         df,
-#         x='Electricity Cost per KwH',
-#         y=['BCH, Per Transaction Fee Needed'],
-#         color=[colorBCH]
-#         )
+If we ever manage to figure out superconductors and fusion, the price of electricity is going to go torwards zero.
 
-#     ''' Daily cost of :green[BCH] security budget with the :red[red line representing the daily block rewards, sold to USD @ current prices.]'''
-#     '''With default settings, :green[BCH] at around .0648/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
+So in effect at this point, the price of electricity doesn't matter. This will cause several interesting thingss. Lets explore this.
+Additionally there are definitly miners who already produce and use electricity for free.
 
-# with tab2:
-#     df
+Additionally the block reward ever increasingly moves towards zero as well. This will be an interesting thing as well.
 
-
-
-
-
-
+The breakpoint will be only the availiablility and efficiency of the mining equipment.
+'''
 
 
 
