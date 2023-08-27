@@ -454,7 +454,7 @@ with col1:
         st.line_chart(
             df,
             x='Electricity Cost per KwH',
-            y=['BTC, Daily Security Budget - Block Reward USD','BTC, Transaction Fee Needed'],
+            y=['BTC, Daily Security Budget - Block Reward USD','BTC, Per Transaction Fee Needed'],
             color=['#ff0320',colorBTC]
             )
         '''Daily cost of :orange[BTC] security budget with the :red[red line representing the daily block rewards value, sold to USD @ current prices.]'''
