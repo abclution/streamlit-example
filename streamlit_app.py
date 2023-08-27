@@ -179,7 +179,7 @@ with col1:
 
     ''' BTC Info here'''
 
-with col3:
+with col2:
     st.header("Settings")
     st.divider()
     st.write('Max. TPS (Transactions per Second)', unsafe_allow_html=True)
