@@ -322,7 +322,7 @@ with col1:
         y=['BTC, Daily Security Budget','BTC, Daily (USD) Block Reward'],
         color=['#ff0320',colorBTC]
         )
-    '''With default settings, BTC at around .059/Kwh the block reward by itself, is no longer sufficient to pay for the security budget.  '''
+    '''With default settings, :orange[BTC] at around .059/Kwh the block reward by itself, is no longer sufficient to pay for the security budget.  '''
 with col2:
     st.header("BCH")
     data = {
@@ -337,7 +337,7 @@ with col2:
         y=['BCH, Daily Security Budget','BCH, Daily (USD) Block Reward'],
         color=['#ff0320', colorBCH]
         )
-    '''With default settings, BCH at around .0648/Kwh the block reward by itself, is no longer sufficient to pay for the security budget.  '''
+    '''With default settings, :green[BCH] at around .0648/Kwh the block reward by itself, is no longer sufficient to pay for the security budget.  '''
 
 '''
 Suggested excersizes: 
