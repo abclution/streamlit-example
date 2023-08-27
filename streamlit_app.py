@@ -296,7 +296,7 @@ with col1:
         df,
         x='Electricity Cost per KwH',
         y=['BTC, Daily Security Budget','Daily, BTC Block Reward (USD)'],
-        color=['#ff0320', colorBTC]
+        color=[colorBTC, '#ff0320']
         )
 
 with col2:
