@@ -18,7 +18,7 @@ seconds_per_day = 86400
 Just farting around 
 """
 ###############################################################################
-st.sidebar.write('<font size="+5">Max. TPS','</font>', '</br>', '(Transactions per Second, Full Blocks)', unsafe_allow_html=True)
+st.sidebar.write('<font size="+5">Max. TPS','</font>', '</br>', '(Maximum Transactions per Second, Full Blocks)', unsafe_allow_html=True)
 ###############################################################################
 #### BTC TPS SLIDER  ##########################################################
 format_slider_TPS = "%d"
