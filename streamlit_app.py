@@ -137,8 +137,10 @@ totalDailyBlockRewards = ((6*24) * blockReward)
 
 ###############################################################################
 
-
-
+#st.number_input(label, min_value=None, max_value=None, value=, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
+st.sidebar.number_input('Lowest Electricity Price, KwH', .001, .50, .007, .001, '%d', help="Lowerrrrrrrrr")
+st.sidebar.number_input('Highest Electricity Price, KwH', .001, .50, .25, .001, '%d', help="Highest price")
+st.sidebar.number_input('Stepping for Charts', .001, .50, .001, .001, '%d', help="Stepping")
 #### MAIN START  #############################################################
 
 col1, col2 = st.columns(2)
