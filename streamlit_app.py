@@ -437,55 +437,53 @@ st.divider()
 # Create a list of values for column 1
 costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - start_value) / step) + 1)]
 
-col1, col2 = st.columns(2)
-with col1:
 
-    tab1, tab2 = st.tabs(["Chart", "Data"])
+tab1, tab2 = st.tabs(["Chart", "Data"])
 
-    with tab1:
-        st.header(":orange[BTC] Per Transaction Fee Needed to Pay for Remainder of (Security Budget - Block Reward) (USD)")
-        data = {
-            "Electricity Cost per KwH": costPerKwH,
-            "BTC, Per Transaction Fee Needed": [(((value * energyUsageYearlyKwH_BTC)/365) - (totalDailyBlockRewards * slider_PriceBTC))/max_daily_transactions_BTC  for value in costPerKwH]
+with tab1:
+    st.header(":orange[BTC] Per Transaction Fee Needed to Pay for Remainder of (Security Budget - Block Reward) (USD)")
+    data = {
+        "Electricity Cost per KwH": costPerKwH,
+        "BTC, Per Transaction Fee Needed": [(((value * energyUsageYearlyKwH_BTC)/365) - (totalDailyBlockRewards * slider_PriceBTC))/max_daily_transactions_BTC  for value in costPerKwH],
+        "BCH, Per Transaction Fee Needed": [(((value * energyUsageYearlyKwH_BCH)/365) - (totalDailyBlockRewards * slider_PriceBCH))/max_daily_transactions_BCH  for value in costPerKwH]
 
-        }
-        df = pd.DataFrame(data)
-        st.line_chart(
-            df,
-            x='Electricity Cost per KwH',
-            y=['BTC, Per Transaction Fee Needed'],
-            color=[colorBTC]
-            )
-        '''Daily cost of :orange[BTC] security budget with the :red[red line representing the daily block rewards value, sold to USD @ current prices.]'''
+    }
+    df = pd.DataFrame(data)
+    st.line_chart(
+        df,
+        x='Electricity Cost per KwH',
+        y=['BTC, Per Transaction Fee Needed','BCH, Per Transaction Fee Needed'],
+        color=[colorBTC, colorBCH]
+        )
+    '''Daily cost of :orange[BTC] security budget with the :red[red line representing the daily block rewards value, sold to USD @ current prices.]'''
 
-        '''With default settings, :orange[BTC] at around .059/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
-    with tab2:
-        df
+    '''With default settings, :orange[BTC] at around .059/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
+with tab2:
+    df
 
 
-with col2:
 
-    tab1, tab2 = st.tabs(["Chart", "Data"])
+# tab1, tab2 = st.tabs(["Chart", "Data"])
 
-    with tab1:
-        st.header(":green[BCH] Per Transaction Fee Needed to Pay for Remainder of (Security Budget - Block Reward) (USD)")
-        data = {
-            "Electricity Cost per KwH": costPerKwH,
-            "BCH, Per Transaction Fee Needed": [(((value * energyUsageYearlyKwH_BCH)/365) - (totalDailyBlockRewards * slider_PriceBCH))/max_daily_transactions_BCH  for value in costPerKwH]
-        }
-        df = pd.DataFrame(data)
-        st.line_chart(
-            df,
-            x='Electricity Cost per KwH',
-            y=['BCH, Per Transaction Fee Needed'],
-            color=[colorBCH]
-            )
-    
-        ''' Daily cost of :green[BCH] security budget with the :red[red line representing the daily block rewards, sold to USD @ current prices.]'''
-        '''With default settings, :green[BCH] at around .0648/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
+# with tab1:
+#     st.header(":green[BCH] Per Transaction Fee Needed to Pay for Remainder of (Security Budget - Block Reward) (USD)")
+#     data = {
+#         "Electricity Cost per KwH": costPerKwH,
+#         "BCH, Per Transaction Fee Needed": [(((value * energyUsageYearlyKwH_BCH)/365) - (totalDailyBlockRewards * slider_PriceBCH))/max_daily_transactions_BCH  for value in costPerKwH]
+#     }
+#     df = pd.DataFrame(data)
+#     st.line_chart(
+#         df,
+#         x='Electricity Cost per KwH',
+#         y=['BCH, Per Transaction Fee Needed'],
+#         color=[colorBCH]
+#         )
 
-    with tab2:
-        df
+#     ''' Daily cost of :green[BCH] security budget with the :red[red line representing the daily block rewards, sold to USD @ current prices.]'''
+#     '''With default settings, :green[BCH] at around .0648/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
+
+# with tab2:
+#     df
 
 
 
