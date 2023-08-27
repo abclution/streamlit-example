@@ -337,23 +337,33 @@ with col1:
 
 
 with col2:
-    st.header(":green[BCH] Daily Security Budget & Block Reward (USD)")
-    data = {
-        "Electricity Cost per KwH": costPerKwH,
-        "BCH, Daily Security Budget": [(value * energyUsageYearlyKwH_BCH)/365 for value in costPerKwH],
-        "BCH, Daily (USD) Block Reward": [(totalDailyBlockRewards * slider_PriceBCH) for value in costPerKwH]
-    }
-    df = pd.DataFrame(data)
-    st.line_chart(
-        df,
-        x='Electricity Cost per KwH',
-        y=['BCH, Daily Security Budget','BCH, Daily (USD) Block Reward'],
-        color=['#ff0320', colorBCH]
-        )
-    ''' Daily cost of :green[BCH] security budget with the :red[red line representing the daily block rewards, sold to USD @ current prices.]'''
 
-    '''With default settings, :green[BCH] at around .0648/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
+    tab1, tab2 = st.tabs(["Chart", "Data"])
 
+    with tab1:
+        st.header(":green[BCH] Daily Security Budget & Block Reward (USD)")
+        data = {
+            "Electricity Cost per KwH": costPerKwH,
+            "BCH, Daily Security Budget": [(value * energyUsageYearlyKwH_BCH)/365 for value in costPerKwH],
+            "BCH, Daily (USD) Block Reward": [(totalDailyBlockRewards * slider_PriceBCH) for value in costPerKwH]
+        }
+        df = pd.DataFrame(data)
+        st.line_chart(
+            df,
+            x='Electricity Cost per KwH',
+            y=['BCH, Daily Security Budget','BCH, Daily (USD) Block Reward'],
+            color=['#ff0320', colorBCH]
+            )
+    
+        ''' Daily cost of :green[BCH] security budget with the :red[red line representing the daily block rewards, sold to USD @ current prices.]'''
+        '''With default settings, :green[BCH] at around .0648/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
+
+    with tab2:
+    df
+
+
+
+    
 '''
 Some suggested exercises: 
  - Change the "Block Reward" amount as well as the price for both :orange[BTC] & :green[BCH] to see how the chart interacts.
