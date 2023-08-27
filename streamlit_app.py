@@ -322,7 +322,7 @@ with col1:
         y=['BTC, Daily Security Budget','BTC, Daily (USD) Block Reward'],
         color=['#ff0320',colorBTC]
         )
-    '''With default settings, :orange[BTC] at around .059/Kwh the block reward by itself, is no longer sufficient to pay for the security budget.  '''
+    '''With default settings, :orange[BTC] at around .059/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
 with col2:
     st.header("BCH")
     data = {
@@ -337,18 +337,18 @@ with col2:
         y=['BCH, Daily Security Budget','BCH, Daily (USD) Block Reward'],
         color=['#ff0320', colorBCH]
         )
-    '''With default settings, :green[BCH] at around .0648/Kwh the block reward by itself, is no longer sufficient to pay for the security budget.  '''
+    '''With default settings, :green[BCH] at around .0648/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
 
 '''
 Suggested excersizes: 
  - Change the block reward amount see how the chart interacts.
  - Adjust the hashrate of :green[BCH], notice how it affects the :green[BCH] chart.
  - Adjust the hashrate of :orange[BTC]. Notice how strangely it affects the :green[BCH] chart instead of the :orange[BTC] chart. 
-   - This is because the power usage for green:[BCH] is derived from the efficiency ratio of the orange:[BTC] network.
+   - This is because the power usage for :green[BCH] is derived from the efficiency ratio of the orange:[BTC] network.
    - The power usage for :orange[BTC] is found from here: https://ccaf.io/cbnsi/cbeci
    - The hashrate for :orange[BTC] & :green[BCH] are found here: https://www.fork.lol/pow/hashrate
-   - We use the hashrate to power usage ratio from :orange[BTC] and use it to derive :green[BCH] power usage based on its hashrate. 
-   - This assumes each network has equivalent efficiency in terms of the machines used.
+   - We use the hashrate to power usage ratio from :orange[BTC] and use it to derive :green[BCH] power usage based on :green[BCH] current hashrate. 
+   - This assumes each network has equivalent efficiency in terms of the mining machines used.
 
 '''
 
