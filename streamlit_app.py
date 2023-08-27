@@ -288,14 +288,14 @@ with col1:
     data = {
         "Electricity Cost per KwH": costPerKwH,
         "BTC, Daily Security Budget": [(value * energyUsageYearlyKwH_BTC)/365 for value in costPerKwH],
-        "Daily, BTC Block Reward (USD)": [(totalDailyBlockRewards * slider_PriceBTC) for value in costPerKwH]
+        "BTC, Daily (USD) Block Reward": [(totalDailyBlockRewards * slider_PriceBTC) for value in costPerKwH]
 
     }
     df = pd.DataFrame(data)
     st.line_chart(
         df,
         x='Electricity Cost per KwH',
-        y=['BTC, Daily Security Budget','Daily, BTC Block Reward (USD)'],
+        y=['BTC, Daily Security Budget','BTC, Daily (USD) Block Reward'],
         color=[colorBTC, '#ff0320']
         )
 
@@ -303,10 +303,17 @@ with col2:
 
     data = {
         "Electricity Cost per KwH": costPerKwH,
-        "BTC, Daily Security Budget": [(value * energyUsageYearlyKwH_BTC)/365 for value in costPerKwH],
+        "BCH, Daily Security Budget": [(value * energyUsageYearlyKwH_BCH)/365 for value in costPerKwH],
         "Daily, BCH Block Reward (USD)": [(totalDailyBlockRewards * slider_PriceBCH) for value in costPerKwH]
     }
     df = pd.DataFrame(data)
+    st.line_chart(
+        df,
+        x='Electricity Cost per KwH',
+        y=['BCH, Daily Security Budget','BCH, Daily (USD) Block Reward'],
+        color=[colorBCH, '#ff0320']
+        )
+
 
 
 
