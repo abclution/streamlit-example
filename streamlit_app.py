@@ -304,7 +304,7 @@ with col2:
     data = {
         "Electricity Cost per KwH": costPerKwH,
         "BCH, Daily Security Budget": [(value * energyUsageYearlyKwH_BCH)/365 for value in costPerKwH],
-        "Daily, BCH Block Reward (USD)": [(totalDailyBlockRewards * slider_PriceBCH) for value in costPerKwH]
+        "BCH, Daily (USD) Block Reward": [(totalDailyBlockRewards * slider_PriceBCH) for value in costPerKwH]
     }
     df = pd.DataFrame(data)
     st.line_chart(
