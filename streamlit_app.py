@@ -322,7 +322,7 @@ with col1:
         y=['BTC, Daily Security Budget','BTC, Daily (USD) Block Reward'],
         color=['#ff0320',colorBTC]
         )
-    ''' - With default settings, BTC at around .059/Kwh the block reward is no longer sufficient to pay for the security budget.  '''
+    '''With default settings, BTC at around .059/Kwh the block reward by itself, is no longer sufficient to pay for the security budget.  '''
 with col2:
     st.header("BCH")
     data = {
@@ -337,9 +337,15 @@ with col2:
         y=['BCH, Daily Security Budget','BCH, Daily (USD) Block Reward'],
         color=['#ff0320', colorBCH]
         )
-    ''' - With default settings, BCH at around .0648/Kwh the block reward is no longer sufficient to pay for the security budget.  '''
+    '''With default settings, BCH at around .0648/Kwh the block reward by itself, is no longer sufficient to pay for the security budget.  '''
 
+'''
+Suggested excersizes: 
+ - Change the block reward amount see how the chart interacts.
+ - Adjust the hashrate of :green[BCH], notice how it affects the :green[BCH] chart.
+ - Adjust the hashrate of :orange[BTC]. Notice how strangely it affects the :green[BCH] chart instead of the :orange[BTC] chart. This is because the power usage for BCH is derived from the efficiency ratio of the BTC network.
 
+'''
 
 
 
