@@ -305,7 +305,7 @@ st.divider()  # DAILY, SPLIT - SECURITY BUDGET CHART AND TABLE
 # Create a list of values for column 1
 costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - start_value) / step) + 1)]
 
-''' Daily cost of security budget with the :red[red line] representing the daily block rewards value, sold to USD.'''
+''' Daily cost of security budget with the :red[red line] representing the daily block rewards value, sold to USD @ current prices.'''
 col1, col2 = st.columns(2)
 with col1:
     st.header("BTC")
@@ -322,7 +322,7 @@ with col1:
         y=['BTC, Daily Security Budget','BTC, Daily (USD) Block Reward'],
         color=['#ff0320',colorBTC]
         )
-
+    ''' - With default settings, BTC at around .059/Kwh the block reward is no longer sufficient to pay for the security budget.  '''
 with col2:
     st.header("BCH")
     data = {
@@ -337,6 +337,7 @@ with col2:
         y=['BCH, Daily Security Budget','BCH, Daily (USD) Block Reward'],
         color=['#ff0320', colorBCH]
         )
+    ''' - With default settings, BCH at around .0648/Kwh the block reward is no longer sufficient to pay for the security budget.  '''
 
 
 
