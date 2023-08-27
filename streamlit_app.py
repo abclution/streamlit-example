@@ -288,17 +288,23 @@ with col1:
     data = {
         "Electricity Cost per KwH": costPerKwH,
         "BTC, Daily Security Budget": [(value * energyUsageYearlyKwH_BTC)/365 for value in costPerKwH],
-        "BCH, Daily Security Budget": [(value * energyUsageYearlyKwH_BCH)/365 for value in costPerKwH]
+        "Daily, BTC Block Reward (USD)": [(totalDailyBlockRewards * slider_PriceBTC) for value in costPerKwH]
+
     }
     df = pd.DataFrame(data)
-
+    st.line_chart(
+        df,
+        x='Electricity Cost per KwH',
+        y=['BTC, Daily Security Budget','Daily, BTC Block Reward (USD)'],
+        color=['#ff0320', colorBTC]
+        )
 
 with col2:
 
     data = {
         "Electricity Cost per KwH": costPerKwH,
         "BTC, Daily Security Budget": [(value * energyUsageYearlyKwH_BTC)/365 for value in costPerKwH],
-        "BCH, Daily Security Budget": [(value * energyUsageYearlyKwH_BCH)/365 for value in costPerKwH]
+        "Daily, BCH Block Reward (USD)": [(totalDailyBlockRewards * slider_PriceBCH) for value in costPerKwH]
     }
     df = pd.DataFrame(data)
 
@@ -330,6 +336,10 @@ with tab1:
 with tab2:
     st.header("Data")
     df
+
+
+
+
 ''' A simple linear chart showing the effects of electricity price and hashrate interaction on a Daily Scale.
 
 
