@@ -180,6 +180,23 @@ with col2:
     '''BCH Info Here'''
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ###############################################################################
 st.divider()  # YEARLY - SECURITY BUDGET CHART AND TABLE
 ###############################################################################
@@ -227,18 +244,68 @@ The very simple formula for determining the cost of the security budget is as fo
 
 Suggested exercises include:
  - Adjust both the BTC + BCH hashrate to verify they match, as they are both calculated with identical efficiency.
- - Adjust the BTC "Energy usage in TwH" to get an idea of how the cost of the security budget/electricity bill scales.'''
+ - Adjust the BTC "Energy usage in TwH" to get an idea of how the cost of the security budget/electricity bill scales.
+
+Unfortunatly, due to the massive difference in scale, the BCH network looks quite flat. Lets split these charts up and drill down into the daily view.
+ '''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 ###############################################################################
-st.divider()  # DAILY - SECURITY BUDGET CHART AND TABLE
+st.divider()  # DAILY, SPLIT - SECURITY BUDGET CHART AND TABLE
 ###############################################################################
 # # ! This is a simple, linear chart.
 # * Next lets see what the costs look like by day.
 # * Same as above but divided by 365
 # * 
+
+col1, col2 = st.columns(2)
+with col1:
+
+    data = {
+        "Electricity Cost per KwH": costPerKwH,
+        "BTC, Daily Security Budget": [(value * energyUsageYearlyKwH_BTC)/365 for value in costPerKwH],
+        "BCH, Daily Security Budget": [(value * energyUsageYearlyKwH_BCH)/365 for value in costPerKwH]
+    }
+    df = pd.DataFrame(data)
+
+
+with col2:
+
+    data = {
+        "Electricity Cost per KwH": costPerKwH,
+        "BTC, Daily Security Budget": [(value * energyUsageYearlyKwH_BTC)/365 for value in costPerKwH],
+        "BCH, Daily Security Budget": [(value * energyUsageYearlyKwH_BCH)/365 for value in costPerKwH]
+    }
+    df = pd.DataFrame(data)
+
+
+
+
+
 
 data = {
     "Electricity Cost per KwH": costPerKwH,
@@ -272,8 +339,31 @@ The very simple formula for determining the cost of the security budget is as fo
  - Divide by 365
  - Make chart.
 
- Unfortunatly, due to the massive difference in scale, the BCH network looks quite flat. Lets split these charts up and drill down into the daily view.
  '''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ###############################################################################
 st.divider()
 ###############################################################################
@@ -354,6 +444,40 @@ with col2:
     '''BCH Info Here'''
 
 #    st.image("https://static.streamlit.io/examples/dog.jpg")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
