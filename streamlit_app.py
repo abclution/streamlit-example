@@ -453,7 +453,7 @@ with tab1:
         df,
         x='Electricity Cost per KwH',
         y=['BTC, Per Transaction Fee Needed','BCH, Per Transaction Fee Needed'],
-        color=[colorBTC, colorBCH]
+        color=[colorBCH, colorBTC]
         )
     '''Daily cost of :orange[BTC] security budget with the :red[red line representing the daily block rewards value, sold to USD @ current prices.]'''
 
