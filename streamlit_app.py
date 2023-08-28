@@ -346,9 +346,10 @@ with col1:
 
     with tab3:
         '''The very simple formula for determining the cost of the security budget is as follows:
-            - Determine the KwH/year used by each network.
-            - Multiply the KwH/year * cost per KwH.
-            - Divide by 365, make chart.'''
+        
+        - Determine the KwH/year used by each network.
+        - Multiply the KwH/year * cost per KwH.
+        - Divide by 365, make chart.'''
 
 
 
@@ -379,9 +380,10 @@ with col2:
 
     with tab3:
         '''The very simple formula for determining the cost of the security budget is as follows:
-            - Determine the KwH/year used by each network.
-            - Multiply the KwH/year * cost per KwH.
-            - Divide by 365, make chart.'''
+            
+        - Determine the KwH/year used by each network.
+        - Multiply the KwH/year * cost per KwH.
+        - Divide by 365, make chart.'''
 
 
 
