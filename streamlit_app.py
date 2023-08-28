@@ -161,7 +161,7 @@ with col1:
     st.write('<font size="+5">', str(round(slider_BTC_TPS)),'</font>', unsafe_allow_html=True)
 
 with col2:
-    st.write('<font size="+5">', Max. TPS  ,'</font>','</br> (Transactions per Second)', unsafe_allow_html=True)
+    st.write('<font size="+5">', 'Max. TPS' '</font>','</br> (Transactions per Second)', unsafe_allow_html=True)
  
 
 with col3:
