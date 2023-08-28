@@ -620,8 +620,8 @@ with tab1:
 
     data = {
         "Fee Per Transaction": feePerTransaction,
-        "BTC, Daily Miner Profit": [(feePerTransaction * max_daily_transactions_BTC)  for value in feePerTransaction],
-        "BCH, Daily Miner Profit": [(feePerTransaction * max_daily_transactions_BCH)  for value in feePerTransaction]
+        "BTC, Daily Miner Profit": [(value * max_daily_transactions_BTC)  for value in feePerTransaction],
+        "BCH, Daily Miner Profit": [(value * max_daily_transactions_BCH)  for value in feePerTransaction]
 
     }
     df = pd.DataFrame(data)
