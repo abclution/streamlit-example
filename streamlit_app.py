@@ -256,7 +256,6 @@ with col2:
 ###############################################################################
 st.divider()  # YEARLY - SECURITY BUDGET CHART AND TABLE
 ###############################################################################
-st.header(":orange[Bitcoin]")
 st.header("Bitcoin Mining & Security Budget Economics", divider='rainbow')
 
 
@@ -420,6 +419,16 @@ with col2:
         - Multiply the KwH/year * cost per KwH.
         - Divide by 365, make chart.'''
 
+'''Libya is/was cheapest electricity in the world with .007 USD per KwH, feel free to adjust the price ranges in the sidebar.
+
+Now some interesting things start to emerge... once the price per KwH gets close the the cheapest availiable KwH we see that:
+ 
+- The current (6.25) block rewards are no longer sufficient to cover the security budget. 
+    - @ 25 Bitcoins (BTC) the block reward was enough to cover the energy costs up to about .235/Kwh.
+    - @ 50 Bitcoins (BTC) the block reward was enough to cover the energy costs up to about .45/Kwh.
+    
+This means it will be neccesary for the remaining of the security budget to be covered by the transaction fees which we will visit next.
+'''
 '''
 Some suggested exercises: 
  - Change the "Block Reward" amount as well as the "Prices in USD" for each :orange[BTC] & :green[BCH] to see how the chart interacts.
@@ -443,21 +452,7 @@ Some suggested exercises:
 
 
 
-''' And now we see some interesting things start to emerge...
-What we see here is... once the price per KwH gets close the the cheapest availiable KwH.
 
-- Libya by the way is/was cheapest in the world with .007 USD per KwH)
-- The current (6.25) block rewards are no longer sufficient to cover the security budget.
-- This means it will be neccesary for the remaining of the security budget to be covered by the transaction fees.
-
-Some exercises to do.
-- Adjust the block reward up and down
-    - @ 25 Bitcoins (BTC) the block reward was enough to cover the energy costs up to about .235/Kwh.
-    - @ 50 Bitcoins (BTC) the block reward was enough to cover the energy costs up to about .45/Kwh.
-
-Lets break that down..
-
-'''
 
 
 
