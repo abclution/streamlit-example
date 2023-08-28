@@ -517,15 +517,15 @@ with tab3:
 
 col1, col2 = st.columns(2)
 with col1:
-    '''Immediately and again, you may have noticed that :green[BCH] seems to have flatlined in comparison to :orange[BTC].'''
+    '''Again sadly, you may have noticed that :green[BCH] seems to have flatlined in comparison to :orange[BTC].'''
     
-    '''But this time having *lower fees is a good thing*, how can :green[BCH] have such lower fees than :orange[BTC]?'''
+    '''Except this time, the line represents having **much lower fees** to maintain the security budge. But how can :green[BCH] have such lower fees than :orange[BTC]?'''
     
     '''**What is going on?**'''
 
     '''The more astute will immediately realize :red[**THE PROBLEM**] here. :thinking_face:'''
     
-    ''':green[BCH's] level of security, its **"Hashrate"** is a mere fraction of :orange[BTC].'''
+    ''':green[BCH's] level of security, its **"Hashrate"** is a mere fraction of :orange[BTC]! :broken_heart:'''
 
 with col2:
     '''**Now it makes makes sense!**'''
