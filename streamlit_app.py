@@ -427,7 +427,7 @@ Now some interesting things start to emerge... once the price per KwH gets close
     - @ 25 Bitcoins (BTC) *the block reward* **was enough to cover the energy costs up to about .235/Kwh.**
     - @ 50 Bitcoins (BTC) *the block reward* **was enough to cover the energy costs up to about .45/Kwh.**
     
-> **This means it will be neccesary for the remaining of the security budget to be covered by the transaction fees which we will visit next.**
+> ** So its easy to see that the current security budget of both :orange[BTC] & :green[BCH] are NOT covered by solely the block rewards any longer. This means it will be neccesary for the remaining of the security budget to be covered by the transaction fees which we will visit next.**
 
 '''
 with st.expander(":bulb: Click here for Suggested exercises"):
@@ -445,7 +445,6 @@ with st.expander(":bulb: Click here for Suggested exercises"):
         - Lowering "Energy Usage in TwH" for :orange[BTC] while keeping the "Hashrate" the same, or increasing it simulates MORE efficient mining machines on both :orange[BTC] & :green[BCH] networks. 
 
     '''
-'''So its easy to see that the current security budget of both :orange[BTC] & :green[BCH] are NOT covered by the block rewards. Thankfully we have transaction fees. Let visit those.'''
 
 
 
