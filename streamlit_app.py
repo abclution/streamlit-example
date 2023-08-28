@@ -511,6 +511,14 @@ with tab1:
 
 with tab2:
     df
+'''Immediately and again, you may have noticed that BCH seems to have flatlined in comparison to BTC. But this time having lower fees is a good thing, how can BCH have such lower fees that BTC? What is going on?
+
+The more astute will immediately realize the issue here. BCH's level of security, its "Hashrate" is a mere fraction of BTC. 
+Now it makes sense! BCH cannot compete when its "Hashrate" and security level approach BTC's "Hashrate"  '''
+
+'''In fact BCH's security level is:'''
+st.write( round(((slider_exaHashes_BCH/slider_exaHashes_BTC) * 100),4) )
+
 
 '''
 Some suggested exercises for this chart:
