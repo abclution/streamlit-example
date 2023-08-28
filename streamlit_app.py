@@ -528,7 +528,7 @@ with col1:
     ''':green[BCH's] level of security, its **"Hashrate"** is a mere fraction of :orange[BTC]! :broken_heart:'''
 
 with col2:
-    '''**Now it makes makes sense!**'''
+    '''**Now it all makes makes sense!**'''
     ''':green[BCH] cannot possibly compete when its security level and security budget costs approach :orange[BTC's]!!!1!'''
     '''...or can it. :microphone:'''
     '''Feel free to adjust :green[BCH's] **"Hashrate"** to match :orange[BTC's]**"Hashrate"** and look at the chart'''
