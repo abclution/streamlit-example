@@ -156,10 +156,10 @@ step = st.sidebar.number_input('Stepping for Charts (Default: .001)', .001, .50,
 # step = 0.001
 #### MAIN START  #############################################################
 col_font_statistic = '<center> <font size="+8">'
-end_font_col_statistic = '</font> </center> </br>'
+end_col_font_statistic = '</font> </center> </br>'
 
-col_font_label = '<center> >'
-end_col_font_label = ''
+col_font_label = '<center>'
+end_col_font_label = '</center>'
 
 col_font_2 = '<font size="+5">'
 col1, col2, col3 = st.columns(3)
@@ -169,22 +169,22 @@ col1, col2 = st.columns(2)
 with col1:
     st.header("BTC")
     st.divider()
-    st.write(col_font_statistic, str(round(slider_BTC_TPS)), end_font_col_statistic,'Max. TPS (Transactions per Second)', unsafe_allow_html=True)
-    st.write(col_font_statistic, str(round(max_daily_transactions_BTC)),end_font_col_statistic,'Max. Daily Transactions (Full Blocks)', unsafe_allow_html=True)
+    st.write(col_font_statistic, str(round(slider_BTC_TPS)), end_col_font_statistic, col_font_label, 'Max. TPS (Transactions per Second)', end_col_font_label, unsafe_allow_html=True)
+    st.write(col_font_statistic, str(round(max_daily_transactions_BTC)),end_col_font_statistic, col_font_label, 'Max. Daily Transactions (Full Blocks)', end_col_font_label, unsafe_allow_html=True)
     st.divider()
-    st.write(col_font_statistic, str(round(slider_exaHashes_BTC,2)),end_font_col_statistic,'Hashrate (in Exahashes/s))', unsafe_allow_html=True)
-    st.write(col_font_statistic, str(round(slider_energyUsageYearlyTwH_BTC,2)),end_font_col_statistic,'Energy Usage (TwH/Yearly)', unsafe_allow_html=True)
+    st.write(col_font_statistic, str(round(slider_exaHashes_BTC,2)),end_col_font_statistic, col_font_label, 'Hashrate (in Exahashes/s))', end_col_font_label, unsafe_allow_html=True)
+    st.write(col_font_statistic, str(round(slider_energyUsageYearlyTwH_BTC,2)),end_col_font_statistic, col_font_label, 'Energy Usage (TwH/Yearly)', end_col_font_label, unsafe_allow_html=True)
     st.divider()
-    st.write(col_font_statistic, '$', str(round(slider_PriceBTC)),end_font_col_statistic,'Price (in USD)', unsafe_allow_html=True)
+    st.write(col_font_statistic, '$', str(round(slider_PriceBTC)),end_col_font_statistic, col_font_label, 'Price (in USD)', end_col_font_label, unsafe_allow_html=True)
     st.divider()
-    st.write(col_font_statistic, str(round(blockReward)),end_font_col_statistic,'Block Reward (in Bitcoins, BTC)', unsafe_allow_html=True)
-    st.write(col_font_statistic, str(round(totalDailyBlockRewards)),end_font_col_statistic,'Total Daily Block Reward (in Bitcoins, BTC)', unsafe_allow_html=True)
+    st.write(col_font_statistic, str(round(blockReward)),end_col_font_statistic, col_font_label, 'Block Reward (in Bitcoins, BTC)', end_col_font_label, unsafe_allow_html=True)
+    st.write(col_font_statistic, str(round(totalDailyBlockRewards)),end_col_font_statistic, col_font_label, 'Total Daily Block Reward (in Bitcoins, BTC)', end_col_font_label, unsafe_allow_html=True)
     st.divider()
-    st.write(col_font_statistic, '$', str(round(totalDailyBlockRewards * slider_PriceBTC)),end_font_col_statistic,'Total Daily Block Reward (if sold to USD)', unsafe_allow_html=True)
+    st.write(col_font_statistic, '$', str(round(totalDailyBlockRewards * slider_PriceBTC)),end_col_font_statistic, col_font_label, 'Total Daily Block Reward (if sold to USD)', end_col_font_label, unsafe_allow_html=True)
 
-    st.write(col_font_statistic, str(round(((energyUsageYearlyKwH_BTC/365) / max_daily_transactions_BTC),2)), end_font_col_statistic, 'KwH Per Transaction', unsafe_allow_html=True)
+    st.write(col_font_statistic, str(round(((energyUsageYearlyKwH_BTC/365) / max_daily_transactions_BTC),2)), end_col_font_statistic, col_font_label,  'KwH Per Transaction', end_col_font_label, unsafe_allow_html=True)
 
-#   st.write(col_font_statistic, str(energyUsageYearlyKwH_BTC/365),end_font,'KwH Per Day', unsafe_allow_html=True)
+#   st.write(col_font_statistic, str(energyUsageYearlyKwH_BTC/365),end_font,'KwH Per Day', end_col_font_label, unsafe_allow_html=True)
 
     ''' BTC Info here'''
 
@@ -192,22 +192,22 @@ with col1:
 with col2:
     st.header("BCH")
     st.divider()
-    st.write(col_font_statistic, str(round(slider_BCH_TPS)),end_font_col_statistic,'Max. TPS (Transactions per Second)', unsafe_allow_html=True)
-    st.write(col_font_statistic, str(round(max_daily_transactions_BCH)),end_font_col_statistic,'Max. Daily Transactions (Full Blocks)', unsafe_allow_html=True)
+    st.write(col_font_statistic, str(round(slider_BCH_TPS)),end_col_font_statistic, col_font_label, 'Max. TPS (Transactions per Second)', end_col_font_label, unsafe_allow_html=True)
+    st.write(col_font_statistic, str(round(max_daily_transactions_BCH)),end_col_font_statistic, col_font_label, 'Max. Daily Transactions (Full Blocks)', end_col_font_label, unsafe_allow_html=True)
     st.divider()
-    st.write(col_font_statistic, str(round(slider_exaHashes_BCH,2)),end_font_col_statistic,'Hashrate (in Exahashes/s))', unsafe_allow_html=True)
-    st.write(col_font_statistic, str(round(energyUsageYearlyTwH_BCH,2)),end_font_col_statistic,'Energy Usage (TwH/Yearly)', unsafe_allow_html=True)
+    st.write(col_font_statistic, str(round(slider_exaHashes_BCH,2)),end_col_font_statistic, col_font_label, 'Hashrate (in Exahashes/s))', end_col_font_label, unsafe_allow_html=True)
+    st.write(col_font_statistic, str(round(energyUsageYearlyTwH_BCH,2)),end_col_font_statistic, col_font_label, 'Energy Usage (TwH/Yearly)', end_col_font_label, unsafe_allow_html=True)
     st.divider()
-    st.write(col_font_statistic, '$', str(round(slider_PriceBCH)),end_font_col_statistic,'Price (in USD)', unsafe_allow_html=True)
+    st.write(col_font_statistic, '$', str(round(slider_PriceBCH)),end_col_font_statistic, col_font_label, 'Price (in USD)', end_col_font_label, unsafe_allow_html=True)
     st.divider()
-    st.write(col_font_statistic, str(round(blockReward)),end_font_col_statistic,'Block Reward (in Bitcoins, BCH)', unsafe_allow_html=True)
-    st.write(col_font_statistic, str(round(totalDailyBlockRewards)),end_font_col_statistic,'Total Daily Block Reward (in Bitcoins, BCH)', unsafe_allow_html=True)
+    st.write(col_font_statistic, str(round(blockReward)),end_col_font_statistic, col_font_label, 'Block Reward (in Bitcoins, BCH)', end_col_font_label, unsafe_allow_html=True)
+    st.write(col_font_statistic, str(round(totalDailyBlockRewards)),end_col_font_statistic, col_font_label, 'Total Daily Block Reward (in Bitcoins, BCH)', end_col_font_label, unsafe_allow_html=True)
     st.divider()
-    st.write(col_font_statistic, '$', str(round(totalDailyBlockRewards * slider_PriceBCH)),end_font_col_statistic,'Total Daily Block Reward (if sold to USD)', unsafe_allow_html=True)
+    st.write(col_font_statistic, '$', str(round(totalDailyBlockRewards * slider_PriceBCH)),end_col_font_statistic, col_font_label, 'Total Daily Block Reward (if sold to USD)', end_col_font_label, unsafe_allow_html=True)
     
-    st.write(col_font_statistic, str(round(( (energyUsageYearlyKwH_BCH / 365) / max_daily_transactions_BCH),2)), end_font_col_statistic, 'KwH Per Transaction', unsafe_allow_html=True)
+    st.write(col_font_statistic, str(round(( (energyUsageYearlyKwH_BCH / 365) / max_daily_transactions_BCH),2)), end_col_font_statistic, col_font_label,  'KwH Per Transaction', end_col_font_label, unsafe_allow_html=True)
     
-#    st.write(col_font_statistic, str(energyUsageYearlyKwH_BCH / 365),'</font>','KwH Per Day', unsafe_allow_html=True)
+#    st.write(col_font_statistic, str(energyUsageYearlyKwH_BCH / 365),'</font>','KwH Per Day', end_col_font_label, unsafe_allow_html=True)
 
     '''BCH Info Here'''
 
