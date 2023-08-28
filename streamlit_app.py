@@ -307,11 +307,11 @@ with tab3:
 
 Unfortunately, due to the massive difference in scale, the :green[BCH] network line looks quite flat. In the next chart we will split these charts up and drill down into the Daily view.'''
 
-
-'''Suggested exercises include:
- - Adjust both the :orange[BTC] + :green[BCH] hashrate to verify they match, as they are both calculated with identical efficiency.
- - Adjust the :orange[BTC] "Energy usage in TwH" to get an idea of how the cost of the security budget/electricity bill scales.
-'''
+with st.expander("Suggested exercises include:"):
+    '''
+    - Adjust both the :orange[BTC] + :green[BCH] hashrate to verify they match, as they are both calculated with identical efficiency.
+    - Adjust the :orange[BTC] "Energy usage in TwH" to get an idea of how the cost of the security budget/electricity bill scales.
+    '''
 
 
 
@@ -548,7 +548,7 @@ st.divider()
 ###############################################################################
 st.header("Bitcoin Miner Profits aka Why Mine Bitcoin?", divider='rainbow')
 
-''' So, from the previous chart an excersice, we learned unintuitively that something BCH is doing makes it better for all the end users that are using it.
+''' So, from the previous chart an excercise, we learned unintuitively that something BCH is doing makes it better for all the end users that are using it.
 
 Fee's are lower and will always be lower, and the cost of its security budget, even if its security levels are raised to equal with BTC, are covered much more easily by transaction fees.
 
