@@ -280,7 +280,7 @@ data = {
 
 df = pd.DataFrame(data)
 
-tab1, tab2, tab3 = st.tabs(["Chart", "Data", "Formula"])
+tab1, tab2, tab3 = st.tabs([":bar_chart: Chart", ":clipboard: Data", ":baby_bottle: Formula"])
 
 with tab1:
     st.header("Yearly Cost of Electricity (Security Budget) for :orange[BTC] & :green[BCH] (USD)")
