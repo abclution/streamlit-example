@@ -28,6 +28,7 @@ This is meant as a tool for anyone who wants to simulate the economic & end user
 - If this sidebar is missing, please press the button at the uppermost top left that should look like ">". 
     - On mobile this menu is collapsed on start due to space constraints.
 - Any changes made to the settings in the sidebar menu will immediately take effect on both the numbers and charts throughout the presentation.
+- The sidebar has more than a full screen worth of options, please make sure to scroll fully down to validate you have seen all availiable settings.
 - It is suggested before adjusting any options, to go on to each section carefully and read the information and perform any of the "Suggested Excercises"
 - To reset all options to defaults, please refresh the page. All default options are set to the actual current numbers of each network, August 2023.
 
