@@ -166,7 +166,7 @@ col1, col2, col3 = st.columns(3)
 
 col1, col2 = st.columns(2)
 with col1:
-    st.header(":orange[BTC]")
+    st.header(":orange[Bitcoin - BTC]")
     st.divider()
     st.write(col_font_statistic, str(round(slider_BTC_TPS)), end_col_font_statistic, col_font_label, 'Max. TPS </br> (Transactions per Second)', end_col_font_label, unsafe_allow_html=True)
     st.write(col_font_statistic, str(round(max_daily_transactions_BTC)),end_col_font_statistic, col_font_label, 'Max. Daily Transactions </br> (Full Blocks)', end_col_font_label, unsafe_allow_html=True)
@@ -189,7 +189,7 @@ with col1:
 
 
 with col2:
-    st.header(":green[BCH]")
+    st.header(":green[Bitcoin Cash - BCH]")
     st.divider()
     st.write(col_font_statistic, str(round(slider_BCH_TPS)),end_col_font_statistic, col_font_label, 'Max. TPS </br> (Transactions per Second)', end_col_font_label, unsafe_allow_html=True)
     st.write(col_font_statistic, str(round(max_daily_transactions_BCH)),end_col_font_statistic, col_font_label, 'Max. Daily Transactions </br> (Full Blocks)', end_col_font_label, unsafe_allow_html=True)
