@@ -23,8 +23,9 @@ This is meant as a tool for anyone who wants to simulate the economic & end user
 
 ### How to use this tool
 
-On first open of this tool you should be reading this text as well as a sidebar menu on the left hand of your screen with various sliders and options.
-If this sidebar is missing, please press the button at the uppermost top left that should look like ">". On mobile this menu is collapsed on start.
+- On first open of this tool you should be reading this text as well as a visible sidebar menu on the left hand of your screen with various sliders and options.
+- If this sidebar is missing, please press the button at the uppermost top left that should look like ">". 
+- On mobile this menu is collapsed on start due to space constraints.
 """
 ###############################################################################
 st.sidebar.write('<font size="+5">Max. TPS','</font>', '</br>', '(Maximum Transactions per Second, Full Blocks)', unsafe_allow_html=True)
