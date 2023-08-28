@@ -354,7 +354,7 @@ costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - s
 col1, col2 = st.columns(2)
 with col1:
 
-    tab1, tab2, tab3 = st.tabs(["Chart", "Data", "Formula"])
+    tab1, tab2, tab3 = st.tabs([":bar_chart: Chart", ":clipboard: Data", ":baby_bottle: Formula"])
 
     with tab1:
         st.header(":orange[BTC] Daily Security Budget (USD)")
@@ -389,7 +389,7 @@ with col1:
 
 with col2:
 
-    tab1, tab2, tab3 = st.tabs(["Chart", "Data", "Formula"])
+    tab1, tab2, tab3 = st.tabs([":bar_chart: Chart", ":clipboard: Data", ":baby_bottle: Formula"])
 
     with tab1:
         st.header(":green[BCH] Daily Security Budget (USD)")
@@ -489,7 +489,7 @@ st.header("Transaction Fees & Security Budget Economics", divider='rainbow')
 costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - start_value) / step) + 1)]
 
 
-tab1, tab2 = st.tabs(["Chart", "Data"])
+tab1, tab2, tab3 = st.tabs([":bar_chart: Chart", ":clipboard: Data", ":baby_bottle: Formula"])
 
 with tab1:
     st.header(":orange[BTC] & :green[BCH] Per Transaction Fee Needed to Pay the remainder of the Security Budget (Electricity Costs)")
@@ -511,6 +511,9 @@ with tab1:
 
 with tab2:
     df
+
+with tab3:
+    '''todo'''
 
 col1, col2 = st.columns(2)
 with col1:
