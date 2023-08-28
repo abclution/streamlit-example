@@ -424,10 +424,11 @@ with col2:
 Now some interesting things start to emerge... once the price per KwH gets close the the cheapest availiable KwH we see that:
  
 - The current (6.25) block rewards are no longer sufficient to cover the security budget. 
-    - @ 25 Bitcoins (BTC) the block reward was enough to cover the energy costs up to about .235/Kwh.
-    - @ 50 Bitcoins (BTC) the block reward was enough to cover the energy costs up to about .45/Kwh.
+    - @ 25 Bitcoins (BTC) *the block reward* **was** *enough to cover the energy costs up to about .235/Kwh.*
+    - @ 50 Bitcoins (BTC) *the block reward* **was** *enough to cover the energy costs up to about .45/Kwh.*
     
-This means it will be neccesary for the remaining of the security budget to be covered by the transaction fees which we will visit next.
+> This means it will be neccesary for the remaining of the security budget to be covered by the transaction fees which we will visit next.
+
 '''
 '''
 Some suggested exercises: 
