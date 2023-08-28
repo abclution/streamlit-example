@@ -277,7 +277,9 @@ with tab3:
     
 
 
-''' A simple linear chart showing the effects of electricity price and hashrate interaction at a yearly scale. Unfortunatly, due to the massive difference in scale, the :green[BCH] network looks quite flat. In the next chart we will split these charts up and drill down into the daily view.'''
+''' A simple linear chart showing the effects of electricity price and hashrate interaction at a yearly scale.
+
+Unfortunatly, due to the massive difference in scale, the :green[BCH] network looks quite flat. In the next chart we will split these charts up and drill down into the daily view.'''
 
 
 '''Suggested exercises include:
