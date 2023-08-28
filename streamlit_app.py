@@ -256,6 +256,9 @@ with col2:
 ###############################################################################
 st.divider()  # YEARLY - SECURITY BUDGET CHART AND TABLE
 ###############################################################################
+st.header(":orange[Bitcoin]")
+st.header("Bitcoin Mining & Security Budget Economics", divider='rainbow')
+
 
 # * First lets discuss security budget costs
 # * Column 1: Per KwH Cost, .007 to .30
