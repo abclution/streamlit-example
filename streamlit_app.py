@@ -548,6 +548,18 @@ st.divider()
 ###############################################################################
 st.header("Bitcoin Miner Profits aka Why Mine Bitcoin?", divider='rainbow')
 
+''' So, from the previous chart an excersice, we learned unintuitively that something BCH is doing makes it better for all the end users that are using it.
+
+Fee's are lower and will always be lower, and the cost of its security budget, even if its security levels are raised to equal with BTC, are covered much more easily by transaction fees.
+
+All of this, even when its price is much lower than BTC. Very strange indeed.'''
+
+
+'''So, in order to find profits, we must decide on some costs. The costs that both affect the production and protection of the Bitcoin networks and scale the most are the electric costs
+
+Here is a new slider where you can choose what the rest of the charts in this section validate or invalidate your notions.
+
+ '''
 
 '''
 Ok, so lets look into the far future.
