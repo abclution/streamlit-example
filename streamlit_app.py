@@ -516,11 +516,11 @@ col1, col2 = st.columns(2)
 with col1:
     '''Immediately and again, you may have noticed that :green[BCH] seems to have flatlined in comparison to :orange[BTC].'''
     
-    '''But this time having *lower fees is a good thing*, how can :green[BCH] have such lower fees that :orange[BTC]?'''
+    '''But this time having *lower fees is a good thing*, how can :green[BCH] have such lower fees than :orange[BTC]?'''
     
     '''**What is going on?**'''
 
-    '''The more astute will immediately realize :red[THE PROBLEM] here.'''
+    '''The more astute will immediately realize :red[**THE PROBLEM**] here.'''
     
     ''':green[BCH's] level of security, its **"Hashrate"** is a mere fraction of :orange[BTC].'''
 
