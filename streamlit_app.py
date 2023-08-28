@@ -521,14 +521,14 @@ with col1:
     
     '''**What is going on?**'''
 
-    '''The more astute will immediately realize :red[**THE PROBLEM**] here.'''
+    '''The more astute will immediately realize :red[**THE PROBLEM**] here. :thinking_face:'''
     
     ''':green[BCH's] level of security, its **"Hashrate"** is a mere fraction of :orange[BTC].'''
 
 with col2:
     '''**Now it makes makes sense!**'''
     ''':green[BCH] cannot possibly compete when its security level and security budget costs approach :orange[BTC's]!!!1!'''
-    '''...or can it.'''
+    '''...or can it. :microphone:'''
     '''Feel free to adjust :green[BCH's] **"Hashrate"** to match :orange[BTC's]**"Hashrate"** and look at the chart'''
     st.write( 'In fact :green[BCHs] security level is exactly:', '<font size="+6">', str(round(((slider_exaHashes_BCH/slider_exaHashes_BTC) * 100), 2)),'%', '</font>', 'of :orange[BTCs]', unsafe_allow_html=True )
 
