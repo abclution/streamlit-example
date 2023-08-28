@@ -26,6 +26,9 @@ This is meant as a tool for anyone who wants to simulate the economic & end user
 - On first open of this tool you should be reading this text as well as a visible sidebar menu on the left hand of your screen with various sliders and options.
 - If this sidebar is missing, please press the button at the uppermost top left that should look like ">". 
 - On mobile this menu is collapsed on start due to space constraints.
+- It is suggested before adjusting any options, to go on to each section carefully and read the information and perform any of the "Suggested Excercises"
+- To reset all changeable options to defaults, please refresh the page.
+- All default options are set to the actual current numbers of each network, August 2023.
 """
 ###############################################################################
 st.sidebar.write('<font size="+5">Max. TPS','</font>', '</br>', '(Maximum Transactions per Second, Full Blocks)', unsafe_allow_html=True)
