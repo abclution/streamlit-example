@@ -312,6 +312,8 @@ st.divider()  # DAILY, SPLIT - SECURITY BUDGET CHART AND TABLE WITH BLOCK REWARD
 # * Same as above but divided by 365
 # * 
 
+st.header("Daily Cost of Electricity (Security Budget) for :orange[BTC] & :green[BCH] w/ Block Reward Overlay")
+
 # Create a list of values for column 1
 costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - start_value) / step) + 1)]
 
