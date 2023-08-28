@@ -177,7 +177,7 @@ with col1:
     st.divider()
     st.write(col_font_statistic, '$', str(round(slider_PriceBTC)),end_col_font_statistic, col_font_label, 'Price </br> (in USD)', end_col_font_label, unsafe_allow_html=True)
     st.divider()
-    st.write(col_font_statistic, str(round(blockReward)),end_col_font_statistic, col_font_label, 'Block Reward (in Bitcoins, BTC)', end_col_font_label, unsafe_allow_html=True)
+    st.write(col_font_statistic, str(round(blockReward)),end_col_font_statistic, col_font_label, 'Block Reward </br> (in Bitcoins, BTC)', end_col_font_label, unsafe_allow_html=True)
     st.write(col_font_statistic, str(round(totalDailyBlockRewards)),end_col_font_statistic, col_font_label, 'Total Daily Block Reward </br> (in Bitcoins, BTC)', end_col_font_label, unsafe_allow_html=True)
     st.divider()
     st.write(col_font_statistic, '$', str(round(totalDailyBlockRewards * slider_PriceBTC)),end_col_font_statistic, col_font_label, 'Total Daily Block Reward </br> (if sold to USD)', end_col_font_label, unsafe_allow_html=True)
