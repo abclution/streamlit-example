@@ -609,7 +609,7 @@ with st.expander(":bulb: Click here for Suggested exercises"):
 
 fee_start_value = .001
 fee_stop_value = 1000
-fee_step = .001
+fee_step = .010
 feePerTransaction = [round(fee_start_value + i * fee_step, 3) for i in range(int((fee_stop_value - fee_start_value) / fee_step) + 1)]
 
 
