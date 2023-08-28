@@ -320,7 +320,7 @@ costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - s
 col1, col2 = st.columns(2)
 with col1:
 
-    tab1, tab2 = st.tabs(["Chart", "Data"])
+    tab1, tab2, tab3 = st.tabs(["Chart", "Data", "Formula"])
 
     with tab1:
         st.header(":orange[BTC] Daily Security Budget (USD)")
@@ -341,16 +341,20 @@ with col1:
 
         '''With default settings, :orange[BTC] at around .059/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
 
-    
-    
     with tab2:
         df
-    
+
+    with tab3:
+        '''The very simple formula for determining the cost of the security budget is as follows:
+            - Determine the KwH/year used by each network.
+            - Multiply the KwH/year * cost per KwH.
+            - Divide by 365, make chart.'''
+
 
 
 with col2:
 
-    tab1, tab2 = st.tabs(["Chart", "Data"])
+    tab1, tab2, tab3 = st.tabs(["Chart", "Data", "Formula"])
 
     with tab1:
         st.header(":green[BCH] Daily Security Budget (USD)")
@@ -373,15 +377,16 @@ with col2:
     with tab2:
         df
 
-''' Simple linear charts showing the effects of electricity price and hashrate interaction on a Daily Scale as well as the zero point where block rewards no longer cover the cost of running the networks.
+    with tab3:
+        '''The very simple formula for determining the cost of the security budget is as follows:
+            - Determine the KwH/year used by each network.
+            - Multiply the KwH/year * cost per KwH.
+            - Divide by 365, make chart.'''
 
-The very simple formula for determining the cost of the security budget is as follows:
- - Determine the KwH/year used by each network.
- - Multiply the KwH/year * cost per KwH.
- - Divide by 365
- - Make chart.
 
- '''
+
+''' Simple linear charts showing the effects of electricity price and hashrate interaction on a Daily Scale as well as the zero point where block rewards no longer cover the cost of running the networks.'''
+
 
 '''
 Some suggested exercises: 
