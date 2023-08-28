@@ -166,7 +166,7 @@ col1, col2, col3 = st.columns(3)
 
 col1, col2 = st.columns(2)
 with col1:
-    st.header(":orange[Bitcoin]")
+    st.header(":orange[Bitcoisn]")
     st.header(":orange[BTC]",'orange')
     st.divider()
     st.write(col_font_statistic, str(round(slider_BTC_TPS)), end_col_font_statistic, col_font_label, 'Max. TPS </br> (Transactions per Second)', end_col_font_label, unsafe_allow_html=True)
