@@ -303,9 +303,9 @@ with tab3:
     
 
 
-''' A simple linear chart showing the price of electricity and its resultant cost of the security budget at a Yearly scale.
+''' A simple linear chart showing the price of electricity and its resultant cost of the security budget at a Yearly scale.'''
 
-Unfortunately, due to the massive difference in scale, the :green[BCH] network line looks quite flat. In the next chart we will split these charts up and drill down into the Daily view.'''
+'''> **Unfortunately, due to the massive difference in scale, the :green[BCH] network line looks quite flat. In the next chart we will split these charts up and drill down into the Daily view.**'''
 
 with st.expander(":bulb: Click here for Suggested exercises"):
     '''
