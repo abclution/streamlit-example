@@ -273,7 +273,7 @@ with tab3:
     st.header("Formula")
     '''The very simple formula for determining the cost of the yearly security budget is as follows:
     - Determine the KwH/year used by each network.
-    - Multiply the KwH/year * cost per KwH & make chart.''''''
+    - Multiply the KwH/year * cost per KwH & make chart.'''
     
 
 
