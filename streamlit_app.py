@@ -25,9 +25,10 @@ This is meant as a tool for anyone who wants to simulate the economic & end user
 
 - On first open of this tool you should be reading this text as well as a visible sidebar menu on the left hand of your screen with various sliders and options.
 - If this sidebar is missing, please press the button at the uppermost top left that should look like ">". 
-- On mobile this menu is collapsed on start due to space constraints.
+    - On mobile this menu is collapsed on start due to space constraints.
+- Any changes made to the settings in the sidebar menu will immediately take effect on both the numbers and charts throughout the presentation.
 - It is suggested before adjusting any options, to go on to each section carefully and read the information and perform any of the "Suggested Excercises"
-- To reset all changeable options to defaults, please refresh the page.
+- To reset all options to defaults, please refresh the page.
 - All default options are set to the actual current numbers of each network, August 2023.
 """
 ###############################################################################
@@ -293,9 +294,9 @@ with tab3:
     
 
 
-''' A simple linear chart showing the effects of electricity price and hashrate interaction at a yearly scale.
+''' A simple linear chart showing the price of electricity and its resultant cost of the security budget at a Yearly scale.
 
-Unfortunatly, due to the massive difference in scale, the :green[BCH] network looks quite flat. In the next chart we will split these charts up and drill down into the daily view.'''
+Unfortunately, due to the massive difference in scale, the :green[BCH] network line looks quite flat. In the next chart we will split these charts up and drill down into the Daily view.'''
 
 
 '''Suggested exercises include:
