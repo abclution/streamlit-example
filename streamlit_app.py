@@ -511,13 +511,17 @@ with tab1:
 
 with tab2:
     df
-'''Immediately and again, you may have noticed that :green[BCH] seems to have flatlined in comparison to :orange:[BTC]. But this time having lower fees is a good thing, how can BCH have such lower fees that BTC? What is going on?
 
-The more astute will immediately realize the issue here. :green[BCH's] level of security, its "Hashrate" is a mere fraction of :orange:[BTC]. 
-Now it makes sense! :green[BCH] cannot compete when its "Hashrate" and security level approach :orange:[BTC's] "Hashrate"  '''
+col1, col2 = st.columns(2)
+with col1:
+    '''Immediately and again, you may have noticed that :green[BCH] seems to have flatlined in comparison to :orange[BTC]. But this time having lower fees is a good thing, how can BCH have such lower fees that BTC? What is going on?
 
-'''In fact :green[BCH's] security level is:'''
-st.write( '<font size="+8">', str(round(((slider_exaHashes_BCH/slider_exaHashes_BTC) * 100), 2)),'%', '</font>', 'of :orange[BTC]', unsafe_allow_html=True )
+    The more astute will immediately realize the issue here. :green[BCH's] level of security, its "Hashrate" is a mere fraction of :orange[BTC]. 
+    Now it makes sense! :green[BCH] cannot compete when its "Hashrate" and security level approach :orange[BTC's] "Hashrate"  '''
+
+with col2:
+    '''In fact :green[BCH's] security level is:'''
+    st.write( '<font size="+8">', str(round(((slider_exaHashes_BCH/slider_exaHashes_BTC) * 100), 2)),'%', '</font>', 'of :orange[BTC]', unsafe_allow_html=True )
 
 
 '''
