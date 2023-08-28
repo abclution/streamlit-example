@@ -520,9 +520,9 @@ with col1:
     
     '''**What is going on?**'''
 
-    '''The more astute will immediately realize the :red[PROBLEM] here.'''
+    '''The more astute will immediately realize :red[THE PROBLEM] here.'''
     
-    ''':green[BCH's] level of security, its "Hashrate" is a mere fraction of :orange[BTC].'''
+    ''':green[BCH's] level of security, its **"Hashrate"** is a mere fraction of :orange[BTC].'''
 
 with col2:
     '''**Now it makes makes sense!**'''
@@ -532,6 +532,12 @@ with col2:
 
 
 '''
+
+
+
+
+
+
 Some suggested exercises for this chart:
  - Validate the presented data. Match the :orange[BTC] & :green[BCH] settings and make sure the chart lines match. I suggest the following settings to assist in setting the sliders which are unfriendly for detail work.
    - "Max TPS", bring :green[BCH] all the way down to 1, then use keyboard to move it to 7.
