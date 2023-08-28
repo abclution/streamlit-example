@@ -609,7 +609,7 @@ with st.expander(":bulb: Click here for Suggested exercises"):
 
 fee_start_value = .001
 fee_stop_value = 1000
-fee_step = 1
+fee_step = .001
 feePerTransaction = [round(fee_start_value + i * fee_step, 3) for i in range(int((fee_stop_value - fee_start_value) / fee_step) + 1)]
 
 
@@ -620,8 +620,8 @@ with tab1:
 
     data = {
         "Fee Per Transaction": feePerTransaction,
-        "BTC, Daily Miner Profit": [(value * max_daily_transactions_BTC)  for value in feePerTransaction],
-        "BCH, Daily Miner Profit": [(value * max_daily_transactions_BCH)  for value in feePerTransaction]
+        "BTC, Daily Miner Profit": [(value * max_daily_transactions_BTC) for value in feePerTransaction],
+        "BCH, Daily Miner Profit": [(value * max_daily_transactions_BCH) for value in feePerTransaction]
 
     }
     df = pd.DataFrame(data)
