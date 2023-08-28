@@ -30,6 +30,11 @@ This is meant as a tool for anyone who wants to simulate the economic & end user
 - It is suggested before adjusting any options, to go on to each section carefully and read the information and perform any of the "Suggested Excercises"
 - To reset all options to defaults, please refresh the page.
 - All default options are set to the actual current numbers of each network, August 2023.
+
+- Charts: Can be clicked on to full screen them, mouse wheel to zoom in/out. You can also hover over each line/point to see more detailed information. They can also be exported to various formats.
+- Additionally the data used to derive the charts should be availiable in the tab next to each chart, as well as the formula used to derive the datasets.
+- The entirety of the source code used to generate this page is also availiable.
+
 """
 ###############################################################################
 st.sidebar.write('<font size="+5">Max. TPS','</font>', '</br>', '(Maximum Transactions per Second, Full Blocks)', unsafe_allow_html=True)
