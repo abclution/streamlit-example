@@ -533,12 +533,6 @@ with col2:
 
 
 '''
-
-
-
-
-
-
 Some suggested exercises for this chart:
  - Validate the presented data. Match the :orange[BTC] & :green[BCH] settings and make sure the chart lines match. I suggest the following settings to assist in setting the sliders which are unfriendly for detail work.
    - "Max TPS", bring :green[BCH] all the way down to 1, then use keyboard to move it to 7.
@@ -546,10 +540,13 @@ Some suggested exercises for this chart:
    - "Prices in USD", move both :orange[BTC] & :green[BCH] fully to the left, 1. Or the right, 100000. Leave one of them a tick off so you can observe both lines.
    - Great, once you are satisfied they match, you should have confidence to continue.
  - I suggest to refresh the page to reset to defaults.
- -    
-
-
 '''
+
+
+###############################################################################
+st.divider()
+###############################################################################
+st.header("Bitcoin Miner Profits aka Why Mine Bitcoin?", divider='rainbow')
 
 
 '''
