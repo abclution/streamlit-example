@@ -444,7 +444,7 @@ Some suggested exercises:
     - Lowering "Energy Usage in TwH" for :orange[BTC] while keeping the "Hashrate" the same, or increasing it simulates MORE efficient mining machines on both :orange[BTC] & :green[BCH] networks. 
 
 '''
-'''<font size="+3"> So its easy to see that the current security budget is NOT covered by the block rewards. Thankfully we have transaction fees. Let visit those.</font>'''
+'''So its easy to see that the current security budget of both :orange[BTC] & :green[BCH] are NOT covered by the block rewards. Thankfully we have transaction fees. Let visit those.'''
 
 
 
