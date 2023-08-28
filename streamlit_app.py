@@ -427,7 +427,7 @@ Now some interesting things start to emerge... once the price per KwH gets close
     - @ 25 Bitcoins (BTC) *the block reward* **was enough to cover the energy costs up to about .235/Kwh.**
     - @ 50 Bitcoins (BTC) *the block reward* **was enough to cover the energy costs up to about .45/Kwh.**
     
-> This means it will be neccesary for the remaining of the security budget to be covered by the transaction fees which we will visit next.
+> **This means it will be neccesary for the remaining of the security budget to be covered by the transaction fees which we will visit next.**
 
 '''
 '''
@@ -477,6 +477,8 @@ Some suggested exercises:
 ###############################################################################
 st.divider()
 ###############################################################################
+st.header("Transaction Fees & Security Budget Economics", divider='rainbow')
+
 # * So if the block reward doesn't cover the bare costs for the security budget
 # * and transaction fees are supposed to, lets see what the transaction fees are
 # * likely to be for a set of variables.
