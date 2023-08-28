@@ -526,10 +526,10 @@ with col1:
 
 with col2:
     '''**Now it makes makes sense!**'''
-    ''':green[BCH] cannot possibly compete when its **"Hashrate"** and security level approach :orange[BTC's] "Hashrate"!!!'''
-    '''~or can it~'''
-    ''' Feel free to adjust :green[BCH's] **"Hashrate"** to match orange[BTC's]**"Hashrate"**'''
-    st.write( 'In fact :green[BCHs] security level is exactly:', '<font size="+8">', str(round(((slider_exaHashes_BCH/slider_exaHashes_BTC) * 100), 2)),'%', '</font>', 'of :orange[BTCs]', unsafe_allow_html=True )
+    ''':green[BCH] cannot possibly compete when its security level and security budget costs approach :orange[BTC's]!!!1!'''
+    '''...or can it.'''
+    '''Feel free to adjust :green[BCH's] **"Hashrate"** to match :orange[BTC's]**"Hashrate"** and look at the chart'''
+    st.write( 'In fact :green[BCHs] security level is exactly:', '<font size="+7">', str(round(((slider_exaHashes_BCH/slider_exaHashes_BTC) * 100), 2)),'%', '</font>', 'of :orange[BTCs]', unsafe_allow_html=True )
 
 
 '''
