@@ -167,6 +167,16 @@ with col2:
 with col3:
     st.write('<font size="+8">', str(round(slider_BCH_TPS)),'</font>', unsafe_allow_html=True)
 
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.write('<font size="+8">', str(round(slider_BTC_TPS)),'</font>', unsafe_allow_html=True)
+
+with col2:
+    st.write('<font size="+5">', 'Max. TPS' '</font>','</br> (Transactions per Second)', unsafe_allow_html=True)
+ 
+
+with col3:
+    st.write('<font size="+8">', str(round(slider_BCH_TPS)),'</font>', unsafe_allow_html=True)
 
 
 col1, col2 = st.columns(2)
