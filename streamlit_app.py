@@ -492,7 +492,7 @@ costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - s
 tab1, tab2 = st.tabs(["Chart", "Data"])
 
 with tab1:
-    st.header(":orange[BTC] & :green[BCH] Per Transaction Fee Needed to Pay for Security Budget (Electricity Costs)")
+    st.header(":orange[BTC] & :green[BCH] Per Transaction Fee Needed to Pay the remainder of the Security Budget (Electricity Costs)")
     '''This is the cost per transaction **REQUIRED** for each :orange[BTC] and :green[BCH] to maintain their security budget (electricity bill) adjusted for having sold the daily block rewards to USD @ current prices.'''
 
     data = {
@@ -520,13 +520,15 @@ with col1:
     
     '''**What is going on?**'''
 
-    '''The more astute will immediately realize the :red[PROBLEM] here. :green[BCH's] level of security, its "Hashrate" is a mere fraction of :orange[BTC].'''
+    '''The more astute will immediately realize the :red[PROBLEM] here.'''
+    
+    ''':green[BCH's] level of security, its "Hashrate" is a mere fraction of :orange[BTC].'''
 
 with col2:
-    '''Now it makes sense! :green[BCH] cannot compete when its "Hashrate" and security level approach :orange[BTC's] "Hashrate"!11!!'''
-    
-    '''In fact :green[BCH's] security level is exactly:'''
-    st.write( '<font size="+8">', str(round(((slider_exaHashes_BCH/slider_exaHashes_BTC) * 100), 2)),'%', '</font>', 'of :orange[BTC]', unsafe_allow_html=True )
+    '''**Now it makes makes sense!**
+    ''':green[BCH] cannot compete when its "Hashrate" and security level approach :orange[BTC's] "Hashrate"!!!'''
+        
+    st.write( 'In fact :green[BCH's] security level is exactly:', '<font size="+8">', str(round(((slider_exaHashes_BCH/slider_exaHashes_BTC) * 100), 2)),'%', '</font>', 'of :orange[BTCs]', unsafe_allow_html=True )
 
 
 '''
