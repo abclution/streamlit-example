@@ -323,7 +323,7 @@ with col1:
     tab1, tab2 = st.tabs(["Chart", "Data"])
 
     with tab1:
-        st.header(":orange[BTC] Daily Security Budget & Block Reward (USD)")
+        st.header(":orange[BTC] Daily Security Budget")
         data = {
             "Electricity Cost per KwH": costPerKwH,
             "BTC, Daily Security Budget": [(value * energyUsageYearlyKwH_BTC)/365 for value in costPerKwH],
@@ -353,7 +353,7 @@ with col2:
     tab1, tab2 = st.tabs(["Chart", "Data"])
 
     with tab1:
-        st.header(":green[BCH] Daily Security Budget & Block Reward (USD)")
+        st.header(":green[BCH] Daily Security Budget")
         data = {
             "Electricity Cost per KwH": costPerKwH,
             "BCH, Daily Security Budget": [(value * energyUsageYearlyKwH_BCH)/365 for value in costPerKwH],
