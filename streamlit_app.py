@@ -492,7 +492,9 @@ costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - s
 tab1, tab2 = st.tabs(["Chart", "Data"])
 
 with tab1:
-    st.header(":orange[BTC] & :green[BCH] Per Transaction Fee Needed to Pay for Remainder of (Security Budget (Electricity Costs) - Block Reward (Sold to USD @ Current Prices))")
+    st.header(":orange[BTC] & :green[BCH] Per Transaction Fee Needed to Pay for Security Budget (Electricity Costs)")
+    '''This is the cost per transaction **REQUIRED** for each :orange[BTC] and :green[BCH] to maintain their security budget (electricity bill) adjusted for having sold the daily block rewards to USD @ current prices.'''
+
     data = {
         "Electricity Cost per KwH": costPerKwH,
         "BTC, Per Transaction Fee Needed": [(((value * energyUsageYearlyKwH_BTC)/365) - (totalDailyBlockRewards * slider_PriceBTC))/max_daily_transactions_BTC  for value in costPerKwH],
@@ -506,7 +508,6 @@ with tab1:
         y=['BTC, Per Transaction Fee Needed','BCH, Per Transaction Fee Needed'],
         color=[colorBCH, colorBTC]
         )
-    '''This is the cost per transaction *needed* for each :orange[BTC] and :green[BCH] to maintain their security budget (electricity bill) adjusted for having sold the daily block rewards to USD @ current prices.]'''
 
 with tab2:
     df
