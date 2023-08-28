@@ -158,7 +158,7 @@ step = st.sidebar.number_input('Stepping for Charts (Default: .001)', .001, .50,
 col_font_statistic = '<center> <font size="+8">'
 end_col_font_statistic = '</font> </center> </br>'
 
-col_font_label = '<center> <font size="+8">'
+col_font_label = '<center> <font size="+4">'
 end_col_font_label = '</font> </center>'
 
 col1, col2, col3 = st.columns(3)
