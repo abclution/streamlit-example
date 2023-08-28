@@ -166,7 +166,8 @@ col1, col2, col3 = st.columns(3)
 
 col1, col2 = st.columns(2)
 with col1:
-    st.header(":orange[Bitcoin - BTC]")
+    st.header(":orange[Bitcoin]")
+    st.header(":orange[BTC]",'orange')
     st.divider()
     st.write(col_font_statistic, str(round(slider_BTC_TPS)), end_col_font_statistic, col_font_label, 'Max. TPS </br> (Transactions per Second)', end_col_font_label, unsafe_allow_html=True)
     st.write(col_font_statistic, str(round(max_daily_transactions_BTC)),end_col_font_statistic, col_font_label, 'Max. Daily Transactions </br> (Full Blocks)', end_col_font_label, unsafe_allow_html=True)
@@ -189,7 +190,9 @@ with col1:
 
 
 with col2:
-    st.header(":green[Bitcoin Cash - BCH]")
+    st.header(":green[Bitcoin Cash]")
+    st.header(":green[BCH]",'green')
+
     st.divider()
     st.write(col_font_statistic, str(round(slider_BCH_TPS)),end_col_font_statistic, col_font_label, 'Max. TPS </br> (Transactions per Second)', end_col_font_label, unsafe_allow_html=True)
     st.write(col_font_statistic, str(round(max_daily_transactions_BCH)),end_col_font_statistic, col_font_label, 'Max. Daily Transactions </br> (Full Blocks)', end_col_font_label, unsafe_allow_html=True)
@@ -393,14 +396,9 @@ with col2:
         - Multiply the KwH/year * cost per KwH.
         - Divide by 365, make chart.'''
 
-
-
-''' Simple linear charts showing the effects of electricity price and hashrate interaction on a Daily Scale as well as the zero point where block rewards no longer cover the cost of running the networks.'''
-
-
 '''
 Some suggested exercises: 
- - Change the "Block Reward" amount as well as the price for both :orange[BTC] & :green[BCH] to see how the chart interacts.
+ - Change the "Block Reward" amount as well as the "Prices in USD" for each :orange[BTC] & :green[BCH] to see how the chart interacts.
  - Adjust the "Hashrate" of :green[BCH], notice how it affects the :green[BCH] chart.
  - Adjust the "Hashrate" of :orange[BTC]. Notice how strangely it affects the :green[BCH] chart instead of the :orange[BTC] chart. 
      - This is because the power usage for :green[BCH] is derived from the efficiency ratio of the orange:[BTC] network.
