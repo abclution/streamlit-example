@@ -523,9 +523,9 @@ with col1:
     '''The more astute will immediately realize the :red[PROBLEM] here. :green[BCH's] level of security, its "Hashrate" is a mere fraction of :orange[BTC].'''
 
 with col2:
-    '''Now it makes sense! :green[BCH] cannot compete when its "Hashrate" and security level approach :orange[BTC's] "Hashrate"!11!!
+    '''Now it makes sense! :green[BCH] cannot compete when its "Hashrate" and security level approach :orange[BTC's] "Hashrate"!11!!'''
     
-    In fact :green[BCH's] security level is:'''
+    '''In fact :green[BCH's] security level is exactly:'''
     st.write( '<font size="+8">', str(round(((slider_exaHashes_BCH/slider_exaHashes_BTC) * 100), 2)),'%', '</font>', 'of :orange[BTC]', unsafe_allow_html=True )
 
 
