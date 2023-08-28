@@ -432,16 +432,14 @@ Now some interesting things start to emerge... once the price per KwH gets close
 '''
 '''
 Some suggested exercises: 
- - Change the "Block Reward" amount as well as the "Prices in USD" for each :orange[BTC] & :green[BCH] to see how the chart interacts.
- - Adjust the "Hashrate" of :green[BCH], notice how it affects the :green[BCH] chart.
- - Adjust the "Hashrate" of :orange[BTC]. Notice how the :orange[BTC] chart stays the same, "Hashrate" ≠ Energy Usage. 
-     - On the other hand, notice how strangely it affects the :green[BCH] chart instead of the :orange[BTC] chart. 
-     - This is because the power usage for :green[BCH] is derived from the efficiency ratio of the orange:[BTC] network.
-     - The power usage for :orange[BTC] is found from here: https://ccaf.io/cbnsi/cbeci
-     - The hashrate for :orange[BTC] & :green[BCH] are found here: https://www.fork.lol/pow/hashrate
-   - We use the hashrate to power usage ratio from :orange[BTC] and use it to derive :green[BCH] power usage based on :green[BCH] current hashrate. 
-     - This assumes each network has equivalent efficiency in terms of the mining machines used.
- - Adjust the "Energy Usage in TwH" :orange[BTC]. Again, this affects both :orange[BTC] & :green[BCH] charts. :red[Remember], :green[BCH] electric efficiencies are derived from :orange[BTC], but scaled for its own hashrate.
+- Change the "Block Reward" amount as well as the "Prices in USD" for each :orange[BTC] & :green[BCH] to see how the chart interacts.
+- Adjust the "Hashrate" of :green[BCH], notice how it affects the :green[BCH] chart.
+- Adjust the "Hashrate" of :orange[BTC]. Notice how the :orange[BTC] chart stays the same, "Hashrate" ≠ Energy Usage. 
+    - On the other hand, notice how strangely it affects the :green[BCH] chart instead of the :orange[BTC] chart. This is because the power usage for :green[BCH] is derived from the efficiency ratio of the orange:[BTC] network.
+    - The power usage for :orange[BTC] is found from here: https://ccaf.io/cbnsi/cbeci and the hashrate for :orange[BTC] & :green[BCH] are found here: https://www.fork.lol/pow/hashrate
+    - We use the hashrate to power usage ratio from :orange[BTC] and use it to derive :green[BCH] power usage based on :green[BCH] current hashrate. 
+    - This assumes each network has equivalent efficiency in terms of the mining machines used.
+- Adjust the "Energy Usage in TwH" :orange[BTC]. Again, this affects both :orange[BTC] & :green[BCH] charts. :red[Remember], :green[BCH] electric efficiencies are derived from :orange[BTC], but scaled for its own hashrate.
     - Raising "Energy Usage in TwH" for :orange[BTC] while keeping the "Hashrate" the same, or lowering it simulates LESS efficient mining machines on both :orange[BTC] & :green[BCH] networks. 
     - Lowering "Energy Usage in TwH" for :orange[BTC] while keeping the "Hashrate" the same, or increasing it simulates MORE efficient mining machines on both :orange[BTC] & :green[BCH] networks. 
 
