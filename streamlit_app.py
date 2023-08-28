@@ -517,7 +517,7 @@ The more astute will immediately realize the issue here. BCH's level of security
 Now it makes sense! BCH cannot compete when its "Hashrate" and security level approach BTC's "Hashrate"  '''
 
 '''In fact BCH's security level is:'''
-st.write( round(((slider_exaHashes_BCH/slider_exaHashes_BTC) * 100),4) )
+st.write( '<font size="+8">', str(round(((slider_exaHashes_BCH/slider_exaHashes_BTC) * 100),4)),'%', '</font>' )
 
 
 '''
