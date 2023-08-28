@@ -610,7 +610,7 @@ with st.expander(":bulb: Click here for Suggested exercises"):
 fee_start_value = .001
 fee_stop_value = 1000
 fee_step = .001
-feePerTransaction = [round(fee_start_value + i * fee_step, 3) for i in range(int((fee_end_value - fee_start_value) / fee_step) + 1)]
+feePerTransaction = [round(fee_start_value + i * fee_step, 3) for i in range(int((fee_stop_value - fee_start_value) / fee_step) + 1)]
 
 
 tab1, tab2, tab3 = st.tabs([":bar_chart: Chart", ":clipboard: Data", ":baby_bottle: Formula"])
