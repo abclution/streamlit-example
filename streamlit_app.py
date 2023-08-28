@@ -514,13 +514,13 @@ with tab2:
 
 col1, col2 = st.columns(2)
 with col1:
-    '''Immediately and again, you may have noticed that :green[BCH] seems to have flatlined in comparison to :orange[BTC]. 
+    '''Immediately and again, you may have noticed that :green[BCH] seems to have flatlined in comparison to :orange[BTC].'''
     
-    But this time having *lower fees is a good thing*, how can :green[BCH] have such lower fees that :orange[BTC]?
+    '''But this time having *lower fees is a good thing*, how can :green[BCH] have such lower fees that :orange[BTC]?'''
     
-    **What is going on?**
+    '''**What is going on?**'''
 
-    The more astute will immediately realize the issue here. :green[BCH's] level of security, its "Hashrate" is a mere fraction of :orange[BTC].'''
+    '''The more astute will immediately realize the :red[PROBLEM] here. :green[BCH's] level of security, its "Hashrate" is a mere fraction of :orange[BTC].'''
 
 with col2:
     '''Now it makes sense! :green[BCH] cannot compete when its "Hashrate" and security level approach :orange[BTC's] "Hashrate"!11!!
