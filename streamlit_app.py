@@ -551,7 +551,28 @@ st.divider()
 ###############################################################################
 st.header("Bitcoin Miner Profits aka Why Mine Bitcoin?", divider='rainbow')
 
-''' So, from the previous chart an excercise, we learned unintuitively that something BCH is doing makes it better for all the end users that are using it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+''' So, from the previous charts and excercise, we learned unintuitively that something BCH is doing makes it better for all the end users that are using it.
 
 Fee's are lower and will always be lower, and the cost of its security budget, even if its security levels are raised to equal with BTC, are covered much more easily by transaction fees.
 
@@ -577,10 +598,45 @@ Additionally the block reward ever increasingly moves towards zero as well. This
 
 The breakpoint will be only the availiablility and efficiency of the mining equipment.
 '''
-
+''' Add cost of "storage" '''
+'''Secret is every single thing that could possibly be usefrul to improve from BTC can be slapped just as easily into BCH.. including lightning.'''
 with st.expander(":bulb: Click here for Suggested exercises"):
     '''asfasdfasd'''
 
+
+# Create a list of values for column 1
+#costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - start_value) / step) + 1)]
+
+fee_start_value = .001
+fee_stop_value = 1000
+fee_step = .001
+feePerTransaction = [round(fee_start_value + i * fee_step, 3) for i in range(int((fee_end_value - fee_start_value) / fee_step) + 1)]
+
+
+tab1, tab2, tab3 = st.tabs([":bar_chart: Chart", ":clipboard: Data", ":baby_bottle: Formula"])
+
+with tab1:
+    st.header(":orange[BTC] & :green[BCH] Miner Profits Now & Future")
+
+    data = {
+        "Fee Per Transaction": feePerTransaction,
+        "BTC, Daily Miner Profit": [(feePerTransaction * max_daily_transactions_BTC)  for value in feePerTransaction],
+        "BCH, Daily Miner Profit": [(feePerTransaction * max_daily_transactions_BCH)  for value in feePerTransaction]
+
+    }
+    df = pd.DataFrame(data)
+    st.line_chart(
+        df,
+        x='Fee Per Transaction',
+        y=['BTC, Daily Miner Profit','BCH, Daily Miner Profit'],
+        color=[colorBCH, colorBTC]
+        )
+
+with tab2:
+    df
+
+with tab3:
+    '''todo'''
 
 
 
