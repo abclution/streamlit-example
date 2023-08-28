@@ -15,7 +15,9 @@ seconds_per_day = 86400
 
 
 """
-Just farting around 
+The Present, Past & Future of Bitcoin. 
+
+A simulation of the economics and usability of Bitcoin as it is, was and will be.
 """
 ###############################################################################
 st.sidebar.write('<font size="+5">Max. TPS','</font>', '</br>', '(Maximum Transactions per Second, Full Blocks)', unsafe_allow_html=True)
