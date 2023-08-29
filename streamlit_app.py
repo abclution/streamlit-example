@@ -550,6 +550,7 @@ with st.expander(":bulb: Click here for Suggested exercises"):
 st.divider()
 ###############################################################################
 st.header("Bitcoin Miner Profits aka Why Mine Bitcoin?", divider='rainbow')
+st.header("Everything here and down in work in progress.....", divider='rainbow')
 
 
 
@@ -638,7 +639,16 @@ with tab2:
 with tab3:
     '''todo'''
 
+''' Fees are a bit difficult. Bitcoin fees are not based "per transaction" in fact they are based "per byte" of data.
+BTC Fee Philosophy - Fees will increase until morale improves.
+When blocks are full, people need to compete in the "fee market" to have their transaction sent.
 
+BCH Fee Philosophy - Always less than a penny no matter what the BCH price is.
+Blocks should never be full enough that fees have to increase.
+When BCH dollar price increases so much that the smallest divisible unit of BCH is worth more than a penny, we create a even smaller divisible unit
+
+A satoshi is the smallest unit of Bitcoin currency. 1 satoshi = 0.00000001 BTC. 
+'''
 
 
 
