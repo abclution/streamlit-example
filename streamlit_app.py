@@ -681,6 +681,7 @@ https://news.bitcoin.com/bitcoin-records-largest-mined-block-to-date-4-mb-block-
 
 
 
+print(f"{slider_PriceBCH/10000000:.10f}")
 
 
 col1, col2 = st.columns(2)
@@ -692,7 +693,7 @@ with col1:
 
 with col2:
 
-    st.write( '1 :green[BCH] satoshi is worth </br>', '<font size="+6">$', str((slider_PriceBCH/10000000:.11f)), 'USD', '</font>', unsafe_allow_html=True )
+    st.write( '1 :green[BCH] satoshi is worth </br>', '<font size="+6">$', str(format(slider_PriceBCH/10000000, ".16f")), 'USD', '</font>', unsafe_allow_html=True )
 
 
 
