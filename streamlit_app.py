@@ -693,7 +693,7 @@ with col1:
 
 with col2:
 
-    st.write( '1 :green[BCH] satoshi is worth </br>', '<font size="+6">$', str(format(slider_PriceBCH/10000000, ".7g")), 'USD', '</font>', unsafe_allow_html=True )
+    st.write( '1 :green[BCH] satoshi is worth </br>', '<font size="+6">$', str.rstrip(format(slider_PriceBCH/10000000, ".7f"),"0"), 'USD', '</font>', unsafe_allow_html=True )
 
 
 
