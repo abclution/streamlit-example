@@ -14,7 +14,7 @@ colorBCH = "#0AC18E"
 seconds_per_day = 86400
 
 
-"""
+'''
 # The Present, The Past & The Future of Bitcoin. 
 ## A simulation of the economics and usability of Bitcoin as it is, as it was and as it will be.
 
@@ -37,7 +37,7 @@ This is meant as a tool for anyone who wants to simulate the economic & end user
 - Additionally the data used to derive the charts should be availiable in the tab next to each chart, as well as the formula used to derive the datasets.
 - The entirety of the source code used to generate this page is also available.
 
-"""
+'''
 ###############################################################################
 st.sidebar.write(
     '<font size="+5">Max. TPS',
@@ -343,7 +343,7 @@ with col1:
 
     #   st.write(col_font_statistic, str(energyUsageYearlyKwH_BTC/365),end_font,'KwH Per Day', end_col_font_label, unsafe_allow_html=True)
 
-    """ BTC Info here"""
+    ''' BTC Info here'''
 
 
 with col2:
@@ -442,7 +442,7 @@ with col2:
 
     #    st.write(col_font_statistic, str(energyUsageYearlyKwH_BCH / 365),'</font>','KwH Per Day', end_col_font_label, unsafe_allow_html=True)
 
-    """BCH Info Here"""
+    '''BCH Info Here'''
 
 
 ###############################################################################
@@ -500,20 +500,20 @@ with tab2:
 
 with tab3:
     st.header("Formula")
-    """The very simple formula for determining the cost of the yearly security budget is as follows:
+    '''The very simple formula for determining the cost of the yearly security budget is as follows:
     - Determine the KwH/year used by each network.
-    - Multiply the KwH/year * cost per KwH & make chart."""
+    - Multiply the KwH/year * cost per KwH & make chart.'''
 
 
-""" A simple linear chart showing the price of electricity and its resultant cost of the security budget at a Yearly scale."""
+''' A simple linear chart showing the price of electricity and its resultant cost of the security budget at a Yearly scale.'''
 
-"""> **Unfortunately, due to the massive difference in scale, the :green[BCH] network line looks quite flat. In the next chart we will split these charts up and drill down into the Daily view.**"""
+'''> **Unfortunately, due to the massive difference in scale, the :green[BCH] network line looks quite flat. In the next chart we will split these charts up and drill down into the Daily view.**'''
 
 with st.expander(":bulb: Click here for Suggested exercises"):
-    """
+    '''
     - Adjust both the :orange[BTC] + :green[BCH] hashrate to verify they match, as they are both calculated with identical efficiency.
     - Adjust the :orange[BTC] "Energy usage in TwH" to get an idea of how the cost of the security budget/electricity bill scales.
-    """
+    '''
 
 
 ###############################################################################
@@ -527,7 +527,7 @@ st.divider()  # DAILY, SPLIT - SECURITY BUDGET CHART AND TABLE WITH BLOCK REWARD
 st.header(
     "Daily Cost of Electricity (Security Budget) for :orange[BTC] & :green[BCH] (USD)"
 )
-""":red[Red line overlay representing the respective daily block rewards, sold to USD @ current prices.]"""
+''':red[Red line overlay representing the respective daily block rewards, sold to USD @ current prices.]'''
 # Create a list of values for column 1
 costPerKwH = [
     round(start_value + i * step, 3)
@@ -558,19 +558,19 @@ with col1:
             y=["BTC, Daily Security Budget", "BTC, Daily (USD) Block Reward"],
             color=["#ff0320", colorBTC],
         )
-        """Daily cost of :orange[BTC] security budget with the :red[red line representing the daily block rewards value, sold to USD @ current prices.]"""
+        '''Daily cost of :orange[BTC] security budget with the :red[red line representing the daily block rewards value, sold to USD @ current prices.]'''
 
-        """With default settings, :orange[BTC] at around .059/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  """
+        '''With default settings, :orange[BTC] at around .059/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
 
     with tab2:
         df
 
     with tab3:
-        """The very simple formula for determining the cost of the security budget is as follows:
+        '''The very simple formula for determining the cost of the security budget is as follows:
 
         - Determine the KwH/year used by each network.
         - Multiply the KwH/year * cost per KwH.
-        - Divide by 365, make chart."""
+        - Divide by 365, make chart.'''
 
 
 with col2:
@@ -597,20 +597,20 @@ with col2:
             color=["#ff0320", colorBCH],
         )
 
-        """ Daily cost of :green[BCH] security budget with the :red[red line representing the daily block rewards, sold to USD @ current prices.]"""
-        """With default settings, :green[BCH] at around .0648/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  """
+        ''' Daily cost of :green[BCH] security budget with the :red[red line representing the daily block rewards, sold to USD @ current prices.]'''
+        '''With default settings, :green[BCH] at around .0648/Kwh electricity price, the block reward by itself is no longer sufficient to pay for the security budget.  '''
 
     with tab2:
         df
 
     with tab3:
-        """The very simple formula for determining the cost of the security budget is as follows:
+        '''The very simple formula for determining the cost of the security budget is as follows:
 
         - Determine the KwH/year used by each network.
         - Multiply the KwH/year * cost per KwH.
-        - Divide by 365, make chart."""
+        - Divide by 365, make chart.'''
 
-"""Libya is/was cheapest electricity in the world with .007 USD per KwH, feel free to adjust the price ranges in the sidebar.
+'''Libya is/was cheapest electricity in the world with .007 USD per KwH, feel free to adjust the price ranges in the sidebar.
 
 Now some interesting things start to emerge... once the price per KwH gets close the the cheapest availiable KwH we see that:
  
@@ -620,9 +620,9 @@ Now some interesting things start to emerge... once the price per KwH gets close
     
 > ** So its easy to see that the current security budget of both :orange[BTC] & :green[BCH] are NOT covered by solely the block rewards any longer. This means it will be necessary for the remaining of the security budget to be covered by the transaction fees which we will visit next.** # noqa: E501
 
-"""
+'''
 with st.expander(":bulb: Click here for Suggested exercises"):
-    """
+    '''
     Some suggested exercises:
     - Change the "Block Reward" amount as well as the "Prices in USD" for each :orange[BTC] & :green[BCH] to see how the chart interacts.
     - Adjust the "Hashrate" of :green[BCH], notice how it affects the :green[BCH] chart.
@@ -635,7 +635,7 @@ with st.expander(":bulb: Click here for Suggested exercises"):
         - Raising "Energy Usage in TwH" for :orange[BTC] while keeping the "Hashrate" the same, or lowering it simulates LESS efficient mining machines on both :orange[BTC] & :green[BCH] networks.
         - Lowering "Energy Usage in TwH" for :orange[BTC] while keeping the "Hashrate" the same, or increasing it simulates MORE efficient mining machines on both :orange[BTC] & :green[BCH] networks.
 
-    """# noqa: E501
+    '''# noqa: E501
 
 
 ###############################################################################
@@ -663,7 +663,7 @@ with tab1:
     st.header(
         ":orange[BTC] & :green[BCH] Per Transaction Fee Needed to Pay the remainder of the Security Budget (Electricity Costs)"
     )
-    """This is the cost per transaction **REQUIRED** for each :orange[BTC] and :green[BCH] to maintain their security budget (electricity bill) adjusted for having sold the daily block rewards to USD @ current prices."""
+    '''This is the cost per transaction **REQUIRED** for each :orange[BTC] and :green[BCH] to maintain their security budget (electricity bill) adjusted for having sold the daily block rewards to USD @ current prices.'''
 
     data = {
         "Electricity Cost per KwH": costPerKwH,
@@ -696,25 +696,25 @@ with tab2:
     df
 
 with tab3:
-    """todo"""
+    '''todo'''
 
 col1, col2 = st.columns(2)
 with col1:
-    """Again sadly, you may have noticed that :green[BCH] seems to have flatlined in comparison to :orange[BTC]."""
+    '''Again sadly, you may have noticed that :green[BCH] seems to have flatlined in comparison to :orange[BTC].'''
 
-    """Except this time, the line represents having **much lower fees** to maintain the security budge. But how can :green[BCH] have such lower fees than :orange[BTC]?"""
+    '''Except this time, the line represents having **much lower fees** to maintain the security budge. But how can :green[BCH] have such lower fees than :orange[BTC]?'''
 
-    """**What is going on?**"""
+    '''**What is going on?**'''
 
-    """The more astute will immediately realize :red[**THE PROBLEM**] here. :thinking_face:"""
+    '''The more astute will immediately realize :red[**THE PROBLEM**] here. :thinking_face:'''
 
-    """:green[BCH's] level of security, its **"Hashrate"** is a mere fraction of :orange[BTC]! :broken_heart:"""
+    ''':green[BCH's] level of security, its **"Hashrate"** is a mere fraction of :orange[BTC]! :broken_heart:'''
 
 with col2:
-    """**Now it all makes makes sense!**"""
-    """:green[BCH] cannot possibly compete when its security level and security budget costs approach :orange[BTC's]!!!1!"""
-    """...or can it. :microphone:"""
-    """Feel free to adjust :green[BCH's] **"Hashrate"** to match :orange[BTC's]**"Hashrate"** and look at the chart"""
+    '''**Now it all makes makes sense!**'''
+    ''':green[BCH] cannot possibly compete when its security level and security budget costs approach :orange[BTC's]!!!1!'''
+    '''...or can it. :microphone:'''
+    '''Feel free to adjust :green[BCH's] **"Hashrate"** to match :orange[BTC's]**"Hashrate"** and look at the chart'''
     st.write(
         "In fact :green[BCHs] security level is exactly:",
         '<font size="+6">',
@@ -727,14 +727,14 @@ with col2:
 
 
 with st.expander(":bulb: Click here for Suggested exercises"):
-    """
+    '''
     - Validate the presented data. Match the :orange[BTC] & :green[BCH] settings and make sure the chart lines match. I suggest the following settings to assist in setting the sliders which are unfriendly for detail work.
     - "Max TPS", bring :green[BCH] all the way down to 1, then use keyboard to move it to 7.
     - "Hashrate", move both :orange[BTC] & :green[BCH] fully to the right, 1000. They have equal efficiency so this is fine and "Energy Usage in TwH" is not needed for this chart.
     - "Prices in USD", move both :orange[BTC] & :green[BCH] fully to the left, 1. Or the right, 100000. Leave one of them a tick off so you can observe both lines.
     - Great, once you are satisfied they match, you should have confidence to continue.
     - I suggest to refresh the page to reset to defaults.
-    """ # noqa: E501
+    ''' # noqa: E501
 
 
 ###############################################################################
@@ -744,19 +744,19 @@ st.header("Bitcoin Miner Profits aka Why Mine Bitcoin?", divider="rainbow")
 st.header("Everything here and down in work in progress.....", divider="rainbow")
 
 
-""" So, from the previous charts and excercise, we learned unintuitively that something BCH is doing makes it better for all the end users that are using it.
+''' So, from the previous charts and excercise, we learned unintuitively that something BCH is doing makes it better for all the end users that are using it.
 
 Fee's are lower and will always be lower, and the cost of its security budget, even if its security levels are raised to equal with BTC, are covered much more easily by transaction fees.
 
-All of this, even when its price is much lower than BTC. Very strange indeed.""" # noqa: E501
+All of this, even when its price is much lower than BTC. Very strange indeed. ''' # noqa: E501
 
 
-"""So, in order to find profits, we must decide on some costs. The costs that both affect the production and protection of the Bitcoin networks and scale the most are the electric costs
+'''So, in order to find profits, we must decide on some costs. The costs that both affect the production and protection of the Bitcoin networks and scale the most are the electric costs
 
 Here is a new slider where you can choose what the rest of the charts in this section validate or invalidate your notions.
-""" # noqa: E501
+''' # noqa: E501
 
-"""
+''''''
 Ok, so lets look into the far future.
 All of this has been based on the current fact regarding the cost of electricity.
 
@@ -768,11 +768,14 @@ Additionally there are definitly miners who already produce and use electricity 
 Additionally the block reward ever increasingly moves towards zero as well. This will be an interesting thing as well.
 
 The breakpoint will be only the availiablility and efficiency of the mining equipment.
-"""
-""" Add cost of "storage" """
-"""Secret is every single thing that could possibly be usefrul to improve from BTC can be slapped just as easily into BCH.. including lightning."""
+'''
+
+''' Add cost of "storage" '''
+'''Secret is every single thing that could possibly be usefrul to improve from BTC can be slapped just as easily into BCH.. including lightning.'''
+
+
 with st.expander(":bulb: Click here for Suggested exercises"):
-    """asfasdfasd"""
+    '''asfasdfasd'''
 
 
 # Create a list of values for column 1
@@ -815,18 +818,18 @@ with tab2:
     df
 
 with tab3:
-    """todo"""
+    '''todo'''
 
 
 ''' So far, we have been approaching the statistics of Bitcoin from a particular angle, The costs of running the network (as a miner!)
 And we have been presenting the fee structure as a static, per transaction cost, valued in USD when doing calculations.
 
 Alas, this is not quite correct. Bitcoin fees are not quite so simple and are a bit difficult to simulate and present.
-Bitcoin fees are not based "per transaction" in fact they are based "satoshis per byte" of size of the data that the transaction itself is composed of.'''
+Bitcoin fees are not based "per transaction" in fact they are based "satoshis per byte" of size of the data that the transaction itself is composed of.'''  # noqa: E501
 
 
 '''A satoshi is (currently) the smallest unit of Bitcoin currency, 1 satoshi = 0.00000001 BTC/BCH.
-If you play with BTC/BCH prices you can see even at a price of $100,000 USD, a satoshi is worth only 1 cent. '''
+If you play with BTC/BCH prices you can see even at a price of $100,000 USD, a satoshi is worth only 1 cent. '''  # noqa: E501
 
 col1, col2 = st.columns(2)
 
@@ -848,7 +851,7 @@ with col2:
         "USD </font>",
         unsafe_allow_html=True,
     )
-'''In the future, if a satoshi is no longer a negligible amount of value, Bitcoin can be divided into ever smaller units of measure, sub-satoshi measurements.'''
+'''In the future, if a satoshi is no longer a negligible amount of value, Bitcoin can be divided into ever smaller units of measure, sub-satoshi measurements.'''  # noqa: E501
 
 
 
@@ -871,7 +874,7 @@ https://cointelegraph.com/news/the-current-state-of-the-bitcoin-network-and-its-
 https://news.bitcoin.com/bitcoin-records-largest-mined-block-to-date-4-mb-block-containing-nft-causes-unease-among-small-block-supporters/
 ''' # noqa: E501
 
-"""Environmental efficiency"""
+'''Environmental efficiency'''
 
 
 
