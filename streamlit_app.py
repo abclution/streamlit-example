@@ -212,7 +212,7 @@ start_value = st.sidebar.number_input(
     0.007,
     0.001,
     "%f",
-    help="Loaaawasdfasdferrrrrrrrr",
+    help="Lowest KwH value for charts. Min. .001",
 )
 end_value = st.sidebar.number_input(
     "Highest Electricity Price, KwH (Default: .25)",
@@ -221,7 +221,7 @@ end_value = st.sidebar.number_input(
     0.25,
     0.001,
     "%f",
-    help="Highestaaa prasdfasdice",
+    help="Highest cost per KwH for charts. Max. .50",
 )
 step = st.sidebar.number_input(
     "Stepping for Charts (Default: .001)",
@@ -230,7 +230,7 @@ step = st.sidebar.number_input(
     0.001,
     0.001,
     "%f",
-    help="Stepping asdfasaaadf",
+    help="Stepping for chart generation.",
 )
 
 
@@ -614,11 +614,11 @@ with col2:
 
 Now some interesting things start to emerge... once the price per KwH gets close the the cheapest availiable KwH we see that:
  
-- The current (6.25) block rewards are no longer sufficient to cover the security budget. 
+- The current (6.25) block rewards are no longer sufficient to cover the security budget.
     - @ 25 Bitcoins (BTC) *the block reward* **was enough to cover the energy costs up to about .235/Kwh.**
     - @ 50 Bitcoins (BTC) *the block reward* **was enough to cover the energy costs up to about .45/Kwh.**
     
-> ** So its easy to see that the current security budget of both :orange[BTC] & :green[BCH] are NOT covered by solely the block rewards any longer. This means it will be neccesary for the remaining of the security budget to be covered by the transaction fees which we will visit next.**
+> ** So its easy to see that the current security budget of both :orange[BTC] & :green[BCH] are NOT covered by solely the block rewards any longer. This means it will be necessary for the remaining of the security budget to be covered by the transaction fees which we will visit next.** # noqa: E501
 
 """
 with st.expander(":bulb: Click here for Suggested exercises"):
@@ -635,7 +635,7 @@ with st.expander(":bulb: Click here for Suggested exercises"):
         - Raising "Energy Usage in TwH" for :orange[BTC] while keeping the "Hashrate" the same, or lowering it simulates LESS efficient mining machines on both :orange[BTC] & :green[BCH] networks.
         - Lowering "Energy Usage in TwH" for :orange[BTC] while keeping the "Hashrate" the same, or increasing it simulates MORE efficient mining machines on both :orange[BTC] & :green[BCH] networks.
 
-    """
+    """# noqa: E501
 
 
 ###############################################################################
@@ -734,7 +734,7 @@ with st.expander(":bulb: Click here for Suggested exercises"):
     - "Prices in USD", move both :orange[BTC] & :green[BCH] fully to the left, 1. Or the right, 100000. Leave one of them a tick off so you can observe both lines.
     - Great, once you are satisfied they match, you should have confidence to continue.
     - I suggest to refresh the page to reset to defaults.
-    """
+    """ # noqa: E501
 
 
 ###############################################################################
@@ -748,14 +748,13 @@ st.header("Everything here and down in work in progress.....", divider="rainbow"
 
 Fee's are lower and will always be lower, and the cost of its security budget, even if its security levels are raised to equal with BTC, are covered much more easily by transaction fees.
 
-All of this, even when its price is much lower than BTC. Very strange indeed."""
+All of this, even when its price is much lower than BTC. Very strange indeed.""" # noqa: E501
 
 
 """So, in order to find profits, we must decide on some costs. The costs that both affect the production and protection of the Bitcoin networks and scale the most are the electric costs
 
 Here is a new slider where you can choose what the rest of the charts in this section validate or invalidate your notions.
-
- """
+""" # noqa: E501
 
 """
 Ok, so lets look into the far future.
@@ -836,7 +835,7 @@ BCH Fee Philosophy - Always less than a penny no matter what the BCH price is.
 Blocks should never be full enough that fees have to increase.
 When BCH dollar price increases so much that the smallest divisible unit of BCH is worth more than a penny, we create a even smaller divisible unit
 
-"""
+""" # noqa: E501
 """List of largest BTC blocks ever and stats"""
 """https://mempool.space/block/00000000000000000001763c6ac07b72152f7cd9ba42949af2269ff83b379cfd"""
 """https://mempool.space/block/0000000000000000000515e202c8ae73c8155fc472422d7593af87aa74f2cf3d
