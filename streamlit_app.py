@@ -818,38 +818,15 @@ with tab3:
     """todo"""
 
 
-""" So far, we have been approaching the statistics of Bitcoin from a particular angle, The costs of running the network (as a miner!)
+''' So far, we have been approaching the statistics of Bitcoin from a particular angle, The costs of running the network (as a miner!)
 And we have been presenting the fee structure as a static, per transaction cost, valued in USD when doing calculations.
 
 Alas, this is not quite correct. Bitcoin fees are not quite so simple and are a bit difficult to simulate and present.
-Bitcoin fees are not based "per transaction" in fact they are based "satoshis per byte" of data the the transaction itself is composed of..
-A satoshi is (currently) the smallest unit of Bitcoin currency. 1 satoshi = 0.00000001 BTC. 
-
-Currently meaning that in the future if a satoshi is a no longer negligible amount of value Bitcoins can be divided into ever smaller units of measure.
+Bitcoin fees are not based "per transaction" in fact they are based "satoshis per byte" of size of the data that the transaction itself is composed of.'''
 
 
-BTC Fee Philosophy - Fees will increase until morale improves.
-Keep the blockspace small and full. When blocks are full, people need to compete in the "limited blockspace created fee market" to have their transaction sent.
-
-BCH Fee Philosophy - Always less than a penny no matter what the BCH price is.
-Blocks should never be full enough that fees have to increase.
-When BCH dollar price increases so much that the smallest divisible unit of BCH is worth more than a penny, we create a even smaller divisible unit
-
-""" # noqa: E501
-"""List of largest BTC blocks ever and stats"""
-"""https://mempool.space/block/00000000000000000001763c6ac07b72152f7cd9ba42949af2269ff83b379cfd"""
-"""https://mempool.space/block/0000000000000000000515e202c8ae73c8155fc472422d7593af87aa74f2cf3d
-https://blockchair.com/bitcoin/blocks?s=size(desc)#
-
-
-https://cointelegraph.com/news/the-current-state-of-the-bitcoin-network-and-its-biggest-block
-
-
-https://news.bitcoin.com/bitcoin-records-largest-mined-block-to-date-4-mb-block-containing-nft-causes-unease-among-small-block-supporters/
-
-"""
-"""Environmental efficiency"""
-
+'''A satoshi is (currently) the smallest unit of Bitcoin currency. 1 satoshi = 0.00000001 BTC/BCH.
+If you play with BTC/BCH prices you can see even at a price of $100,000 USD, a satoshi is worth 1 cent. '''
 
 col1, col2 = st.columns(2)
 
@@ -871,6 +848,36 @@ with col2:
         "USD </font>",
         unsafe_allow_html=True,
     )
+
+
+
+'''In the future if a satoshi is a no longer negligible amount of value, Bitcoin can be divided into ever smaller units of measure, sub-satoshi measurements.'''
+
+'''
+BTC Fee Philosophy - Fees will increase until morale improves.
+Keep the blockspace small and full. When blocks are full, people need to compete in the "limited blockspace created fee market" to have their transaction sent.
+
+BCH Fee Philosophy - Always less than a penny no matter what the BCH price is.
+Blocks should never be full enough that fees have to increase.
+When BCH dollar price increases so much that the smallest divisible unit of BCH is worth more than a penny, we create a even smaller divisible unit
+'''
+
+""" # noqa: E501
+"""List of largest BTC blocks ever and stats"""
+"""https://mempool.space/block/00000000000000000001763c6ac07b72152f7cd9ba42949af2269ff83b379cfd"""
+"""https://mempool.space/block/0000000000000000000515e202c8ae73c8155fc472422d7593af87aa74f2cf3d
+https://blockchair.com/bitcoin/blocks?s=size(desc)#
+
+
+https://cointelegraph.com/news/the-current-state-of-the-bitcoin-network-and-its-biggest-block
+
+
+https://news.bitcoin.com/bitcoin-records-largest-mined-block-to-date-4-mb-block-containing-nft-causes-unease-among-small-block-supporters/
+
+"""
+"""Environmental efficiency"""
+
+
 
 
 ###############################################################################
