@@ -688,7 +688,7 @@ with tab1:
     st.line_chart(
         df,
         x="Electricity Cost per KwH",
-        y=["BTC, Per Transaction Fee Needed", "BCH, Per Transaction Fee Needed"],
+        y=["BTC, Per Transaction Fee Needed", "BCH, Per Transaction Fee Needed"],  # noqa: E501
         color=[colorBCH, colorBTC],
     )
 
@@ -700,21 +700,21 @@ with tab3:
 
 col1, col2 = st.columns(2)
 with col1:
-    '''Again sadly, you may have noticed that :green[BCH] seems to have flatlined in comparison to :orange[BTC].'''
+    '''Again sadly, you may have noticed that :green[BCH] seems to have flatlined in comparison to :orange[BTC].'''  # noqa: E501
 
-    '''Except this time, the line represents having **much lower fees** to maintain the security budge. But how can :green[BCH] have such lower fees than :orange[BTC]?'''
+    '''Except this time, the line represents having **much lower fees** to maintain the security budge. But how can :green[BCH] have such lower fees than :orange[BTC]?'''  # noqa: E501
 
     '''**What is going on?**'''
 
-    '''The more astute will immediately realize :red[**THE PROBLEM**] here. :thinking_face:'''
+    '''The more astute will immediately realize :red[**THE PROBLEM**] here. :thinking_face:'''  # noqa: E501
 
-    ''':green[BCH's] level of security, its **"Hashrate"** is a mere fraction of :orange[BTC]! :broken_heart:'''
+    ''':green[BCH's] level of security, its **"Hashrate"** is a mere fraction of :orange[BTC]! :broken_heart:'''  # noqa: E501
 
 with col2:
     '''**Now it all makes makes sense!**'''
-    ''':green[BCH] cannot possibly compete when its security level and security budget costs approach :orange[BTC's]!!!1!'''
+    ''':green[BCH] cannot possibly compete when its security level and security budget costs approach :orange[BTC's]!!!1!'''  # noqa: E501
     '''...or can it. :microphone:'''
-    '''Feel free to adjust :green[BCH's] **"Hashrate"** to match :orange[BTC's]**"Hashrate"** and look at the chart'''
+    '''Feel free to adjust :green[BCH's] **"Hashrate"** to match :orange[BTC's]**"Hashrate"** and look at the chart'''  # noqa: E501
     st.write(
         "In fact :green[BCHs] security level is exactly:",
         '<font size="+6">',
@@ -744,34 +744,34 @@ st.header("Bitcoin Miner Profits aka Why Mine Bitcoin?", divider="rainbow")
 st.header("Everything here and down in work in progress.....", divider="rainbow")
 
 
-''' So, from the previous charts and excercise, we learned unintuitively that something BCH is doing makes it better for all the end users that are using it.
+''' So, from the previous charts and exercise, we learned unintuitively that something BCH is doing makes it better for all the end users that are using it.
 
 Fee's are lower and will always be lower, and the cost of its security budget, even if its security levels are raised to equal with BTC, are covered much more easily by transaction fees.
 
-All of this, even when its price is much lower than BTC. Very strange indeed. ''' # noqa: E501
+All of this, even when its price is much lower than BTC. Very strange indeed.'''  # noqa: E501
 
 
 '''So, in order to find profits, we must decide on some costs. The costs that both affect the production and protection of the Bitcoin networks and scale the most are the electric costs
 
 Here is a new slider where you can choose what the rest of the charts in this section validate or invalidate your notions.
-''' # noqa: E501
+'''  # noqa: E501
 
-''''''
+'''
 Ok, so lets look into the far future.
 All of this has been based on the current fact regarding the cost of electricity.
 
-If we ever manage to figure out superconductors and fusion, the price of electricity is going to go torwards zero.
+If we ever manage to figure out superconductors and fusion, the price of electricity is going to go towards zero.
 
-So in effect at this point, the price of electricity doesn't matter. This will cause several interesting thingss. Lets explore this.
-Additionally there are definitly miners who already produce and use electricity for free.
+So in effect at this point, the price of electricity doesn't matter. This will cause several interesting things. Lets explore this.
+Additionally there are definitely miners who already produce and use electricity for free.
 
 Additionally the block reward ever increasingly moves towards zero as well. This will be an interesting thing as well.
 
-The breakpoint will be only the availiablility and efficiency of the mining equipment.
-'''
+The breakpoint will be only the availability and efficiency of the mining equipment.
+'''  # noqa: E501
 
 ''' Add cost of "storage" '''
-'''Secret is every single thing that could possibly be usefrul to improve from BTC can be slapped just as easily into BCH.. including lightning.'''
+'''Secret is every single thing that could possibly be useful to improve from BTC can be slapped just as easily into BCH.. including lightning.'''  # noqa: E501
 
 
 with st.expander(":bulb: Click here for Suggested exercises"):
