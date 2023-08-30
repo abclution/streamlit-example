@@ -639,6 +639,9 @@ with tab2:
 with tab3:
     '''todo'''
 
+
+
+
 ''' So far, we have been approaching the statistics of Bitcoin from a particular angle, The costs of running the network (as a miner!)
 And we have been presenting the fee structure as a static, per transaction cost, valued in USD when doing calculations.
 
