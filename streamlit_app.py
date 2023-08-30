@@ -825,8 +825,8 @@ Alas, this is not quite correct. Bitcoin fees are not quite so simple and are a 
 Bitcoin fees are not based "per transaction" in fact they are based "satoshis per byte" of size of the data that the transaction itself is composed of.'''
 
 
-'''A satoshi is (currently) the smallest unit of Bitcoin currency. 1 satoshi = 0.00000001 BTC/BCH.
-If you play with BTC/BCH prices you can see even at a price of $100,000 USD, a satoshi is worth 1 cent. '''
+'''A satoshi is (currently) the smallest unit of Bitcoin currency, 1 satoshi = 0.00000001 BTC/BCH.
+If you play with BTC/BCH prices you can see even at a price of $100,000 USD, a satoshi is worth only 1 cent. '''
 
 col1, col2 = st.columns(2)
 
@@ -848,10 +848,9 @@ with col2:
         "USD </font>",
         unsafe_allow_html=True,
     )
+'''In the future, if a satoshi is no longer a negligible amount of value, Bitcoin can be divided into ever smaller units of measure, sub-satoshi measurements.'''
 
 
-
-'''In the future if a satoshi is a no longer negligible amount of value, Bitcoin can be divided into ever smaller units of measure, sub-satoshi measurements.'''
 
 '''
 BTC Fee Philosophy - Fees will increase until morale improves.
