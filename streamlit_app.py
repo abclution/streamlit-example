@@ -859,21 +859,18 @@ Keep the blockspace small and full. When blocks are full, people need to compete
 BCH Fee Philosophy - Always less than a penny no matter what the BCH price is.
 Blocks should never be full enough that fees have to increase.
 When BCH dollar price increases so much that the smallest divisible unit of BCH is worth more than a penny, we create a even smaller divisible unit
-'''
+''' # noqa: E501
 
-""" # noqa: E501
-"""List of largest BTC blocks ever and stats"""
-"""https://mempool.space/block/00000000000000000001763c6ac07b72152f7cd9ba42949af2269ff83b379cfd"""
-"""https://mempool.space/block/0000000000000000000515e202c8ae73c8155fc472422d7593af87aa74f2cf3d
+
+'''List of largest BTC blocks ever and stats
+https://mempool.space/block/00000000000000000001763c6ac07b72152f7cd9ba42949af2269ff83b379cfd
+https://mempool.space/block/0000000000000000000515e202c8ae73c8155fc472422d7593af87aa74f2cf3d
 https://blockchair.com/bitcoin/blocks?s=size(desc)#
 
-
 https://cointelegraph.com/news/the-current-state-of-the-bitcoin-network-and-its-biggest-block
-
-
 https://news.bitcoin.com/bitcoin-records-largest-mined-block-to-date-4-mb-block-containing-nft-causes-unease-among-small-block-supporters/
+''' # noqa: E501
 
-"""
 """Environmental efficiency"""
 
 
