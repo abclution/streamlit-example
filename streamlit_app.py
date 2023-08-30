@@ -688,12 +688,12 @@ col1, col2 = st.columns(2)
 
 with col1:
 
-    st.write('1 :orange[BTC] satoshi is worth </br>', '<font size="+6">$', str(round((slider_PriceBTC/10000000),11)), 'USD', '</font>',  unsafe_allow_html=True )
+    st.write('1 :orange[BTC] satoshi is worth </br>', '<font size="+6">$', str.rstrip(format(slider_PriceBTC/10000000, ".8f"),"0"),  'USD', '</font>',  unsafe_allow_html=True )
 
 
 with col2:
 
-    st.write( '1 :green[BCH] satoshi is worth </br>', '<font size="+6">$', str.rstrip(format(slider_PriceBCH/10000000, ".7f"),"0"), 'USD', '</font>', unsafe_allow_html=True )
+    st.write( '1 :green[BCH] satoshi is worth </br>', '<font size="+6">$', str.rstrip(format(slider_PriceBCH/10000000, ".8f"),"0"), 'USD', '</font>', unsafe_allow_html=True )
 
 
 
