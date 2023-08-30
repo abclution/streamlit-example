@@ -688,7 +688,7 @@ with tab1:
     st.line_chart(
         df,
         x="Electricity Cost per KwH",
-        y=["BTC, Per Transaction Fee Needed", "BCH, Per Transaction Fee Needed"],  # noqa: E501
+        y=["BTC, Per Transaction Fee Needed", "BCH, Per Transaction Fee Needed"],  
         color=[colorBCH, colorBTC],
     )
 
