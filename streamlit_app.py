@@ -511,7 +511,8 @@ with tab3:
 
 with st.expander(":bulb: CLICK HERE FOR SUGGESTED EXERCISES."):
     '''
-    - Adjust both the :orange[BTC] + :green[BCH] "Hashrate" setting to equal levels. Verify their lines on the chart match. Understand they are both calculated with identical efficiency and costs.
+    - Adjust both the :orange[BTC] + :green[BCH] "Hashrate" setting to equal levels.
+        - Verify their lines on the chart match. Understand how they are both calculated with identical efficiency and costs.
     - Adjust the :orange[BTC] "Energy usage in TwH" to get an idea of how the cost of the security budget/electricity bill scales.
     '''
 
