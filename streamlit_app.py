@@ -755,19 +755,7 @@ All of this, even when its price is much lower than BTC. Very strange indeed.'''
 Here is a new slider where you can choose what the rest of the charts in this section validate or invalidate your notions.
 '''  # noqa: E501
 
-'''
-Ok, so lets look into the far future.
-All of this has been based on the current fact regarding the cost of electricity.
 
-If we ever manage to figure out superconductors and fusion, the price of electricity is going to go towards zero.
-
-So in effect at this point, the price of electricity doesn't matter. This will cause several interesting things. Lets explore this.
-Additionally there are definitely miners who already produce and use electricity for free.
-
-Additionally the block reward ever increasingly moves towards zero as well. This will be an interesting thing as well.
-
-The breakpoint will be only the availability and efficiency of the mining equipment.
-'''  # noqa: E501
 
 ''' Add cost of "storage" '''
 '''Secret is every single thing that could possibly be useful to improve from BTC can be slapped just as easily into BCH.. including lightning.'''  # noqa: E501
@@ -882,7 +870,19 @@ https://news.bitcoin.com/bitcoin-records-largest-mined-block-to-date-4-mb-block-
 st.divider()
 ###############################################################################
 
+'''
+Ok, so lets look into the far future.
+All of this has been based on the current fact regarding the cost of electricity.
 
+If we ever manage to figure out superconductors and fusion, the price of electricity is going to go towards zero.
+
+So in effect at this point, the price of electricity doesn't matter. This will cause several interesting things. Lets explore this.
+Additionally there are definitely miners who already produce and use electricity for free.
+
+Additionally the block reward ever increasingly moves towards zero as well. This will be an interesting thing as well.
+
+The breakpoint will be only the availability and efficiency of the mining equipment.
+'''  # noqa: E501
 ###############################################################################
 st.divider()
 ###############################################################################
