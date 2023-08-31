@@ -874,7 +874,7 @@ st.write(
 st.write(
     "1 :orange[BTC] Max Fees collected per block, in USD</br>",
     '<font size="+6">$',
-    str.rstrip(format((BTC_MaxBillableBytes * BTC_SatoshisPerByte)*(slider_PriceBTC / 10000000), ".8f"), "0"),
+    str.rstrip(format((BTC_MaxBillableBytes * BTC_SatoshisPerByte)*(slider_PriceBTC / 10000000), ".2f"), "0"),
     "USD </font>",
     unsafe_allow_html=True,
 )
