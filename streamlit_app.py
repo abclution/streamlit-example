@@ -908,7 +908,7 @@ st.write(
     "</br> MAX. transactions per block of this type",
     "</br> Cost in satoshis is: 226",
     "</br> which equals $",
-    226 * (slider_PriceBTC / 10000000),
+    round(226 * (slider_PriceBTC / 10000000),2),
     "USD",
     unsafe_allow_html=True,
 )
