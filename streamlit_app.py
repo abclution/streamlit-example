@@ -866,15 +866,15 @@ BTC_SatoshisPerByte = st.slider(label_BTC_SatoshisPerByte, 1, 1000, 1, 1, format
 
 st.write(
     "1 :orange[BTC] Max Fees collected per block, in satoshis</br>",
-    '<font size="+6">$',
+    '<font size="+6">',
     str.rstrip(format(BTC_MaxBillableBytes * BTC_SatoshisPerByte, ".8f"), "0"),
-    "USD </font>",
+    "Satoshis </font>",
     unsafe_allow_html=True,
 )
 st.write(
     "1 :orange[BTC] Max Fees collected per block, in USD</br>",
     '<font size="+6">$',
-    str.rstrip(format(slider_PriceBTC / 10000000, ".8f"), "0"),
+    str.rstrip(format((BTC_MaxBillableBytes * BTC_SatoshisPerByte)*(slider_PriceBTC / 10000000), ".8f"), "0"),
     "USD </font>",
     unsafe_allow_html=True,
 )
