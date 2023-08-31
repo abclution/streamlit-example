@@ -918,7 +918,7 @@ def transactionTypeInfoBTC(transaction_name,transaction_cost):
         unsafe_allow_html=True,
     )
 
-
+transactionTypeInfoBTC("farts", 1234)
 
 transactionCost = 226
 st.write(
