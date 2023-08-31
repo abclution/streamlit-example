@@ -509,7 +509,7 @@ with tab3:
 
 '''> **Unfortunately, due to the massive difference in scale, the :green[BCH] network line looks quite flat. In the next chart we will split these charts up and drill down into the Daily view.**'''
 
-with st.expander(":bulb: Click here for Suggested exercises"):
+with st.expander(":bulb: CLICK HERE FOR SUGGESTED EXERCISES."):
     '''
     - Adjust both the :orange[BTC] + :green[BCH] hashrate to verify they match, as they are both calculated with identical efficiency.
     - Adjust the :orange[BTC] "Energy usage in TwH" to get an idea of how the cost of the security budget/electricity bill scales.
@@ -621,7 +621,7 @@ Now some interesting things start to emerge... once the price per KwH gets close
 > ** So its easy to see that the current security budget of both :orange[BTC] & :green[BCH] are NOT covered by solely the block rewards any longer. This means it will be necessary for the remaining of the security budget to be covered by the transaction fees which we will visit next.** # noqa: E501
 
 '''
-with st.expander(":bulb: Click here for Suggested exercises"):
+with st.expander(":bulb: CLICK HERE FOR SUGGESTED EXERCISES."):
     '''
     Some suggested exercises:
     - Change the "Block Reward" amount as well as the "Prices in USD" for each :orange[BTC] & :green[BCH] to see how the chart interacts.
@@ -726,7 +726,7 @@ with col2:
     )
 
 
-with st.expander(":bulb: Click here for Suggested exercises"):
+with st.expander(":bulb: CLICK HERE FOR SUGGESTED EXERCISES."):
     '''
     - Validate the presented data. Match the :orange[BTC] & :green[BCH] settings and make sure the chart lines match. I suggest the following settings to assist in setting the sliders which are unfriendly for detail work.
     - "Max TPS", bring :green[BCH] all the way down to 1, then use keyboard to move it to 7.
@@ -745,11 +745,11 @@ st.header("Everything here and down in work in progress.....", divider="rainbow"
 
 
 ''' So, from the previous charts and exercise, we learned un-intuitively that something BCH is doing makes it better for all those who use it, both the end users and the miners.
-Additionally and unexpectedly, we also learned it is much easier for activities, transactinh on the BCH network to pay and cover its security budget.
-Fee's are lower and will always be lower, and the cost of its security budget, even if its security levels are raised to equal with BTC, are covered much more easily by transaction fees.
+Additionally and unexpectedly, we also learned it is much easier for activities, transacting on the BCH network to pay and cover its security budget compared to BTC.
+Transaction Fees are lower, and the cost of its security budget, even if its security levels are raised to equal with BTC, are covered much more easily by transaction fees.
 All of this, even when its price is much lower than BTC. Very strange indeed.'''  # noqa: E501
 
-
+'''This is what happens when you serve the needs of the many instead of the wishes of a few.'''
 '''So, in order to find profits, we must decide on some costs. The costs that both affect the production and protection of the Bitcoin networks and scale the most are the electric costs
 Here is a new slider where you can choose what the rest of the charts in this section validate or invalidate your notions.
 '''  # noqa: E501
@@ -772,7 +772,7 @@ The breakpoint will be only the availability and efficiency of the mining equipm
 '''Secret is every single thing that could possibly be useful to improve from BTC can be slapped just as easily into BCH.. including lightning.'''  # noqa: E501
 
 
-with st.expander(":bulb: Click here for Suggested exercises"):
+with st.expander(":bulb: CLICK HERE FOR SUGGESTED EXERCISES."):
     '''asfasdfasd'''
 
 
