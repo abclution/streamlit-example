@@ -766,6 +766,7 @@ with st.expander(":bulb: CLICK HERE FOR SUGGESTED EXERCISES."):
     '''asfasdfasd'''
 
 
+
 # Create a list of values for column 1
 # costPerKwH = [round(start_value + i * step, 3) for i in range(int((end_value - start_value) / step) + 1)]
 
@@ -808,13 +809,14 @@ with tab2:
 with tab3:
     '''todo'''
 
+st.header("A closer look at Transaction Fees", divider="rainbow")
 
 ''' So far, we have been approaching the statistics of Bitcoin from a particular angle, The costs of running the network (as a miner!)
 And we have been presenting the fee structure as a static, per transaction cost, valued in USD when doing calculations.
 
-Alas, this is not quite correct. Bitcoin fees are not quite so simple and are a bit difficult to simulate and present.
-Bitcoin fees are not based "per transaction" in fact they are based "satoshis per byte" of size of the data that the transaction itself is composed of.'''  # noqa: E501
+Alas, this is not quite correct. Bitcoin fees are not based "per transaction" in fact they are based "satoshis per byte" of size of the data that the transaction itself is composed of.'''  # noqa: E501
 
+'''Additionally the data size of a Bitcoin transaction is variable. Many factors can influence the size of the transaction making calculation difficult'''
 
 '''A satoshi is (currently) the smallest unit of Bitcoin currency, 1 satoshi = 0.00000001 BTC/BCH.
 If you play with BTC/BCH prices you can see even at a price of $100,000 USD, a satoshi is worth only 1 cent. '''  # noqa: E501
@@ -839,9 +841,31 @@ with col2:
         "USD </font>",
         unsafe_allow_html=True,
     )
-'''In the future, if a satoshi is no longer a negligible amount of value, Bitcoin can be divided into ever smaller units of measure, sub-satoshi measurements.'''  # noqa: E501
+'''In the future, if a satoshi is no longer a negligible amount of value, Bitcoin can be divided into ever smaller units of measure, sub-satoshi measurements.
 
+So as it is currently, the absolute lowest fee level is 1 satoshi per byte.
+BTC currently averages between 3-7 satoshis per byte
+BCH currently (and intends to continue) an average of 1 satoshi per byte, or lower.
 
+'''  # noqa: E501
+'''
+Legacy BTC Block Size Limit: 1 MB
+Segwit + Taproot BTC Block Size Limit: 4 MB
+1 Megabyte = 1048576 bytes 4194304
+'''
+#### BTC MAXIMUM BILLABLE BYTES SLIDER  #######################################
+format_slider_TPS = "%d"
+label_BTC_MaxBillableBytes = ":orange[BTC Network] Maximum Billable Bytes *(Default: 1048576)*"
+BTC_MaxBillableBytes = st.slider(label_BTC_MaxBillableBytes, 1048576, 4194304, 1048576, 1, format_slider_TPS)
+
+#### BTC SATOSHIS PER BYTE TRANSACTION FEE SLIDER SLIDER  #######################################
+format_slider_TPS = "%d"
+label_BTC_SatoshisPerByte = ":orange[BTC Network] Satoshis Per Byte Transaction Fee *(Default: 1)*"
+BTC_SatoshisPerByte = st.slider(label_BTC_SatoshisPerByte, 1, 1000, 1, 1, format_slider_TPS)
+
+###############################################################################
+st.sidebar.divider()
+###############################################################################
 
 '''
 BTC Fee Philosophy - Fees will increase until morale improves.
@@ -860,6 +884,11 @@ https://blockchair.com/bitcoin/blocks?s=size(desc)#
 
 https://cointelegraph.com/news/the-current-state-of-the-bitcoin-network-and-its-biggest-block
 https://news.bitcoin.com/bitcoin-records-largest-mined-block-to-date-4-mb-block-containing-nft-causes-unease-among-small-block-supporters/
+
+https://trustmachines.co/blog/bitcoin-ordinals-reignited-block-size-debate/
+https://bitcoin.stackexchange.com/questions/92689/how-is-the-size-of-a-bitcoin-transaction-calculated#:~:text=Each%20Non%2DSegwit%20byte%20of,for%20numbers%20up%20to%20252)
+https://bitcoin.stackexchange.com/questions/92587/calculate-transaction-fee-for-external-addresses-which-doesnt-belong-to-my-loca/92600#92600
+
 ''' # noqa: E501
 
 '''Environmental efficiency'''
