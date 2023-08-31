@@ -865,20 +865,37 @@ BTC_SatoshisPerByte = st.slider(label_BTC_SatoshisPerByte, 1, 1000, 1, 1, format
 
 
 st.write(
-    "1 :orange[BTC] Max Fees collected per block, in satoshis</br>",
+    ":orange[BTC] Max Fees collected per block, in satoshis</br>",
     '<font size="+6">',
     str.rstrip(format(BTC_MaxBillableBytes * BTC_SatoshisPerByte, ".8f"), "0"),
     "Satoshis </font>",
     unsafe_allow_html=True,
 )
 st.write(
-    "1 :orange[BTC] Max Fees collected per block, in USD</br>",
+    ":orange[BTC] Max Fees collected per block, in USD</br>",
     '<font size="+6">$',
     str.rstrip(format((BTC_MaxBillableBytes * BTC_SatoshisPerByte)*(slider_PriceBTC / 10000000), ".2f"), "0"),
     "USD </font>",
     unsafe_allow_html=True,
 )
 
+
+'''List of BTC Transactions & Sizes
+Each transaction consists of the most common type of transaction in a functional ecosystem, assuming an entity has their entirety of their balance on a single address (1 input), and sends a single payment to another entity, but doesnt spend their entire balance. (2 outputs, change address.)
+'''
+
+
+
+
+
+
+
+st.write("- P2PKH, 226 vbytes each, ", str(BTC_MaxBillableBytes/226), "MAX. transactions per block of this type", unsafe_allow_html=True)
+
+st.write("- P2WPKH, 140.5 vbytes each, ", str(BTC_MaxBillableBytes/140.5), "MAX. transactions per block of this type", unsafe_allow_html=True)
+st.write("- P2SH 2-OF-3 MULTISIG, 371 vbytes each, ", str(BTC_MaxBillableBytes/371), "MAX. transactions per block of this type", unsafe_allow_html=True)
+st.write("- P2WSH 2-OF-3 MULTISIG, 201 vbytes each, ", str(BTC_MaxBillableBytes/201), "MAX. transactions per block of this type", unsafe_allow_html=True)
+st.write("- P2TR (taproot), 154 vbytes each, ", str(BTC_MaxBillableBytes/154), "MAX. transactions per block of this type", unsafe_allow_html=True)
 
 
 
@@ -907,6 +924,14 @@ https://news.bitcoin.com/bitcoin-records-largest-mined-block-to-date-4-mb-block-
 https://trustmachines.co/blog/bitcoin-ordinals-reignited-block-size-debate/
 https://bitcoin.stackexchange.com/questions/92689/how-is-the-size-of-a-bitcoin-transaction-calculated#:~:text=Each%20Non%2DSegwit%20byte%20of,for%20numbers%20up%20to%20252)
 https://bitcoin.stackexchange.com/questions/92587/calculate-transaction-fee-for-external-addresses-which-doesnt-belong-to-my-loca/92600#92600
+
+https://www.semanticscholar.org/paper/How-many-transactions-per-second-can-bitcoin-really-Georgiadis/cd19b9bd1c726df7c6e9d14d9bcfd5104b599a96
+
+https://eprint.iacr.org/2019/416.pdf
+
+
+https://www.reddit.com/r/Bitcoin/comments/xz2zxj/calculating_batch_throughput_and_its_theoretical/
+
 
 ''' # noqa: E501
 
