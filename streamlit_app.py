@@ -904,12 +904,10 @@ Each transaction consists of the most common type of transaction in a functional
 
 st.write(
     "- P2PKH, 226 vbytes each, ",
+    "</br> MAX. transactions per block of this type: ",
     format(BTC_MaxBillableBytes / 226, ".2f"),
-    "</br> MAX. transactions per block of this type",
-    "</br> Cost in satoshis is: 226",
-    "</br> which equals $",
-    round(226 * (slider_PriceBTC / 10000000),2),
-    "USD",
+    "</br> Cost in satoshis is: 226 which equals (approx): $",
+    round(226 * (slider_PriceBTC / 10000000), 2), "USD",
     unsafe_allow_html=True,
 )
 st.write(
