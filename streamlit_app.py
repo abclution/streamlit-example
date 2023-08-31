@@ -901,9 +901,28 @@ with col2:
 Each transaction consists of the most common type of transaction in a functional ecosystem, assuming an entity has their entirety of their balance on a single address (1 input), and sends a single payment to another entity, but doesnt spend their entire balance. (2 outputs, change address.)
 """
 
+def transactionTypeInfoBTC(transaction_name,transaction_cost):
+    st.write(
+        transaction_name,",",
+        transaction_cost,
+        " vbytes each. ",
+        "</br> MAX. transactions per block of this type: ",
+        format(BTC_MaxBillableBytes / transaction_cost, ".2f"),
+        "</br> Cost in satoshis is ",
+        transaction_cost,
+        " which equals (approx): $",
+        round(transaction_cost * (slider_PriceBTC / 10000000), 2), "USD",
+        "</br> A block composed solely of these transactions is worth: ",
+        ((BTC_MaxBillableBytes / 226) * (226 * (slider_PriceBTC / 10000000))),
+        "in fees.",
+        unsafe_allow_html=True,
+    )
 
+
+
+transactionCost = 226
 st.write(
-    "P2PKH Transaction, 226 vbytes each, ",
+    "P2PKH Transaction, 226 vbytes each. ",
     "</br> MAX. transactions per block of this type: ",
     format(BTC_MaxBillableBytes / 226, ".2f"),
     "</br> Cost in satoshis is 226, which equals (approx): $",
@@ -913,18 +932,26 @@ st.write(
     "in fees.",
     unsafe_allow_html=True,
 )
+
+transactionCost = 140.5
 st.write(
-    "- P2WPKH, 140.5 vbytes each, ",
+    "P2WPKH, 140.5 vbytes each. ",
+    "</br> MAX. transactions per block of this type: ",
     format(BTC_MaxBillableBytes / 140.5, ".2f"),
+    "</br> Cost in satoshis is 140.5, which equals (approx): $",
+    round(140.5 * (slider_PriceBTC / 10000000), 2), "USD",
     "MAX. transactions per block of this type",
     unsafe_allow_html=True,
 )
+
+transactionCost = 371
 st.write(
     "- P2SH 2-OF-3 MULTISIG, 371 vbytes each, ",
     format(BTC_MaxBillableBytes / 371, ".2f"),
     "MAX. transactions per block of this type",
     unsafe_allow_html=True,
 )
+
 st.write(
     "- P2WSH 2-OF-3 MULTISIG, 201 vbytes each, ",
     format(BTC_MaxBillableBytes / 201, ".2f"),
