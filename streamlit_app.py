@@ -908,6 +908,9 @@ st.write(
     format(BTC_MaxBillableBytes / 226, ".2f"),
     "</br> Cost in satoshis is 226, which equals (approx): $",
     round(226 * (slider_PriceBTC / 10000000), 2), "USD",
+    "</br> A block composed solely of these transactions is worth: ",
+    ((BTC_MaxBillableBytes / 226) * (226 * (slider_PriceBTC / 10000000))),
+    "in fees.",
     unsafe_allow_html=True,
 )
 st.write(
