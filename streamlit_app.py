@@ -864,20 +864,24 @@ label_BTC_SatoshisPerByte = ":orange[BTC Network] Satoshis Per Byte Transaction 
 BTC_SatoshisPerByte = st.slider(label_BTC_SatoshisPerByte, 1, 1000, 1, 1, format_slider_TPS)
 
 
-st.write(
-    ":orange[BTC] Max Fees collected per block, in satoshis</br>",
-    '<font size="+6">',
-    str.rstrip(format(BTC_MaxBillableBytes * BTC_SatoshisPerByte, ".8f"), "0"),
-    "Satoshis </font>",
-    unsafe_allow_html=True,
-)
-st.write(
-    ":orange[BTC] Max Fees collected per block, in USD</br>",
-    '<font size="+6">$',
-    str.rstrip(format((BTC_MaxBillableBytes * BTC_SatoshisPerByte)*(slider_PriceBTC / 10000000), ".2f"), "0"),
-    "USD </font>",
-    unsafe_allow_html=True,
-)
+col1, col2 = st.columns(2)
+
+with col1:
+    st.write(
+        ":orange[BTC] Max Fees collected per block, in satoshis based on Maximum Billable bytes per block</br>",
+        '<font size="+6">',
+        str.rstrip(format(BTC_MaxBillableBytes * BTC_SatoshisPerByte, ".8f"), "0"),
+        "Satoshis </font>",
+        unsafe_allow_html=True,
+    )
+with col2:
+    st.write(
+        ":orange[BTC] Max Fees collected per block, in USD</br>",
+        '<font size="+6">$',
+        str.rstrip(format((BTC_MaxBillableBytes * BTC_SatoshisPerByte)*(slider_PriceBTC / 10000000), ".2f"), "0"),
+        "USD </font>",
+        unsafe_allow_html=True,
+    )
 
 
 '''List of BTC Transactions & Sizes
@@ -891,12 +895,16 @@ Each transaction consists of the most common type of transaction in a functional
 
 
 st.write("- P2PKH, 226 vbytes each, ", format(BTC_MaxBillableBytes/226, ".2f"), "MAX. transactions per block of this type", unsafe_allow_html=True)
-
 st.write("- P2WPKH, 140.5 vbytes each, ", format(BTC_MaxBillableBytes/140.5, ".2f"), "MAX. transactions per block of this type", unsafe_allow_html=True)
 st.write("- P2SH 2-OF-3 MULTISIG, 371 vbytes each, ", format(BTC_MaxBillableBytes/371, ".2f"), "MAX. transactions per block of this type", unsafe_allow_html=True)
 st.write("- P2WSH 2-OF-3 MULTISIG, 201 vbytes each, ", format(BTC_MaxBillableBytes/201, ".2f"), "MAX. transactions per block of this type", unsafe_allow_html=True)
 st.write("- P2TR (taproot), 154 vbytes each, ", format(BTC_MaxBillableBytes/154, ".2f"), "MAX. transactions per block of this type", unsafe_allow_html=True)
 
+st.write("Avg Quantity Possible Transactions Per Block", format(((BTC_MaxBillableBytes/226) +
+                                                                 (BTC_MaxBillableBytes/140.5) +
+                                                                 (BTC_MaxBillableBytes/371) +
+                                                                 (BTC_MaxBillableBytes/201) +
+                                                                 (BTC_MaxBillableBytes/154))/5, ".2f"), "supposed", unsafe_allow_html=True)
 
 
 ###############################################################################
