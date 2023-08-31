@@ -611,17 +611,6 @@ with col2:
         - Multiply the KwH/year * cost per KwH.
         - Divide by 365, make chart.'''
 
-'''Libya is/was cheapest electricity in the world with .007 USD per KwH, feel free to adjust the price ranges in the sidebar.
-
-Now some interesting things start to emerge... once the price per KwH gets close the the cheapest availiable KwH we see that:
- 
-- The current (6.25) block rewards are no longer sufficient to cover the security budget.
-    - @ 25 Bitcoins (BTC) *the block reward* **was enough to cover the energy costs up to about .235/Kwh.**
-    - @ 50 Bitcoins (BTC) *the block reward* **was enough to cover the energy costs up to about .45/Kwh.**
-    
-> ** So its easy to see that the current security budget of both :orange[BTC] & :green[BCH] are NOT covered by solely the block rewards any longer. This means it will be necessary for the remaining of the security budget to be covered by the transaction fees which we will visit next.** # noqa: E501
-
-'''
 with st.expander(":bulb: CLICK HERE FOR SUGGESTED EXERCISES."):
     '''
     Some suggested exercises:
@@ -637,6 +626,19 @@ with st.expander(":bulb: CLICK HERE FOR SUGGESTED EXERCISES."):
         - Lowering "Energy Usage in TwH" for :orange[BTC] while keeping the "Hashrate" the same, or increasing it simulates MORE efficient mining machines on both :orange[BTC] & :green[BCH] networks.
 
     '''# noqa: E501
+
+
+'''Libya is/was cheapest electricity in the world with .007 USD per KwH, feel free to adjust the price ranges in the sidebar.
+
+Now some interesting things start to emerge... once the price per KwH gets close the the cheapest availiable KwH we see that:
+ 
+- The current (6.25) block rewards are no longer sufficient to cover the security budget.
+    - @ 25 Bitcoins (BTC) *the block reward* **was enough to cover the energy costs up to about .235/Kwh.**
+    - @ 50 Bitcoins (BTC) *the block reward* **was enough to cover the energy costs up to about .45/Kwh.**
+    
+> ** So its easy to see that the current security budget of both :orange[BTC] & :green[BCH] are NOT covered by solely the block rewards any longer. This means it will be necessary for the remaining of the security budget to be covered by the transaction fees which we will visit next.** # noqa: E501
+
+'''
 
 
 ###############################################################################
@@ -699,6 +701,16 @@ with tab2:
 with tab3:
     '''todo'''
 
+with st.expander(":bulb: CLICK HERE FOR SUGGESTED EXERCISES."):
+    '''
+    - Validate the presented data. Match the :orange[BTC] & :green[BCH] settings and make sure the chart lines match. I suggest the following settings to assist in setting the sliders which are unfriendly for detail work.
+    - "Max TPS", bring :green[BCH] all the way down to 1, then use keyboard to move it to 7.
+    - "Hashrate", move both :orange[BTC] & :green[BCH] fully to the right, 1000. They have equal efficiency so this is fine and "Energy Usage in TwH" is not needed for this chart.
+    - "Prices in USD", move both :orange[BTC] & :green[BCH] fully to the left, 1. Or the right, 100000. Leave one of them a tick off so you can observe both lines.
+    - Great, once you are satisfied they match, you should have confidence to continue.
+    - I suggest to refresh the page to reset to defaults.
+    ''' # noqa: E501
+
 col1, col2 = st.columns(2)
 with col1:
     '''Again sadly, you may have noticed that :green[BCH] seems to have flatlined in comparison to :orange[BTC].'''  # noqa: E501
@@ -725,17 +737,6 @@ with col2:
         "of :orange[BTCs]",
         unsafe_allow_html=True,
     )
-
-
-with st.expander(":bulb: CLICK HERE FOR SUGGESTED EXERCISES."):
-    '''
-    - Validate the presented data. Match the :orange[BTC] & :green[BCH] settings and make sure the chart lines match. I suggest the following settings to assist in setting the sliders which are unfriendly for detail work.
-    - "Max TPS", bring :green[BCH] all the way down to 1, then use keyboard to move it to 7.
-    - "Hashrate", move both :orange[BTC] & :green[BCH] fully to the right, 1000. They have equal efficiency so this is fine and "Energy Usage in TwH" is not needed for this chart.
-    - "Prices in USD", move both :orange[BTC] & :green[BCH] fully to the left, 1. Or the right, 100000. Leave one of them a tick off so you can observe both lines.
-    - Great, once you are satisfied they match, you should have confidence to continue.
-    - I suggest to refresh the page to reset to defaults.
-    ''' # noqa: E501
 
 
 ###############################################################################
