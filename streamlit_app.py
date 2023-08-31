@@ -890,12 +890,12 @@ Each transaction consists of the most common type of transaction in a functional
 
 
 
-st.write("- P2PKH, 226 vbytes each, ", str(BTC_MaxBillableBytes/226), "MAX. transactions per block of this type", unsafe_allow_html=True)
+st.write("- P2PKH, 226 vbytes each, ", format(BTC_MaxBillableBytes/226, ".2f"), "MAX. transactions per block of this type", unsafe_allow_html=True)
 
-st.write("- P2WPKH, 140.5 vbytes each, ", str(BTC_MaxBillableBytes/140.5), "MAX. transactions per block of this type", unsafe_allow_html=True)
-st.write("- P2SH 2-OF-3 MULTISIG, 371 vbytes each, ", str(BTC_MaxBillableBytes/371), "MAX. transactions per block of this type", unsafe_allow_html=True)
-st.write("- P2WSH 2-OF-3 MULTISIG, 201 vbytes each, ", str(BTC_MaxBillableBytes/201), "MAX. transactions per block of this type", unsafe_allow_html=True)
-st.write("- P2TR (taproot), 154 vbytes each, ", str(BTC_MaxBillableBytes/154), "MAX. transactions per block of this type", unsafe_allow_html=True)
+st.write("- P2WPKH, 140.5 vbytes each, ", format(BTC_MaxBillableBytes/140.5, ".2f"), "MAX. transactions per block of this type", unsafe_allow_html=True)
+st.write("- P2SH 2-OF-3 MULTISIG, 371 vbytes each, ", format(BTC_MaxBillableBytes/371, ".2f"), "MAX. transactions per block of this type", unsafe_allow_html=True)
+st.write("- P2WSH 2-OF-3 MULTISIG, 201 vbytes each, ", format(BTC_MaxBillableBytes/201, ".2f"), "MAX. transactions per block of this type", unsafe_allow_html=True)
+st.write("- P2TR (taproot), 154 vbytes each, ", format(BTC_MaxBillableBytes/154, ".2f"), "MAX. transactions per block of this type", unsafe_allow_html=True)
 
 
 
