@@ -625,7 +625,7 @@ with st.expander(":bulb: CLICK HERE FOR SUGGESTED EXERCISES."):
         - Raising "Energy Usage in TwH" for :orange[BTC] while keeping the "Hashrate" the same, or lowering it simulates LESS efficient mining machines on both :orange[BTC] & :green[BCH] networks.
         - Lowering "Energy Usage in TwH" for :orange[BTC] while keeping the "Hashrate" the same, or increasing it simulates MORE efficient mining machines on both :orange[BTC] & :green[BCH] networks.
 
-    '''# noqa: E501
+    '''  # noqa: E501
 
 
 '''Libya is/was cheapest electricity in the world with .007 USD per KwH, feel free to adjust the price ranges in the sidebar.
@@ -636,9 +636,9 @@ Now some interesting things start to emerge... once the price per KwH gets close
     - @ 25 Bitcoins (BTC) *the block reward* **was enough to cover the energy costs up to about .235/Kwh.**
     - @ 50 Bitcoins (BTC) *the block reward* **was enough to cover the energy costs up to about .45/Kwh.**
     
-> ** So its easy to see that the current security budget of both :orange[BTC] & :green[BCH] are NOT covered by solely the block rewards any longer. This means it will be necessary for the remaining of the security budget to be covered by the transaction fees which we will visit next.** # noqa: E501
+> ** So its easy to see that the current security budget of both :orange[BTC] & :green[BCH] are NOT covered by solely the block rewards any longer. This means it will be necessary for the remaining of the security budget to be covered by the transaction fees which we will visit next.** 
 
-'''
+'''  # noqa: E501
 
 
 ###############################################################################
