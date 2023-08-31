@@ -913,12 +913,12 @@ def transactionTypeInfoBTC(transaction_name,transaction_cost):
         " which equals (approx): $",
         round(transaction_cost * (slider_PriceBTC / 10000000), 2), "USD",
         "</br> A block composed solely of these transactions is worth: ",
-        ((BTC_MaxBillableBytes / 226) * (226 * (slider_PriceBTC / 10000000))),
+        ((BTC_MaxBillableBytes / transaction_cost) * (transaction_cost * (slider_PriceBTC / 10000000))),
         "in fees.",
         unsafe_allow_html=True,
     )
 
-transactionTypeInfoBTC("farts", 1234)
+transactionTypeInfoBTC("P2PKH Transaction", 226)
 
 transactionCost = 226
 st.write(
