@@ -927,7 +927,7 @@ with col1:
 
 with col2:
     '''So looking at the differing types of transactions availiable for the BTC chain, regardless of which one is used the total available "billable" bytes per transactions remains the same.'''
-    
+    '''And therefore the maximum amount of fee income miners can receive is only affected by the "satoshis per byte" scaling soley by increasing the charge per byte!'''
     '''However, what does change is how many transactions can fit per block, for users to take advantage of! The least efficient lets us fit 2826 transactions and the most efficient 7463 transactions per block!'''
 
 st.write(
