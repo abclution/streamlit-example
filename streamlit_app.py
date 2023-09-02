@@ -912,68 +912,21 @@ def transactionTypeInfoBTC(transaction_name,transaction_cost):
         transaction_cost,
         " which equals (approx): $",
         round(transaction_cost * (slider_PriceBTC / 10000000), 2), "USD",
-        "</br> A block composed solely of these transactions is worth: ",
+        "</br> A block composed solely of these: $",
         ((BTC_MaxBillableBytes / transaction_cost) * (transaction_cost * (slider_PriceBTC / 10000000))),
         "in fees.",
         unsafe_allow_html=True,
     )
+col1, col2 = st.columns(2)
+with col1:
+    transactionTypeInfoBTC("P2PKH Transaction", 226)
+    transactionTypeInfoBTC("P2WPKH Transaction", 140.5)
+    transactionTypeInfoBTC("P2SH 2-OF-3 MULTISIG Transaction", 371)
+    transactionTypeInfoBTC("P2WSH 2-OF-3 MULTISIG Transaction", 201)
+    transactionTypeInfoBTC("P2TR (Taproot) Transaction", 154)
 
-transactionTypeInfoBTC("P2PKH Transaction", 226)
-
-transactionTypeInfoBTC("P2WPKH Transaction", 140.5)
-
-transactionTypeInfoBTC("P2SH 2-OF-3 MULTISIG Transaction", 371)
-
-transactionTypeInfoBTC("P2WSH 2-OF-3 MULTISIG Transaction", 201)
-
-transactionTypeInfoBTC("P2TR (Taproot) Transaction", 154)
-
-
-
-# transactionCost = 226
-# st.write(
-#     "P2PKH Transaction, 226 vbytes each. ",
-#     "</br> MAX. transactions per block of this type: ",
-#     format(BTC_MaxBillableBytes / 226, ".2f"),
-#     "</br> Cost in satoshis is 226, which equals (approx): $",
-#     round(226 * (slider_PriceBTC / 10000000), 2), "USD",
-#     "</br> A block composed solely of these transactions is worth: ",
-#     ((BTC_MaxBillableBytes / 226) * (226 * (slider_PriceBTC / 10000000))),
-#     "in fees.",
-#     unsafe_allow_html=True,
-# )
-
-# transactionCost = 140.5
-# st.write(
-#     "P2WPKH, 140.5 vbytes each. ",
-#     "</br> MAX. transactions per block of this type: ",
-#     format(BTC_MaxBillableBytes / 140.5, ".2f"),
-#     "</br> Cost in satoshis is 140.5, which equals (approx): $",
-#     round(140.5 * (slider_PriceBTC / 10000000), 2), "USD",
-#     "MAX. transactions per block of this type",
-#     unsafe_allow_html=True,
-# )
-
-# transactionCost = 371
-# st.write(
-#     "- P2SH 2-OF-3 MULTISIG, 371 vbytes each, ",
-#     format(BTC_MaxBillableBytes / 371, ".2f"),
-#     "MAX. transactions per block of this type",
-#     unsafe_allow_html=True,
-# )
-
-# st.write(
-#     "- P2WSH 2-OF-3 MULTISIG, 201 vbytes each, ",
-#     format(BTC_MaxBillableBytes / 201, ".2f"),
-#     "MAX. transactions per block of this type",
-#     unsafe_allow_html=True,
-# )
-# st.write(
-#     "- P2TR (taproot), 154 vbytes each, ",
-#     format(BTC_MaxBillableBytes / 154, ".2f"),
-#     "MAX. transactions per block of this type",
-#     unsafe_allow_html=True,
-# )
+with col2:
+    '''So looking at the differing types of transactions availiable for the BTC chain and users to take advantage of'''
 
 st.write(
     "Avg Quantity Possible Transactions Per Block",
