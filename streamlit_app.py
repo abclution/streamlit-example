@@ -910,11 +910,11 @@ def transactionTypeInfoBTC(transaction_name,transaction_cost):
         format(BTC_MaxBillableBytes / transaction_cost, ".2f"),
         "</br> Cost in satoshis is ",
         transaction_cost,
-        " which equals (approx):$",
+        " which equals (approx):",
         round(transaction_cost * (slider_PriceBTC / 10000000), 2), "USD",
-        "</br> A block composed solely of these:$",
+        "</br> A block composed solely of these:",
         str(((BTC_MaxBillableBytes / transaction_cost) * (transaction_cost * (slider_PriceBTC / 10000000)))),
-        "in fees.",
+        "USD in fees.",
         unsafe_allow_html=True,
     )
 col1, col2 = st.columns(2)
