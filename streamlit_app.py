@@ -926,11 +926,11 @@ with col1:
     transactionTypeInfoBTC("P2TR (Taproot) Transaction", 154)
 
 with col2:
-    '''So looking at the differing types of transactions availiable for the BTC chain,
-      regardless of which one is used the total availiable "billable" bytes per transactions remains the same.
+    '''So looking at the differing types of transactions availiable for the BTC
+      chain,regardless of which one is used the total availiable "billable" bytes per transactions remains the same.
       
       
-      However, what does change is how many transactions can fit per block, for users to take advantage of!'''
+    However, what does change is how many transactions can fit per block, for users to take advantage of!'''
 
 st.write(
     "Avg Quantity Possible Transactions Per Block",
