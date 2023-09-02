@@ -913,7 +913,7 @@ def transactionTypeInfoBTC(transaction_name,transaction_cost):
         " which equals (approx): $",
         round(transaction_cost * (slider_PriceBTC / 10000000), 2), "USD",
         "</br> A block composed solely of these: $",
-        ((BTC_MaxBillableBytes / transaction_cost) * (transaction_cost * (slider_PriceBTC / 10000000))),
+        str(((BTC_MaxBillableBytes / transaction_cost) * (transaction_cost * (slider_PriceBTC / 10000000)))),
         "in fees.",
         unsafe_allow_html=True,
     )
