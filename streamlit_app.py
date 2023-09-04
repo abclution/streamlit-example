@@ -930,26 +930,39 @@ with col2:
     '''And therefore the maximum amount of fee income miners can receive is only affected by the "satoshis per byte" scaling soley by increasing the charge per byte!'''
     '''However, what does change is how many transactions can fit per block, for users to take advantage of! The least efficient lets us fit 2826 transactions and the most efficient 7463 transactions per block!'''
 
-    '''With all the protocol improvments in BTC I propose a change to the widely quoted "7 TPS limit" for BTC. based on this information.'''
+    '''With all the protocol improvments in BTC I propose a change to the widely quoted "7 Max. TPS limit for BTC." based on this information.'''
     ''' 7 TPS = 4200 Transactions per Block'''
     '''If we assume a mix of the various transactions per block, we can take the average.'''
+    
+    # Max amount of these type of transactions per billable block space.
+    perBlockP2PKH = (BTC_MaxBillableBytes / 226)
+    perBlockP2WPKH = (BTC_MaxBillableBytes / 140.5)
+    perBlockP2SH_2OF3_MULTISIG = (BTC_MaxBillableBytes / 371) 
+    perBlockP2WSH_2OF3_MULTISIG = (BTC_MaxBillableBytes / 201)
+    perBlockP2TR = (BTC_MaxBillableBytes / 154)
+    
+
+    BTC_TransPerBlockList = [perBlockP2PKH, perBlockP2WPKH, perBlockP2SH_2OF3_MULTISIG, perBlockP2WSH_2OF3_MULTISIG,perBlockP2TR] 
+    avgQntTransPerBTCBlock = sum(BTC_TransPerBlockList) / len(BTC_TransPerBlockList)
+    minQntTransPerBTCBlock = min(BTC_TransPerBlockList)
+    maxQntTransPerBTCBlock = max(BTC_TransPerBlockList)
 
     st.write(
-        "Avg Quantity Possible Transactions Per Block",
-        format(
-            (
-                (BTC_MaxBillableBytes / 226)
-                + (BTC_MaxBillableBytes / 140.5)
-                + (BTC_MaxBillableBytes / 371)
-                + (BTC_MaxBillableBytes / 201)
-                + (BTC_MaxBillableBytes / 154)
-            )
-            / 5,
-            ".2f",
-        ),
-        "supposed",
-        unsafe_allow_html=True,
+        "Average Possible Transactions Per Block",
+        format(avgQntTransPerBTCBlock,".2f"),
+        unsafe_allow_html=True
     )
+    st.write(
+        "Minimum Possible Transactions Per Block",
+        format(minQntTransPerBTCBlock,".2f"),
+        unsafe_allow_html=True
+    )
+    st.write(
+        "Maximum Possible Transactions Per Block",
+        format(maxQntTransPerBTCBlock,".2f"),
+        unsafe_allow_html=True
+    )
+
 
     '''8.9 (9) TPS = 5390.99 Transactions per Block'''
 
@@ -1013,3 +1026,9 @@ The breakpoint will be only the availability and efficiency of the mining equipm
 ###############################################################################
 st.divider()
 ###############################################################################
+
+
+''' Reality check about adoption and transactions. How many tranactions would be happening with all BTC transactions on BCH. And Ether as well etc.'''
+
+
+'''Lmao.. so I'm trying to research the math behind BTC/BCH maximum transactions per second.. came across this paper which claims BTC can do 27 TPS! But there is a hilarious punchline at the end of the paper about this. Its only 6 pages long if someone wants to have a look https://eprint.iacr.org/2019/416.pdf'''
