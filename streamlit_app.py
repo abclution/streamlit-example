@@ -930,8 +930,6 @@ with col2:
     '''And therefore the maximum amount of fee income miners can receive is only affected by the "satoshis per byte" scaling soley by increasing the charge per byte!'''
     '''However, what does change is how many transactions can fit per block, for users to take advantage of! The least efficient lets us fit 2826 transactions and the most efficient 7463 transactions per block!'''
 
-    '''With all the protocol improvments in BTC I propose a change to the widely quoted "7 Max. TPS limit for BTC." based on this information.'''
-    ''' 7 TPS = 4200 Transactions per Block'''
     '''If we assume a mix of the various transactions per block, we can take the average.'''
     
     # Max amount of these type of transactions per billable block space.
@@ -962,9 +960,9 @@ with col2:
         format(maxQntTransPerBTCBlock,".2f"),
         unsafe_allow_html=True
     )
-
-
-    '''8.9 (9) TPS = 5390.99 Transactions per Block'''
+    '''As you can see, with all the protocol improvements in BTC I propose a change to the widely quoted "7 Max. TPS limit for BTC." based on this information.'''
+    '''From: 7 TPS = 4200 Transactions per Block'''
+    '''To: 8.9 (9) TPS = 5390.99 Transactions per Block'''
 
 
 ###############################################################################
