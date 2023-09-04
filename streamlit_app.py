@@ -944,21 +944,21 @@ with col2:
 
     BTC_TransPerBlockList = [perBlockP2PKH, perBlockP2WPKH, perBlockP2SH_2OF3_MULTISIG, perBlockP2WSH_2OF3_MULTISIG,perBlockP2TR] 
     avgQntTransPerBTCBlock = sum(BTC_TransPerBlockList) / len(BTC_TransPerBlockList)
-    minQntTransPerBTCBlock = min(BTC_TransPerBlockList)
-    maxQntTransPerBTCBlock = max(BTC_TransPerBlockList)
+    minQntTransPerBTCBlock = max(BTC_TransPerBlockList)
+    maxQntTransPerBTCBlock = min(BTC_TransPerBlockList)
 
     st.write(
-        "Average Possible Transactions Per Block",
+        "Average Possible Transactions Per Block (Average All Types Transactions)",
         format(avgQntTransPerBTCBlock,".2f"),
         unsafe_allow_html=True
     )
     st.write(
-        "Minimum Possible Transactions Per Block",
+        "Minimum Possible Transactions Per Block (All P2SH 2-OF-3 MULTISIG Transactions)",
         format(minQntTransPerBTCBlock,".2f"),
         unsafe_allow_html=True
     )
     st.write(
-        "Maximum Possible Transactions Per Block",
+        "Maximum Possible Transactions Per Block (All P2WPKH Transactions)",
         format(maxQntTransPerBTCBlock,".2f"),
         unsafe_allow_html=True
     )
