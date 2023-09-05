@@ -8,7 +8,7 @@ import numpy as np
 
 
 #st.set_page_config(layout="wide")
-st.set_page_config(page_title="Plotting Demo", page_icon="📈",layout="wide")
+st.set_page_config(page_title="The Present, The Past & The Future of Bitcoin.", page_icon="📈",layout="wide")
 
 colorBTC = "#F2A900"
 colorBCH = "#0AC18E"
