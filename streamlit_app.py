@@ -8,6 +8,13 @@ import numpy as np
 
 
 st.set_page_config(layout="wide")
+# page1.py
+# import streamlit as st
+if "shared" not in st.session_state:
+   st.session_state["shared"] = True
+
+
+
 
 colorBTC = "#F2A900"
 colorBCH = "#0AC18E"

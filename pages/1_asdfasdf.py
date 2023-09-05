@@ -5,6 +5,10 @@ import numpy as np
 # from collections import namedtuple
 # import altair as alt
 # import math
+# page2.py
+# import streamlit as st
+st.write(st.session_state["shared"])
+# If page1 already executed, this should write True
 
 
 #st.set_page_config(layout="wide")
