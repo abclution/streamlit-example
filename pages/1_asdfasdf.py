@@ -7,12 +7,14 @@ import numpy as np
 # import math
 # page2.py
 # import streamlit as st
-st.write(st.session_state["shared"])
 # If page1 already executed, this should write True
 
 
 #st.set_page_config(layout="wide")
 st.set_page_config(page_title="The Present, The Past & The Future of Bitcoin.", page_icon="📈",layout="wide")
+st.write(st.session_state["shared"])
+
+
 
 colorBTC = "#F2A900"
 colorBCH = "#0AC18E"
