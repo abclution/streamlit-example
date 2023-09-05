@@ -7,7 +7,8 @@ import numpy as np
 # import math
 
 
-st.set_page_config(layout="wide")
+#st.set_page_config(layout="wide")
+st.set_page_config(page_title="Plotting Demo", page_icon="📈",layout="wide")
 
 colorBTC = "#F2A900"
 colorBCH = "#0AC18E"
